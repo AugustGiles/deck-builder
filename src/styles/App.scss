@@ -1,0 +1,55 @@
+body {
+  background-color: #f6f0ed;
+  color: rgb(33, 36, 36);
+  height: 100%;
+
+  header {
+    background-color: #28536b;
+    color: white;
+    #main-logo {
+      width: 30%;
+      display: inline-block;
+      margin: 0px;
+    }
+
+    nav {
+      width: 90%;
+      margin: auto;
+      ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          margin: 0px 5px;
+          padding: 25px 10px;
+          text-decoration: none;
+          color: white;
+        }
+        li.active {
+          color: yellow;
+          border-bottom: 2px solid yellow;
+        }
+      }
+    }
+  }
+
+  .app-content {
+    height: 100%;
+    aside,
+    article {
+      display: inline-block !important;
+    }
+
+    aside.sidebar {
+      background-color: #dadad9;
+      width: 25%;
+      height: 100%;
+      margin: auto;
+    }
+
+    article.article-right {
+      display: inline-block;
+    }
+  }
+}
