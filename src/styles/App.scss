@@ -19,6 +19,8 @@ body {
         display: inline-block;
         margin: 0;
         padding: 0;
+        width: 70%;
+        text-align: right;
         li {
           display: inline-block;
           margin: 0px 5px;
@@ -36,20 +38,54 @@ body {
 
   .app-content {
     height: 100%;
-    aside,
-    article {
-      display: inline-block !important;
-    }
+    display: flex;
 
     aside.sidebar {
+      display: inline-block;
       background-color: #dadad9;
       width: 25%;
-      height: 100%;
-      margin: auto;
+      height: 92vh;
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+
+      .sidebar-content {
+        margin: auto;
+        width: 80%;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            padding: 10px 0px;
+          }
+        }
+      }
     }
 
     article.article-right {
       display: inline-block;
+      height: 92vh;
+      width: 75%;
+
+      .article-content {
+        width: 90%;
+        margin: auto;
+      }
     }
+  }
+
+  // elements
+
+  button {
+    width: 100%;
+    padding: 10px 3px;
+    font-size: 1em;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #edeba0;
   }
 }
