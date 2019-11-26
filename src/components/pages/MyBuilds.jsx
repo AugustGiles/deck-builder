@@ -9,7 +9,6 @@ function MyBuilds() {
   const [activeTemplate, setActiveTemplate] = useState("AllDeckStats");
 
   let setDeckView = function(id) {
-    console.log(id);
     return activeTemplate !== "DeckView" ? setActiveTemplate("DeckView") : null;
   };
 

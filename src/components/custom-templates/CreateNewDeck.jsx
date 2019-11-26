@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import mtg from "mtgsdk";
+import deckClient from "../../modules/deckBuilderApi/deck";
 
 function CreateNewDeck() {
   const [deckTitle, setDeckTitle] = useState("");
@@ -45,7 +46,12 @@ function CreateNewDeck() {
   };
 
   let saveSelectedCards = () => {
-    console.log("save!");
+    let deck = {
+      title: deckTitle,
+      cards: selectedCards
+    };
+
+    deckClient.addNewDeck(deck);
   };
 
   return (

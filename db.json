@@ -1,0 +1,589 @@
+{
+  "decks": [
+    {
+      "title": "Hapatra",
+      "cards": [
+        {
+          "name": "Hapatra, Vizier of Poisons",
+          "names": [],
+          "manaCost": "{B}{G}",
+          "cmc": 2,
+          "colors": [
+            "Black",
+            "Green"
+          ],
+          "colorIdentity": [
+            "B",
+            "G"
+          ],
+          "type": "Legendary Creature — Human Cleric",
+          "supertypes": [
+            "Legendary"
+          ],
+          "types": [
+            "Creature"
+          ],
+          "subtypes": [
+            "Human",
+            "Cleric"
+          ],
+          "rarity": "Rare",
+          "set": "AKH",
+          "setName": "Amonkhet",
+          "text": "Whenever Hapatra, Vizier of Poisons deals combat damage to a player, you may put a -1/-1 counter on target creature.\nWhenever you put one or more -1/-1 counters on a creature, create a 1/1 green Snake creature token with deathtouch.",
+          "flavor": "Her subtle smile is suffused with venom.",
+          "artist": "Tyler Jacobson",
+          "number": "199",
+          "power": "2",
+          "toughness": "2",
+          "layout": "normal",
+          "multiverseid": 426901,
+          "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=426901&type=card",
+          "rulings": [
+            {
+              "date": "2017-04-18",
+              "text": "If you put any number of -1/-1 counters on more than one creature at once, Hapatra’s last ability triggers once for each of those creatures."
+            },
+            {
+              "date": "2017-04-18",
+              "text": "If you put enough -1/-1 counters on Hapatra so that its toughness is 0 or less, its last ability triggers."
+            },
+            {
+              "date": "2017-04-18",
+              "text": "If a creature with wither or infect deals damage to a creature, the controller of the creature with wither or infect puts that many -1/-1 counters on the second creature."
+            }
+          ],
+          "foreignNames": [
+            {
+              "name": "Hapatra, Wesirin der Gifte",
+              "text": "Immer wenn Hapatra, Wesirin der Gifte, einem Spieler Kampfschaden zufügt, kannst du eine -1/-1-Marke auf eine Kreatur deiner Wahl legen.\nImmer wenn du eine oder mehrere -1/-1-Marken auf eine Kreatur legst, erzeuge einen 1/1 grünen Ophis-Kreaturenspielstein mit Todesberührung.",
+              "flavor": "Ihr fast unmerkliches Lächeln ist selbst wie süßes Gift.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427170&type=card",
+              "language": "German",
+              "multiverseid": 427170
+            },
+            {
+              "name": "Hapatra, visir de los venenos",
+              "text": "Siempre que Hapatra, visir de los venenos haga daño de combate a un jugador, puedes poner un contador -1/-1 sobre la criatura objetivo.\nSiempre que pongas uno o más contadores -1/-1 sobre una criatura, crea una ficha de criatura Víbora verde 1/1 con la habilidad de toque mortal.",
+              "flavor": "Incluso su sutil sonrisa es ponzoñosa.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427439&type=card",
+              "language": "Spanish",
+              "multiverseid": 427439
+            },
+            {
+              "name": "Hapatra, vizir des poisons",
+              "text": "À chaque fois qu'Hapatra, vizir des poisons inflige des blessures de combat à un joueur, vous pouvez mettre un marqueur -1/-1 sur une créature ciblée.\nÀ chaque fois que vous mettez au moins un marqueur -1/-1 sur une créature, créez un jeton de créature 1/1 verte Serpent avec le contact mortel.",
+              "flavor": "Son léger sourire est empreint de venin.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427708&type=card",
+              "language": "French",
+              "multiverseid": 427708
+            },
+            {
+              "name": "Hapatra, Visir dei Veleni",
+              "text": "Ogniqualvolta Hapatra, Visir dei Veleni infligge danno da combattimento a un giocatore, puoi mettere un segnalino -1/-1 su una creatura bersaglio.\nOgniqualvolta metti uno o più segnalini -1/-1 su una creatura, crea una pedina creatura Serpente 1/1 verde con tocco letale.",
+              "flavor": "Il suo impercettibile sorriso è impregnato di veleno.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=427977&type=card",
+              "language": "Italian",
+              "multiverseid": 427977
+            },
+            {
+              "name": "毒物の侍臣、ハパチラ",
+              "text": "毒物の侍臣、ハパチラがプレイヤー１人に戦闘ダメージを与えるたび、クリーチャー１体を対象とする。あなたはそれの上に－１/－１カウンターを１個置いてもよい。\nあなたがクリーチャー１体の上に－１/－１カウンターを１個以上置くたび、接死を持つ緑の１/１の蛇・クリーチャー・トークンを１体生成する。",
+              "flavor": "その謎めいた笑顔には毒気が満ちている。",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428246&type=card",
+              "language": "Japanese",
+              "multiverseid": 428246
+            },
+            {
+              "name": "독의 고관 하파트라",
+              "text": "독의 고관 하파트라가 플레이어에게 전투피해를 입힐 때마다, 생물을 목표로 정한다. 당신은 그 생물에 -1/-1 카운터 한 개를 올려놓을 수 있다.\n당신이 생물에 -1/-1 카운터를 한 개 이상 올려놓을 때마다, 치명타를 가진 1/1 녹색 뱀 생물 토큰 한 개를 만든다.",
+              "flavor": "그녀의 미묘한 미소에는 독이 깃들어 있다.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428515&type=card",
+              "language": "Korean",
+              "multiverseid": 428515
+            },
+            {
+              "name": "Hapatra, Vizir dos Venenos",
+              "text": "Toda vez que Hapatra, Vizir dos Venenos, causa dano de combate a um jogador, você pode colocar um marcador -1/-1 na criatura alvo.\nToda vez que você colocar um ou mais marcadores -1/-1 em uma criatura, crie uma ficha de criatura verde 1/1 do tipo Cobra com toque mortífero.",
+              "flavor": "A peçonha impregna seu sorriso sutil.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=428784&type=card",
+              "language": "Portuguese (Brazil)",
+              "multiverseid": 428784
+            },
+            {
+              "name": "Хапатра, Визирь Ядов",
+              "text": "Каждый раз, когда Хапатра, Визирь Ядов наносит боевые повреждения игроку, вы можете положить один жетон -1/-1 на целевое существо.\nКаждый раз, когда вы кладете на существо один или более жетонов -1/-1, создайте одну фишку существа 1/1 зеленая Змея со Смертельным касанием.",
+              "flavor": "Ее едва заметная улыбка пропитана ядом.",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429053&type=card",
+              "language": "Russian",
+              "multiverseid": 429053
+            },
+            {
+              "name": "司毒维齐尔哈芭恰",
+              "text": "每当司毒维齐尔哈芭恰对任一牌手造成战斗伤害时，你可以在目标生物上放置一个-1/-1指示物。\n每当你在一个生物上放置一个或数个-1/-1指示物时，派出一个1/1绿色，具死触异能的蛇衍生生物。",
+              "flavor": "她的诡秘笑容潜藏剧毒杀机。",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429322&type=card",
+              "language": "Chinese Simplified",
+              "multiverseid": 429322
+            },
+            {
+              "name": "司毒維齊爾哈芭恰",
+              "text": "每當司毒維齊爾哈芭恰對任一玩家造成戰鬥傷害時，你可以在目標生物上放置一個-1/-1指示物。\n每當你在一個生物上放置一個或數個-1/-1指示物時，派出一個1/1綠色，具死觸異能的蛇衍生生物。",
+              "flavor": "她的詭祕笑容潛藏劇毒殺機。",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=429591&type=card",
+              "language": "Chinese Traditional",
+              "multiverseid": 429591
+            }
+          ],
+          "printings": [
+            "AKH",
+            "PAKH"
+          ],
+          "originalText": "Whenever Hapatra, Vizier of Poisons deals combat damage to a player, you may put a -1/-1 counter on target creature.\nWhenever you put one or more -1/-1 counters on a creature, create a 1/1 green Snake creature token with deathtouch.",
+          "originalType": "Legendary Creature - Human Cleric",
+          "legalities": [
+            {
+              "format": "Commander",
+              "legality": "Legal"
+            },
+            {
+              "format": "Duel",
+              "legality": "Legal"
+            },
+            {
+              "format": "Legacy",
+              "legality": "Legal"
+            },
+            {
+              "format": "Modern",
+              "legality": "Legal"
+            },
+            {
+              "format": "Vintage",
+              "legality": "Legal"
+            }
+          ],
+          "id": "eecef377-f636-583d-911b-46c43d375364"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "Alesha",
+      "cards": [
+        {
+          "name": "Alesha, Who Smiles at Death",
+          "manaCost": "{2}{R}",
+          "cmc": 3,
+          "colors": [
+            "Red"
+          ],
+          "colorIdentity": [
+            "B",
+            "R",
+            "W"
+          ],
+          "type": "Legendary Creature — Human Warrior",
+          "supertypes": [
+            "Legendary"
+          ],
+          "types": [
+            "Creature"
+          ],
+          "subtypes": [
+            "Human",
+            "Warrior"
+          ],
+          "rarity": "Rare",
+          "set": "FRF",
+          "setName": "Fate Reforged",
+          "text": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {W/B}{W/B}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+          "flavor": "\"Greet death with sword in hand.\"",
+          "artist": "Anastasia Ovchinnikova",
+          "number": "90",
+          "power": "3",
+          "toughness": "2",
+          "layout": "normal",
+          "multiverseid": 391787,
+          "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=391787&type=card",
+          "watermark": "mardu",
+          "rulings": [
+            {
+              "date": "2014-11-24",
+              "text": "You choose which opponent or opposing planeswalker the creature is attacking as you put it onto the battlefield. It doesn’t have to be the same player or planeswalker Alesha is attacking."
+            },
+            {
+              "date": "2014-11-24",
+              "text": "Although the creature you return is attacking, it was never declared as an attacking creature (for purposes of abilities that trigger whenever a creature attacks, for example)."
+            }
+          ],
+          "foreignNames": [
+            {
+              "name": "Alesha, Verachterin des Todes",
+              "text": "Erstschlag\nImmer wenn Alesha, Verachterin des Todes, angreift, kannst du {W/B}{W/B} bezahlen. Falls du dies tust, bringe eine Kreaturenkarte deiner Wahl mit Stärke 2 oder weniger aus deinem Friedhof getappt und angreifend ins Spiel zurück.",
+              "flavor": "„Begegne dem Tod mit dem Schwert in der Hand.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392342&type=card",
+              "language": "German",
+              "multiverseid": 392342
+            },
+            {
+              "name": "Alesha, la que sonríe a la muerte",
+              "text": "Daña primero.\nSiempre que Alesha, la que sonríe a la muerte ataque, puedes pagar {W/B}{W/B}. Si lo haces, regresa la carta de criatura objetivo con fuerza de 2 o menos de tu cementerio al campo de batalla girada y atacando.",
+              "flavor": "\"Saluda a la muerte con una espada en la mano\".",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393637&type=card",
+              "language": "Spanish",
+              "multiverseid": 393637
+            },
+            {
+              "name": "Alesha, Celle-qui-sourit-devant-la-mort",
+              "text": "Initiative\nÀ chaque fois qu'Alesha, Celle-qui-sourit-devant-la-mort attaque, vous pouvez payer {W/B}{W/B}. Si vous faites ainsi, renvoyez sur le champ de bataille depuis votre cimetière une carte de créature ciblée de force inférieure ou égale à 2, engagée et attaquante.",
+              "flavor": "« Saluez la mort une épée à la main. »",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392527&type=card",
+              "language": "French",
+              "multiverseid": 392527
+            },
+            {
+              "name": "Alesha, Che Sorride alla Morte",
+              "text": "Attacco improvviso\nOgniqualvolta Alesha, Che Sorride alla Morte attacca, puoi pagare {W/B}{W/B}. Se lo fai, rimetti sul campo di battaglia dal tuo cimitero una carta creatura bersaglio con forza pari o inferiore a 2 TAPpata e attaccante.",
+              "flavor": "\"Saluta la morte impugnando la spada.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392712&type=card",
+              "language": "Italian",
+              "multiverseid": 392712
+            },
+            {
+              "name": "死に微笑むもの、アリーシャ",
+              "text": "先制攻撃\n死に微笑むもの、アリーシャが攻撃するたび、あなたの墓地にあるパワーが２以下のクリーチャー・カード１枚を対象とする。あなたは{W/B}{W/B}を支払ってもよい。そうしたなら、それをタップ状態で攻撃している状態で戦場に戻す。",
+              "flavor": "「手に剣を持って死を迎えよ。」",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392897&type=card",
+              "language": "Japanese",
+              "multiverseid": 392897
+            },
+            {
+              "name": "죽음에 웃음짓는 알레샤",
+              "text": "선제공격\n죽음에 웃음짓는 알레샤가 공격할 때마다, 당신은 {W/B}{W/B}를 지불할 수 있다. 그렇게 한다면, 당신의 무덤에 있는 공격력이 2 이하인 생물 카드를 목표로 정한다. 그 카드를 탭되어 공격하는 채로 전장에 놓는다.",
+              "flavor": "\"손에 칼을 쥐고 최후를 맞이하거라.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393082&type=card",
+              "language": "Korean",
+              "multiverseid": 393082
+            },
+            {
+              "name": "Alesha, a Que Sorri Para a Morte",
+              "text": "Iniciativa\nToda vez que Alesha, a Que Sorri Para a Morte, ataca, você pode pagar {W/B}{W/B}. Se fizer isso, devolva o card de criatura alvo com poder igual ou inferior a 2 do seu cemitério para o campo de batalha virado e atacando.",
+              "flavor": "\"Cumprimente a morte com uma espada em punho.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393267&type=card",
+              "language": "Portuguese (Brazil)",
+              "multiverseid": 393267
+            },
+            {
+              "name": "Алиша, Улыбнувшаяся Смерти",
+              "text": "Первый удар\nКаждый раз, когда Алиша, Улыбнувшаяся Смерти атакует, вы можете заплатить {W/B}{W/B}. Если вы это делаете, верните целевую карту существа с силой 2 или меньше из вашего кладбища на поле битвы повернутой и атакующей.",
+              "flavor": "«Встречай смерть с мечом в руке».",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393452&type=card",
+              "language": "Russian",
+              "multiverseid": 393452
+            },
+            {
+              "name": "蔑死者阿列莎",
+              "text": "先攻\n每当蔑死者阿列莎攻击时，你可以支付{W/B}{W/B}。若你如此作，则将目标力量等于或小于2的生物牌从你的坟墓场横置移回战场且正进行攻击。",
+              "flavor": "「持剑在手，笑迎死亡。」",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=391972&type=card",
+              "language": "Chinese Simplified",
+              "multiverseid": 391972
+            },
+            {
+              "name": "蔑死者阿列莎",
+              "text": "先攻\n每當蔑死者阿列莎攻擊時，你可以支付{W/B}{W/B}。若你如此作，則將目標力量等於或小於2的生物牌從你的墳墓場橫置移回戰場且正進行攻擊。",
+              "flavor": "「持劍在手，笑迎死亡。」",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392157&type=card",
+              "language": "Chinese Traditional",
+              "multiverseid": 392157
+            }
+          ],
+          "printings": [
+            "C16",
+            "FRF",
+            "PFRF"
+          ],
+          "originalText": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {WB}{WB}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+          "originalType": "Legendary Creature — Human Warrior",
+          "legalities": [
+            {
+              "format": "Commander",
+              "legality": "Legal"
+            },
+            {
+              "format": "Duel",
+              "legality": "Legal"
+            },
+            {
+              "format": "Legacy",
+              "legality": "Legal"
+            },
+            {
+              "format": "Modern",
+              "legality": "Legal"
+            },
+            {
+              "format": "Vintage",
+              "legality": "Legal"
+            }
+          ],
+          "id": "7cbda31f-0744-567e-8e5a-b1a7b4c5afbd"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "title": "test",
+      "cards": [
+        {
+          "name": "Forest",
+          "cmc": 0,
+          "colors": [],
+          "colorIdentity": [
+            "G"
+          ],
+          "type": "Basic Land — Forest",
+          "supertypes": [
+            "Basic"
+          ],
+          "types": [
+            "Land"
+          ],
+          "subtypes": [
+            "Forest"
+          ],
+          "rarity": "Common",
+          "set": "10E",
+          "setName": "Tenth Edition",
+          "text": "({T}: Add {G}.)",
+          "artist": "Anthony S. Waters",
+          "number": "380",
+          "layout": "normal",
+          "multiverseid": 129559,
+          "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=129559&type=card",
+          "variations": [
+            "6dd4420d-6855-5ca0-b06d-243dd46be3ba",
+            "82263df4-32ef-5f0f-9c82-b68e8413aa1f",
+            "b8ea7783-71ec-590e-926a-58531e246f61"
+          ],
+          "rulings": [],
+          "foreignNames": [],
+          "printings": [
+            "10E",
+            "2ED",
+            "3ED",
+            "4BB",
+            "4ED",
+            "5ED",
+            "6ED",
+            "7ED",
+            "8ED",
+            "9ED",
+            "AKH",
+            "ALA",
+            "ANA",
+            "ARC",
+            "ATH",
+            "AVR",
+            "BBD",
+            "BFZ",
+            "BRB",
+            "BTD",
+            "C13",
+            "C14",
+            "C15",
+            "C16",
+            "C17",
+            "C18",
+            "C19",
+            "CED",
+            "CEI",
+            "CHK",
+            "CM2",
+            "CMA",
+            "CMD",
+            "CST",
+            "DD1",
+            "DDD",
+            "DDE",
+            "DDG",
+            "DDH",
+            "DDJ",
+            "DDL",
+            "DDM",
+            "DDO",
+            "DDP",
+            "DDR",
+            "DDS",
+            "DDU",
+            "DKM",
+            "DOM",
+            "DPA",
+            "DTK",
+            "E01",
+            "ELD",
+            "EVG",
+            "FBB",
+            "FRF",
+            "G17",
+            "GK1",
+            "GK2",
+            "GNT",
+            "GRN",
+            "GS1",
+            "GVL",
+            "H09",
+            "HOP",
+            "HOU",
+            "ICE",
+            "INV",
+            "ISD",
+            "ITP",
+            "J14",
+            "KLD",
+            "KTK",
+            "LEA",
+            "LEB",
+            "LRW",
+            "M10",
+            "M11",
+            "M12",
+            "M13",
+            "M14",
+            "M15",
+            "M19",
+            "M20",
+            "MBS",
+            "ME1",
+            "ME3",
+            "MIR",
+            "MMQ",
+            "MRD",
+            "NPH",
+            "ODY",
+            "ONS",
+            "ORI",
+            "P02",
+            "PAL00",
+            "PAL01",
+            "PAL03",
+            "PAL04",
+            "PAL05",
+            "PAL06",
+            "PAL99",
+            "PALP",
+            "PARL",
+            "PC2",
+            "PCA",
+            "PELP",
+            "PF19",
+            "PGPX",
+            "PGRU",
+            "PMPS",
+            "PMPS06",
+            "PMPS07",
+            "PMPS08",
+            "PMPS09",
+            "PMPS10",
+            "PMPS11",
+            "POR",
+            "PPP1",
+            "PRM",
+            "PRW2",
+            "PRWK",
+            "PS11",
+            "PSAL",
+            "PSS2",
+            "PSS3",
+            "PTC",
+            "PTK",
+            "PZ2",
+            "RAV",
+            "RIX",
+            "RNA",
+            "ROE",
+            "RQS",
+            "RTR",
+            "S99",
+            "SHM",
+            "SOI",
+            "SOM",
+            "SUM",
+            "TD0",
+            "TD2",
+            "THS",
+            "TMP",
+            "TPR",
+            "TSP",
+            "UGL",
+            "UNH",
+            "USG",
+            "UST",
+            "WAR",
+            "WC00",
+            "WC01",
+            "WC02",
+            "WC03",
+            "WC04",
+            "WC97",
+            "WC98",
+            "WC99",
+            "XLN",
+            "ZEN"
+          ],
+          "originalText": "G",
+          "originalType": "Basic Land - Forest",
+          "legalities": [
+            {
+              "format": "Brawl",
+              "legality": "Legal"
+            },
+            {
+              "format": "Commander",
+              "legality": "Legal"
+            },
+            {
+              "format": "Duel",
+              "legality": "Legal"
+            },
+            {
+              "format": "Future",
+              "legality": "Legal"
+            },
+            {
+              "format": "Historic",
+              "legality": "Legal"
+            },
+            {
+              "format": "Legacy",
+              "legality": "Legal"
+            },
+            {
+              "format": "Modern",
+              "legality": "Legal"
+            },
+            {
+              "format": "Pauper",
+              "legality": "Legal"
+            },
+            {
+              "format": "Penny",
+              "legality": "Legal"
+            },
+            {
+              "format": "Standard",
+              "legality": "Legal"
+            },
+            {
+              "format": "Vintage",
+              "legality": "Legal"
+            }
+          ],
+          "id": "f53637c9-9f4e-5d3c-a11a-c30e8e9a92b4"
+        }
+      ],
+      "id": 5
+    }
+  ]
+}
