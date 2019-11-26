@@ -15,7 +15,7 @@ function App() {
         <Route path="/login">
           <h1>Login</h1>
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <MyBuilds />
         </Route>
       </Switch>
