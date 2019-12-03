@@ -1,11 +1,12 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 
 function DeckView() {
   return (
-    <React.Fragment>
+    <Container>
       <h3>Deck Title</h3>
       <p>See cards and stats</p>
-    </React.Fragment>
+    </Container>
   );
 }
 

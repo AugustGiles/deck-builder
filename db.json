@@ -584,6 +584,803 @@
         }
       ],
       "id": 5
+    },
+    {
+      "title": "Test Deck 2",
+      "cards": [
+        {
+          "name": "Alesha, Who Smiles at Death",
+          "manaCost": "{2}{R}",
+          "cmc": 3,
+          "colors": [
+            "Red"
+          ],
+          "colorIdentity": [
+            "B",
+            "R",
+            "W"
+          ],
+          "type": "Legendary Creature — Human Warrior",
+          "supertypes": [
+            "Legendary"
+          ],
+          "types": [
+            "Creature"
+          ],
+          "subtypes": [
+            "Human",
+            "Warrior"
+          ],
+          "rarity": "Rare",
+          "set": "C16",
+          "setName": "Commander 2016",
+          "text": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {W/B}{W/B}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+          "flavor": "\"Greet death with sword in hand.\"",
+          "artist": "Anastasia Ovchinnikova",
+          "number": "119",
+          "power": "3",
+          "toughness": "2",
+          "layout": "normal",
+          "multiverseid": 420736,
+          "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420736&type=card",
+          "rulings": [
+            {
+              "date": "2014-11-24",
+              "text": "You choose which opponent or opposing planeswalker the creature is attacking as you put it onto the battlefield. It doesn’t have to be the same player or planeswalker Alesha is attacking."
+            },
+            {
+              "date": "2014-11-24",
+              "text": "Although the creature you return is attacking, it was never declared as an attacking creature (for purposes of abilities that trigger whenever a creature attacks, for example)."
+            }
+          ],
+          "foreignNames": [
+            {
+              "name": "Alesha, Verachterin des Todes",
+              "text": "Erstschlag\nImmer wenn Alesha, Verachterin des Todes, angreift, kannst du {W/B}{W/B} bezahlen. Falls du dies tust, bringe eine Kreaturenkarte deiner Wahl mit Stärke 2 oder weniger aus deinem Friedhof getappt und angreifend ins Spiel zurück.",
+              "flavor": "„Begegne dem Tod mit dem Schwert in der Hand.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=421438&type=card",
+              "language": "German",
+              "multiverseid": 421438
+            },
+            {
+              "name": "Alesha, la que sonríe a la muerte",
+              "text": "Daña primero.\nSiempre que Alesha, la que sonríe a la muerte ataque, puedes pagar {W/B}{W/B}. Si lo haces, regresa la carta de criatura objetivo con fuerza de 2 o menos de tu cementerio al campo de batalla girada y atacando.",
+              "flavor": "\"Saluda a la muerte con una espada en la mano\".",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=423193&type=card",
+              "language": "Spanish",
+              "multiverseid": 423193
+            },
+            {
+              "name": "Alesha, Celle-qui-sourit-devant-la-mort",
+              "text": "Initiative\nÀ chaque fois qu'Alesha, Celle-qui-sourit-devant-la-mort attaque, vous pouvez payer {W/B}{W/B}. Si vous faites ainsi, renvoyez sur le champ de bataille depuis votre cimetière une carte de créature ciblée de force inférieure ou égale à 2, engagée et attaquante.",
+              "flavor": "« Saluez la mort une épée à la main. »",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=421789&type=card",
+              "language": "French",
+              "multiverseid": 421789
+            },
+            {
+              "name": "Alesha, Che Sorride alla Morte",
+              "text": "Attacco improvviso\nOgniqualvolta Alesha, Che Sorride alla Morte attacca, puoi pagare {W/B}{W/B}. Se lo fai, rimetti sul campo di battaglia dal tuo cimitero una carta creatura bersaglio con forza pari o inferiore a 2 TAPpata e attaccante.",
+              "flavor": "\"Saluta la morte impugnando la spada.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=422140&type=card",
+              "language": "Italian",
+              "multiverseid": 422140
+            },
+            {
+              "name": "死に微笑むもの、アリーシャ",
+              "text": "先制攻撃\n死に微笑むもの、アリーシャが攻撃するたび、あなたの墓地からパワーが２以下のクリーチャー・カード１枚を対象とする。あなたは{W/B}{W/B}を支払ってもよい。そうしたなら、それをタップ状態で攻撃している状態で戦場に戻す。",
+              "flavor": "「手に剣を持って死を迎えよ。」",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=422491&type=card",
+              "language": "Japanese",
+              "multiverseid": 422491
+            },
+            {
+              "name": "Alesha, a Que Sorri Para a Morte",
+              "text": "Iniciativa\nToda vez que Alesha, a Que Sorri Para a Morte, ataca, você pode pagar {W/B}{W/B}. Se fizer isso, devolva o card de criatura alvo com poder igual ou inferior a 2 do seu cemitério para o campo de batalha virado e atacando.",
+              "flavor": "\"Cumprimente a morte com uma espada em punho.\"",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=422842&type=card",
+              "language": "Portuguese (Brazil)",
+              "multiverseid": 422842
+            },
+            {
+              "name": "蔑死者阿列莎",
+              "text": "先攻\n每当蔑死者阿列莎攻击时，你可以支付{W/B}{W/B}。若你如此作，则将目标力量等于或小于2的生物牌从你的坟墓场横置移回战场且正进行攻击。",
+              "flavor": "「持剑在手，笑迎死亡。」",
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=421087&type=card",
+              "language": "Chinese Simplified",
+              "multiverseid": 421087
+            }
+          ],
+          "printings": [
+            "C16",
+            "FRF",
+            "PFRF"
+          ],
+          "originalText": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {WB}{WB}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+          "originalType": "Legendary Creature — Human Warrior",
+          "legalities": [
+            {
+              "format": "Commander",
+              "legality": "Legal"
+            },
+            {
+              "format": "Duel",
+              "legality": "Legal"
+            },
+            {
+              "format": "Legacy",
+              "legality": "Legal"
+            },
+            {
+              "format": "Modern",
+              "legality": "Legal"
+            },
+            {
+              "format": "Vintage",
+              "legality": "Legal"
+            }
+          ],
+          "id": "855488ad-330f-5ed5-84fe-4e748754f04f"
+        },
+        {
+          "name": "Sol Ring",
+          "manaCost": "{1}",
+          "cmc": 1,
+          "colors": [],
+          "colorIdentity": [],
+          "type": "Artifact",
+          "supertypes": [],
+          "types": [
+            "Artifact"
+          ],
+          "subtypes": [],
+          "rarity": "Uncommon",
+          "set": "2ED",
+          "setName": "Unlimited Edition",
+          "text": "{T}: Add {C}{C}.",
+          "artist": "Mark Tedin",
+          "number": "270",
+          "layout": "normal",
+          "multiverseid": 637,
+          "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=637&type=card",
+          "rulings": [],
+          "foreignNames": [],
+          "printings": [
+            "2ED",
+            "3ED",
+            "C13",
+            "C14",
+            "C15",
+            "C16",
+            "C17",
+            "C18",
+            "C19",
+            "CED",
+            "CEI",
+            "CM2",
+            "CMA",
+            "CMD",
+            "FBB",
+            "G05",
+            "LEA",
+            "LEB",
+            "ME4",
+            "MPS",
+            "PF19",
+            "PRM",
+            "PZ1",
+            "SUM",
+            "V10",
+            "VMA"
+          ],
+          "originalText": "Add 2 colorless mana to your mana pool. Tapping this artifact can be played as an interrupt.",
+          "originalType": "Mono Artifact",
+          "legalities": [
+            {
+              "format": "Commander",
+              "legality": "Legal"
+            },
+            {
+              "format": "Duel",
+              "legality": "Banned"
+            },
+            {
+              "format": "Legacy",
+              "legality": "Banned"
+            },
+            {
+              "format": "Oldschool",
+              "legality": "Restricted"
+            },
+            {
+              "format": "Vintage",
+              "legality": "Restricted"
+            }
+          ],
+          "id": "26dbb251-4d5c-5aa9-96b3-5a09ab5aa83c"
+        },
+        {
+          "name": "Torgaar, Famine Incarnate",
+          "manaCost": "{6}{B}{B}",
+          "cmc": 8,
+          "colors": [
+            "Black"
+          ],
+          "colorIdentity": [
+            "B"
+          ],
+          "type": "Legendary Creature — Avatar",
+          "supertypes": [
+            "Legendary"
+          ],
+          "types": [
+            "Creature"
+          ],
+          "subtypes": [
+            "Avatar"
+          ],
+          "rarity": "Rare",
+          "set": "DOM",
+          "setName": "Dominaria",
+          "text": "As an additional cost to cast this spell, you may sacrifice any number of creatures. This spell costs {2} less to cast for each creature sacrificed this way.\nWhen Torgaar, Famine Incarnate enters the battlefield, up to one target player's life total becomes half their starting life total, rounded down.",
+          "artist": "Lius Lasahido",
+          "number": "108",
+          "power": "7",
+          "toughness": "6",
+          "layout": "normal",
+          "multiverseid": 442996,
+          "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442996&type=card",
+          "rulings": [
+            {
+              "date": "2018-04-27",
+              "text": "Torgaar’s first ability can’t reduce its cost below {B}{B}. You can sacrifice any number of creatures, even if they won’t reduce Torgaar’s cost any further."
+            },
+            {
+              "date": "2018-04-27",
+              "text": "For your life total to become half your starting life total (normally 10, half of 20), you gain or lose the appropriate amount of life. For example, if your life total is 4 when Torgaar’s ability resolves targeting you, it will cause you to gain 6 life; alternatively, if your life total is 25 when it resolves, it will cause you to lose 15 life. Other cards that interact with life gain or life loss will interact with this effect accordingly."
+            },
+            {
+              "date": "2018-04-27",
+              "text": "In a Two-Headed Giant game, Torgaar’s ability causes the team’s life total to become half the team’s starting life total (normally 15, half of 30), but only the target player actually gains or loses life."
+            }
+          ],
+          "foreignNames": [
+            {
+              "name": "Torgaar, der fleischgewordene Hunger",
+              "text": "Als zusätzliche Kosten, um diesen Zauberspruch zu wirken, kannst du eine beliebige Anzahl an Kreaturen opfern. Dieser Zauberspruch kostet beim Wirken für jede auf diese Weise geopferte Kreatur {2} weniger.\nWenn Torgaar, der fleischgewordene Hunger, ins Spiel kommt, wird der Lebenspunktestand von bis zu einem Spieler deiner Wahl gleich der Hälfte seiner Startlebenspunktezahl, abgerundet.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443265&type=card",
+              "language": "German",
+              "multiverseid": 443265
+            },
+            {
+              "name": "Torgaar, el Hambre Encarnada",
+              "text": "Como coste adicional para lanzar este hechizo, puedes sacrificar cualquier cantidad de criaturas. Te cuesta {2} menos lanzar este hechizo por cada criatura sacrificada de esta manera.\nCuando Torgaar, el Hambre Encarnada entre al campo de batalla, el total de vidas de hasta un jugador objetivo se convierte en la mitad de su total de vidas inicial, redondeando hacia abajo.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443534&type=card",
+              "language": "Spanish",
+              "multiverseid": 443534
+            },
+            {
+              "name": "Torgaar, famine incarnée",
+              "text": "En tant que coût supplémentaire pour lancer ce sort, vous pouvez sacrifier n'importe quel nombre de créatures. Ce sort coûte {2} de moins à lancer pour chaque créature sacrifiée de cette manière.\nQuand Torgaar, famine incarnée arrive sur le champ de bataille, ciblez jusqu'à un joueur. Le total de points de vie de ce joueur devient la moitié de son total de points de vie de départ, arrondie à l'unité inférieure.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443803&type=card",
+              "language": "French",
+              "multiverseid": 443803
+            },
+            {
+              "name": "Torgaar, Incarnazione della Carestia",
+              "text": "Come costo addizionale per lanciare questa magia, puoi sacrificare un qualsiasi numero di creature. Questa magia costa {2} in meno per essere lanciata per ogni creatura sacrificata in questo modo.\nQuando Torgaar, Incarnazione della Carestia entra nel campo di battaglia, scegli fino a un giocatore bersaglio. I suoi punti vita diventano metà dei suoi punti vita iniziali, arrotondati per difetto.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444072&type=card",
+              "language": "Italian",
+              "multiverseid": 444072
+            },
+            {
+              "name": "飢饉の具現、トルガール",
+              "text": "この呪文を唱えるための追加コストとして、あなたは望む数のクリーチャーを生け贄に捧げてもよい。この呪文を唱えるためのコストは、これにより生け贄に捧げたクリーチャー１体につき{2}少なくなる。\n飢饉の具現、トルガールが戦場に出たとき、プレイヤー最大１人を対象とする。そのプレイヤーのライフ総量は、そのプレイヤーの初期ライフ総量の端数を切り捨てた半分になる。",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444341&type=card",
+              "language": "Japanese",
+              "multiverseid": 444341
+            },
+            {
+              "name": "기아의 화신, 토르가르",
+              "text": "이 주문을 발동하기 위한 추가비용으로, 당신은 생물을 원하는 만큼 희생할 수 있다. 이 주문은 이렇게 희생된 생물 한 개당 발동하는 데 {2}가 덜 든다.\n기아의 화신, 토르가르가 전장에 들어올 때, 플레이어를 최대 한 명까지 목표로 정한다. 그 플레이어의 생명 총점은 게임 시작시의 생명 총점의 절반을 내림한 값이 된다.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444610&type=card",
+              "language": "Korean",
+              "multiverseid": 444610
+            },
+            {
+              "name": "Torgaar, Penúria Incarnada",
+              "text": "Como custo adicional para conjurar esta mágica, você pode sacrificar um número qualquer de criaturas. Esta mágica custa {2} a menos para ser conjurada para cada criatura sacrificada dessa forma.\nQuando Torgaar, Penúria Incarnada, entra no campo de batalha, o total de pontos de vida de até um jogador alvo torna-se metade do total de pontos de vida inicial deste, arredondado para baixo.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444879&type=card",
+              "language": "Portuguese (Brazil)",
+              "multiverseid": 444879
+            },
+            {
+              "name": "Торгаар, Воплощение Голода",
+              "text": "В качестве дополнительной стоимости разыгрывания этого заклинания вы можете пожертвовать любое количество существ. Разыгрывание этого заклинания стоит на {2} меньше за каждое существо, пожертвованное таким образом.\nКогда Торгаар, Воплощение Голода выходит на поле битвы, количество жизней не более чем одного целевого игрока становится равным половине его начального количества жизней, округленной в меньшую сторону.",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=445148&type=card",
+              "language": "Russian",
+              "multiverseid": 445148
+            },
+            {
+              "name": "饥馑化身托迦尔",
+              "text": "你可以牺牲任意数量的生物，以作为施放此咒语的额外费用。每以此法牺牲一个生物，此咒语便减少{2}来施放。\n当饥馑化身托迦尔进战场时，至多一位目标牌手的总生命成为其起始总生命的一半，小数点后舍去。",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=445417&type=card",
+              "language": "Chinese Simplified",
+              "multiverseid": 445417
+            },
+            {
+              "name": "飢饉化身托迦爾",
+              "text": "你可以犧牲任意數量的生物，以作為施放此咒語的額外費用。每以此法犧牲一個生物，此咒語便減少{2}來施放。\n當飢饉化身托迦爾進戰場時，至多一位目標玩家的總生命成為其起始總生命的一半，小數點後捨去。",
+              "flavor": null,
+              "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=445686&type=card",
+              "language": "Chinese Traditional",
+              "multiverseid": 445686
+            }
+          ],
+          "printings": [
+            "DOM",
+            "PDOM"
+          ],
+          "originalText": "As an additional cost to cast this spell, you may sacrifice any number of creatures. This spell costs {2} less to cast for each creature sacrificed this way.\nWhen Torgaar, Famine Incarnate enters the battlefield, up to one target player's life total becomes half their starting life total, rounded down.",
+          "originalType": "Legendary Creature — Avatar",
+          "legalities": [
+            {
+              "format": "Commander",
+              "legality": "Legal"
+            },
+            {
+              "format": "Duel",
+              "legality": "Legal"
+            },
+            {
+              "format": "Historic",
+              "legality": "Legal"
+            },
+            {
+              "format": "Legacy",
+              "legality": "Legal"
+            },
+            {
+              "format": "Modern",
+              "legality": "Legal"
+            },
+            {
+              "format": "Vintage",
+              "legality": "Legal"
+            }
+          ],
+          "id": "506d18cd-ca90-5b43-92f8-639b0e1a79e2"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "title": "",
+      "cards": [],
+      "id": 7
+    },
+    {
+      "title": "Test Deck",
+      "cards": [
+        {
+          "card": {
+            "name": "Alesha, Who Smiles at Death",
+            "manaCost": "{2}{R}",
+            "cmc": 3,
+            "colors": [
+              "Red"
+            ],
+            "colorIdentity": [
+              "B",
+              "R",
+              "W"
+            ],
+            "type": "Legendary Creature — Human Warrior",
+            "supertypes": [
+              "Legendary"
+            ],
+            "types": [
+              "Creature"
+            ],
+            "subtypes": [
+              "Human",
+              "Warrior"
+            ],
+            "rarity": "Rare",
+            "set": "FRF",
+            "setName": "Fate Reforged",
+            "text": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {W/B}{W/B}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+            "flavor": "\"Greet death with sword in hand.\"",
+            "artist": "Anastasia Ovchinnikova",
+            "number": "90",
+            "power": "3",
+            "toughness": "2",
+            "layout": "normal",
+            "multiverseid": 391787,
+            "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=391787&type=card",
+            "watermark": "mardu",
+            "rulings": [
+              {
+                "date": "2014-11-24",
+                "text": "You choose which opponent or opposing planeswalker the creature is attacking as you put it onto the battlefield. It doesn’t have to be the same player or planeswalker Alesha is attacking."
+              },
+              {
+                "date": "2014-11-24",
+                "text": "Although the creature you return is attacking, it was never declared as an attacking creature (for purposes of abilities that trigger whenever a creature attacks, for example)."
+              }
+            ],
+            "foreignNames": [
+              {
+                "name": "Alesha, Verachterin des Todes",
+                "text": "Erstschlag\nImmer wenn Alesha, Verachterin des Todes, angreift, kannst du {W/B}{W/B} bezahlen. Falls du dies tust, bringe eine Kreaturenkarte deiner Wahl mit Stärke 2 oder weniger aus deinem Friedhof getappt und angreifend ins Spiel zurück.",
+                "flavor": "„Begegne dem Tod mit dem Schwert in der Hand.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392342&type=card",
+                "language": "German",
+                "multiverseid": 392342
+              },
+              {
+                "name": "Alesha, la que sonríe a la muerte",
+                "text": "Daña primero.\nSiempre que Alesha, la que sonríe a la muerte ataque, puedes pagar {W/B}{W/B}. Si lo haces, regresa la carta de criatura objetivo con fuerza de 2 o menos de tu cementerio al campo de batalla girada y atacando.",
+                "flavor": "\"Saluda a la muerte con una espada en la mano\".",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393637&type=card",
+                "language": "Spanish",
+                "multiverseid": 393637
+              },
+              {
+                "name": "Alesha, Celle-qui-sourit-devant-la-mort",
+                "text": "Initiative\nÀ chaque fois qu'Alesha, Celle-qui-sourit-devant-la-mort attaque, vous pouvez payer {W/B}{W/B}. Si vous faites ainsi, renvoyez sur le champ de bataille depuis votre cimetière une carte de créature ciblée de force inférieure ou égale à 2, engagée et attaquante.",
+                "flavor": "« Saluez la mort une épée à la main. »",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392527&type=card",
+                "language": "French",
+                "multiverseid": 392527
+              },
+              {
+                "name": "Alesha, Che Sorride alla Morte",
+                "text": "Attacco improvviso\nOgniqualvolta Alesha, Che Sorride alla Morte attacca, puoi pagare {W/B}{W/B}. Se lo fai, rimetti sul campo di battaglia dal tuo cimitero una carta creatura bersaglio con forza pari o inferiore a 2 TAPpata e attaccante.",
+                "flavor": "\"Saluta la morte impugnando la spada.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392712&type=card",
+                "language": "Italian",
+                "multiverseid": 392712
+              },
+              {
+                "name": "死に微笑むもの、アリーシャ",
+                "text": "先制攻撃\n死に微笑むもの、アリーシャが攻撃するたび、あなたの墓地にあるパワーが２以下のクリーチャー・カード１枚を対象とする。あなたは{W/B}{W/B}を支払ってもよい。そうしたなら、それをタップ状態で攻撃している状態で戦場に戻す。",
+                "flavor": "「手に剣を持って死を迎えよ。」",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392897&type=card",
+                "language": "Japanese",
+                "multiverseid": 392897
+              },
+              {
+                "name": "죽음에 웃음짓는 알레샤",
+                "text": "선제공격\n죽음에 웃음짓는 알레샤가 공격할 때마다, 당신은 {W/B}{W/B}를 지불할 수 있다. 그렇게 한다면, 당신의 무덤에 있는 공격력이 2 이하인 생물 카드를 목표로 정한다. 그 카드를 탭되어 공격하는 채로 전장에 놓는다.",
+                "flavor": "\"손에 칼을 쥐고 최후를 맞이하거라.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393082&type=card",
+                "language": "Korean",
+                "multiverseid": 393082
+              },
+              {
+                "name": "Alesha, a Que Sorri Para a Morte",
+                "text": "Iniciativa\nToda vez que Alesha, a Que Sorri Para a Morte, ataca, você pode pagar {W/B}{W/B}. Se fizer isso, devolva o card de criatura alvo com poder igual ou inferior a 2 do seu cemitério para o campo de batalha virado e atacando.",
+                "flavor": "\"Cumprimente a morte com uma espada em punho.\"",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393267&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 393267
+              },
+              {
+                "name": "Алиша, Улыбнувшаяся Смерти",
+                "text": "Первый удар\nКаждый раз, когда Алиша, Улыбнувшаяся Смерти атакует, вы можете заплатить {W/B}{W/B}. Если вы это делаете, верните целевую карту существа с силой 2 или меньше из вашего кладбища на поле битвы повернутой и атакующей.",
+                "flavor": "«Встречай смерть с мечом в руке».",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=393452&type=card",
+                "language": "Russian",
+                "multiverseid": 393452
+              },
+              {
+                "name": "蔑死者阿列莎",
+                "text": "先攻\n每当蔑死者阿列莎攻击时，你可以支付{W/B}{W/B}。若你如此作，则将目标力量等于或小于2的生物牌从你的坟墓场横置移回战场且正进行攻击。",
+                "flavor": "「持剑在手，笑迎死亡。」",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=391972&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 391972
+              },
+              {
+                "name": "蔑死者阿列莎",
+                "text": "先攻\n每當蔑死者阿列莎攻擊時，你可以支付{W/B}{W/B}。若你如此作，則將目標力量等於或小於2的生物牌從你的墳墓場橫置移回戰場且正進行攻擊。",
+                "flavor": "「持劍在手，笑迎死亡。」",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=392157&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 392157
+              }
+            ],
+            "printings": [
+              "C16",
+              "FRF",
+              "PFRF"
+            ],
+            "originalText": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {WB}{WB}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+            "originalType": "Legendary Creature — Human Warrior",
+            "legalities": [
+              {
+                "format": "Commander",
+                "legality": "Legal"
+              },
+              {
+                "format": "Duel",
+                "legality": "Legal"
+              },
+              {
+                "format": "Legacy",
+                "legality": "Legal"
+              },
+              {
+                "format": "Modern",
+                "legality": "Legal"
+              },
+              {
+                "format": "Vintage",
+                "legality": "Legal"
+              }
+            ],
+            "id": "7cbda31f-0744-567e-8e5a-b1a7b4c5afbd"
+          },
+          "qty": 1
+        },
+        {
+          "card": {
+            "name": "Sol Ring",
+            "manaCost": "{1}",
+            "cmc": 1,
+            "colors": [],
+            "colorIdentity": [],
+            "type": "Artifact",
+            "supertypes": [],
+            "types": [
+              "Artifact"
+            ],
+            "subtypes": [],
+            "rarity": "Uncommon",
+            "set": "2ED",
+            "setName": "Unlimited Edition",
+            "text": "{T}: Add {C}{C}.",
+            "artist": "Mark Tedin",
+            "number": "270",
+            "layout": "normal",
+            "multiverseid": 637,
+            "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=637&type=card",
+            "rulings": [],
+            "foreignNames": [],
+            "printings": [
+              "2ED",
+              "3ED",
+              "C13",
+              "C14",
+              "C15",
+              "C16",
+              "C17",
+              "C18",
+              "C19",
+              "CED",
+              "CEI",
+              "CM2",
+              "CMA",
+              "CMD",
+              "FBB",
+              "G05",
+              "LEA",
+              "LEB",
+              "ME4",
+              "MPS",
+              "PF19",
+              "PRM",
+              "PZ1",
+              "SUM",
+              "V10",
+              "VMA"
+            ],
+            "originalText": "Add 2 colorless mana to your mana pool. Tapping this artifact can be played as an interrupt.",
+            "originalType": "Mono Artifact",
+            "legalities": [
+              {
+                "format": "Commander",
+                "legality": "Legal"
+              },
+              {
+                "format": "Duel",
+                "legality": "Banned"
+              },
+              {
+                "format": "Legacy",
+                "legality": "Banned"
+              },
+              {
+                "format": "Oldschool",
+                "legality": "Restricted"
+              },
+              {
+                "format": "Vintage",
+                "legality": "Restricted"
+              }
+            ],
+            "id": "26dbb251-4d5c-5aa9-96b3-5a09ab5aa83c"
+          },
+          "qty": 1
+        },
+        {
+          "card": {
+            "name": "Torgaar, Famine Incarnate",
+            "manaCost": "{6}{B}{B}",
+            "cmc": 8,
+            "colors": [
+              "Black"
+            ],
+            "colorIdentity": [
+              "B"
+            ],
+            "type": "Legendary Creature — Avatar",
+            "supertypes": [
+              "Legendary"
+            ],
+            "types": [
+              "Creature"
+            ],
+            "subtypes": [
+              "Avatar"
+            ],
+            "rarity": "Rare",
+            "set": "DOM",
+            "setName": "Dominaria",
+            "text": "As an additional cost to cast this spell, you may sacrifice any number of creatures. This spell costs {2} less to cast for each creature sacrificed this way.\nWhen Torgaar, Famine Incarnate enters the battlefield, up to one target player's life total becomes half their starting life total, rounded down.",
+            "artist": "Lius Lasahido",
+            "number": "108",
+            "power": "7",
+            "toughness": "6",
+            "layout": "normal",
+            "multiverseid": 442996,
+            "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442996&type=card",
+            "rulings": [
+              {
+                "date": "2018-04-27",
+                "text": "Torgaar’s first ability can’t reduce its cost below {B}{B}. You can sacrifice any number of creatures, even if they won’t reduce Torgaar’s cost any further."
+              },
+              {
+                "date": "2018-04-27",
+                "text": "For your life total to become half your starting life total (normally 10, half of 20), you gain or lose the appropriate amount of life. For example, if your life total is 4 when Torgaar’s ability resolves targeting you, it will cause you to gain 6 life; alternatively, if your life total is 25 when it resolves, it will cause you to lose 15 life. Other cards that interact with life gain or life loss will interact with this effect accordingly."
+              },
+              {
+                "date": "2018-04-27",
+                "text": "In a Two-Headed Giant game, Torgaar’s ability causes the team’s life total to become half the team’s starting life total (normally 15, half of 30), but only the target player actually gains or loses life."
+              }
+            ],
+            "foreignNames": [
+              {
+                "name": "Torgaar, der fleischgewordene Hunger",
+                "text": "Als zusätzliche Kosten, um diesen Zauberspruch zu wirken, kannst du eine beliebige Anzahl an Kreaturen opfern. Dieser Zauberspruch kostet beim Wirken für jede auf diese Weise geopferte Kreatur {2} weniger.\nWenn Torgaar, der fleischgewordene Hunger, ins Spiel kommt, wird der Lebenspunktestand von bis zu einem Spieler deiner Wahl gleich der Hälfte seiner Startlebenspunktezahl, abgerundet.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443265&type=card",
+                "language": "German",
+                "multiverseid": 443265
+              },
+              {
+                "name": "Torgaar, el Hambre Encarnada",
+                "text": "Como coste adicional para lanzar este hechizo, puedes sacrificar cualquier cantidad de criaturas. Te cuesta {2} menos lanzar este hechizo por cada criatura sacrificada de esta manera.\nCuando Torgaar, el Hambre Encarnada entre al campo de batalla, el total de vidas de hasta un jugador objetivo se convierte en la mitad de su total de vidas inicial, redondeando hacia abajo.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443534&type=card",
+                "language": "Spanish",
+                "multiverseid": 443534
+              },
+              {
+                "name": "Torgaar, famine incarnée",
+                "text": "En tant que coût supplémentaire pour lancer ce sort, vous pouvez sacrifier n'importe quel nombre de créatures. Ce sort coûte {2} de moins à lancer pour chaque créature sacrifiée de cette manière.\nQuand Torgaar, famine incarnée arrive sur le champ de bataille, ciblez jusqu'à un joueur. Le total de points de vie de ce joueur devient la moitié de son total de points de vie de départ, arrondie à l'unité inférieure.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=443803&type=card",
+                "language": "French",
+                "multiverseid": 443803
+              },
+              {
+                "name": "Torgaar, Incarnazione della Carestia",
+                "text": "Come costo addizionale per lanciare questa magia, puoi sacrificare un qualsiasi numero di creature. Questa magia costa {2} in meno per essere lanciata per ogni creatura sacrificata in questo modo.\nQuando Torgaar, Incarnazione della Carestia entra nel campo di battaglia, scegli fino a un giocatore bersaglio. I suoi punti vita diventano metà dei suoi punti vita iniziali, arrotondati per difetto.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444072&type=card",
+                "language": "Italian",
+                "multiverseid": 444072
+              },
+              {
+                "name": "飢饉の具現、トルガール",
+                "text": "この呪文を唱えるための追加コストとして、あなたは望む数のクリーチャーを生け贄に捧げてもよい。この呪文を唱えるためのコストは、これにより生け贄に捧げたクリーチャー１体につき{2}少なくなる。\n飢饉の具現、トルガールが戦場に出たとき、プレイヤー最大１人を対象とする。そのプレイヤーのライフ総量は、そのプレイヤーの初期ライフ総量の端数を切り捨てた半分になる。",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444341&type=card",
+                "language": "Japanese",
+                "multiverseid": 444341
+              },
+              {
+                "name": "기아의 화신, 토르가르",
+                "text": "이 주문을 발동하기 위한 추가비용으로, 당신은 생물을 원하는 만큼 희생할 수 있다. 이 주문은 이렇게 희생된 생물 한 개당 발동하는 데 {2}가 덜 든다.\n기아의 화신, 토르가르가 전장에 들어올 때, 플레이어를 최대 한 명까지 목표로 정한다. 그 플레이어의 생명 총점은 게임 시작시의 생명 총점의 절반을 내림한 값이 된다.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444610&type=card",
+                "language": "Korean",
+                "multiverseid": 444610
+              },
+              {
+                "name": "Torgaar, Penúria Incarnada",
+                "text": "Como custo adicional para conjurar esta mágica, você pode sacrificar um número qualquer de criaturas. Esta mágica custa {2} a menos para ser conjurada para cada criatura sacrificada dessa forma.\nQuando Torgaar, Penúria Incarnada, entra no campo de batalha, o total de pontos de vida de até um jogador alvo torna-se metade do total de pontos de vida inicial deste, arredondado para baixo.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=444879&type=card",
+                "language": "Portuguese (Brazil)",
+                "multiverseid": 444879
+              },
+              {
+                "name": "Торгаар, Воплощение Голода",
+                "text": "В качестве дополнительной стоимости разыгрывания этого заклинания вы можете пожертвовать любое количество существ. Разыгрывание этого заклинания стоит на {2} меньше за каждое существо, пожертвованное таким образом.\nКогда Торгаар, Воплощение Голода выходит на поле битвы, количество жизней не более чем одного целевого игрока становится равным половине его начального количества жизней, округленной в меньшую сторону.",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=445148&type=card",
+                "language": "Russian",
+                "multiverseid": 445148
+              },
+              {
+                "name": "饥馑化身托迦尔",
+                "text": "你可以牺牲任意数量的生物，以作为施放此咒语的额外费用。每以此法牺牲一个生物，此咒语便减少{2}来施放。\n当饥馑化身托迦尔进战场时，至多一位目标牌手的总生命成为其起始总生命的一半，小数点后舍去。",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=445417&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 445417
+              },
+              {
+                "name": "飢饉化身托迦爾",
+                "text": "你可以犧牲任意數量的生物，以作為施放此咒語的額外費用。每以此法犧牲一個生物，此咒語便減少{2}來施放。\n當飢饉化身托迦爾進戰場時，至多一位目標玩家的總生命成為其起始總生命的一半，小數點後捨去。",
+                "flavor": null,
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=445686&type=card",
+                "language": "Chinese Traditional",
+                "multiverseid": 445686
+              }
+            ],
+            "printings": [
+              "DOM",
+              "PDOM"
+            ],
+            "originalText": "As an additional cost to cast this spell, you may sacrifice any number of creatures. This spell costs {2} less to cast for each creature sacrificed this way.\nWhen Torgaar, Famine Incarnate enters the battlefield, up to one target player's life total becomes half their starting life total, rounded down.",
+            "originalType": "Legendary Creature — Avatar",
+            "legalities": [
+              {
+                "format": "Commander",
+                "legality": "Legal"
+              },
+              {
+                "format": "Duel",
+                "legality": "Legal"
+              },
+              {
+                "format": "Historic",
+                "legality": "Legal"
+              },
+              {
+                "format": "Legacy",
+                "legality": "Legal"
+              },
+              {
+                "format": "Modern",
+                "legality": "Legal"
+              },
+              {
+                "format": "Vintage",
+                "legality": "Legal"
+              }
+            ],
+            "id": "506d18cd-ca90-5b43-92f8-639b0e1a79e2"
+          },
+          "qty": 1
+        }
+      ],
+      "description": "hello world",
+      "format": "standard",
+      "id": 8
     }
   ]
 }

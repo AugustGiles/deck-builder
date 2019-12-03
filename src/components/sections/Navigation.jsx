@@ -1,19 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 function Navigation() {
   return (
-    <nav>
-      <h1 id="main-logo">Deck Builder</h1>
-      <ul>
-        <Link to="/">
-          <li>My Builds</li>
-        </Link>
-        <Link to="/login">
-          <li>Login</li>
-        </Link>
-      </ul>
-    </nav>
+    <Navbar bg="dark" variant="dark" sticky="top">
+      <Navbar.Brand href="/">Deck Builder</Navbar.Brand>
+      <Nav className="ml-auto">
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/login">Login</Nav.Link>
+      </Nav>
+    </Navbar>
   );
 }
 
