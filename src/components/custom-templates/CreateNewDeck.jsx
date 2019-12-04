@@ -8,6 +8,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
 function CreateNewDeck() {
   const [deckTitle, setDeckTitle] = useState("");
@@ -17,6 +19,7 @@ function CreateNewDeck() {
   const [selectedCards, setSelectedCards] = useState([]);
   const [currentCard, setCurrentCard] = useState(null);
   const [currentQty, setCurrentQty] = useState(1);
+  const [tabKey, setTabKey] = useState("mainboard");
   let typingTimer;
 
   let renderFetchedCards = cards => {
@@ -25,9 +28,10 @@ function CreateNewDeck() {
         <p
           key={card.id}
           onClick={() => {
-            document.querySelector("#card-name").value = card.name;
+            document.querySelector("#card-title").value = card.name;
             setFetchedCards([]);
             setCurrentCard(card);
+            document.querySelector("#fetched-cards").hidden = true;
           }}
         >
           {card.name}
@@ -51,17 +55,18 @@ function CreateNewDeck() {
 
   // move this to mtg api module
   let searchName = text => {
-    mtg.card.where({ name: text, pageSize: 10 }).then(cards => {
+    mtg.card.where({ name: text, pageSize: 7 }).then(cards => {
       setFetchedCards(cards);
+      document.querySelector("#fetched-cards").hidden = false;
     });
   };
 
   let handleCardNameInput = e => {
     clearTimeout(typingTimer);
+    let value = e.target.value;
 
-    if (e.target.value) {
-      let text = e.target.value;
-      typingTimer = setTimeout(() => searchName(text), 1000);
+    if (value) {
+      typingTimer = setTimeout(() => searchName(value), 1000);
     }
   };
 
@@ -72,7 +77,7 @@ function CreateNewDeck() {
     ]);
     setCurrentCard(null);
     setCurrentQty(1);
-    document.querySelector("#card-name").value = "";
+    document.querySelector("#card-title").value = "";
     document.querySelector("#card-qty").value = 1;
     e.preventDefault();
   };
@@ -91,9 +96,10 @@ function CreateNewDeck() {
   return (
     <Container>
       <h3>Create a New Deck</h3>
-      <Row>
-        <Col md={5}>
-          <Form>
+      <hr />
+      <Row className="pt-3">
+        <Col xl={6}>
+          <Form autoComplete="off">
             <Form.Row>
               <Col sm={7}>
                 <Form.Group>
@@ -127,18 +133,25 @@ function CreateNewDeck() {
                 onChange={e => setDeckDescription(e.target.value)}
               />
             </Form.Group>
-
+            <hr />
             <Form.Row>
-              <Col sm={8}>
-                <Form.Group>
-                  <Form.Label>Card Name</Form.Label>
+              <Col sm={10}>
+                <Form.Group className="position-relative">
+                  <Form.Label>Card Title</Form.Label>
                   <Form.Control
-                    id="card-name"
+                    id="card-title"
                     type="text"
-                    placeholder="'Sol Ring'"
+                    placeholder="'Alesha, Who Smiles at Death'"
                     onKeyUp={e => handleCardNameInput(e)}
                   />
                 </Form.Group>
+                <div
+                  id="fetched-cards"
+                  className="position-absolute"
+                  style={{ zIndex: "10" }}
+                >
+                  {renderFetchedCards(fetchedCards)}
+                </div>
               </Col>
               <Col sm={2}>
                 <Form.Group>
@@ -152,19 +165,78 @@ function CreateNewDeck() {
                   />
                 </Form.Group>
               </Col>
-              <Col sm={2}>
+            </Form.Row>
+            <Form.Row>
+              <Col sm={4}>
                 <Form.Group>
-                  <Button onClick={addToDeck} variant="primary">
-                    Add
-                  </Button>
+                  <Form.Label>Printing</Form.Label>
+                  <Form.Control as="select">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                  </Form.Control>
+                </Form.Group>
+              </Col>
+              <Col sm={4}>
+                <Form.Group>
+                  <Form.Label>Condition</Form.Label>
+                  <Form.Control as="select">
+                    <option value="mint">Mint/Near Mint</option>
+                    <option value="lightlyPlayed">Lightly Played</option>
+                    <option value="moderatelyPlayed">Moderately Played</option>
+                    <option value="heavilyPlayed">Heavily Played</option>
+                  </Form.Control>
+                </Form.Group>
+              </Col>
+              <Col sm={4}>
+                <Form.Group>
+                  <Form.Label>Board</Form.Label>
+                  <Form.Control as="select">
+                    <option value="mainboard">Mainboard</option>
+                    <option value="sideboard">Sideboard</option>
+                    <option value="maybeboard">Maybeboard</option>
+                  </Form.Control>
                 </Form.Group>
               </Col>
             </Form.Row>
-            {renderFetchedCards(fetchedCards)}
-            <Button onClick={saveSelectedCards}>Save</Button>
+            <Form.Group>
+              <Button onClick={addToDeck} variant="primary">
+                Add To Deck ->
+              </Button>
+            </Form.Group>
+            <hr />
+            <Button onClick={saveSelectedCards} className="w-100">
+              Create Deck
+            </Button>
           </Form>
         </Col>
-        <Col md={7}>{renderSelectedCards(selectedCards)}</Col>
+        <Col xl={6} className="px-3">
+          <Tabs activeKey={tabKey} onSelect={k => setTabKey(k)}>
+            <Tab
+              eventKey="mainboard"
+              title="Mainboard"
+              style={{ height: "70vh", overflow: "scroll" }}
+              className="p-3 border-bottom border-right border-left"
+            >
+              {renderSelectedCards(selectedCards)}
+            </Tab>
+            <Tab
+              eventKey="sideboard"
+              title="Sideboard"
+              style={{ height: "70vh", overflow: "scroll" }}
+              className="p-3 border-bottom border-right border-left"
+            >
+              <p>Sideboard</p>
+            </Tab>
+            <Tab
+              eventKey="maybeboard"
+              title="Maybeboard"
+              style={{ height: "70vh", overflow: "scroll" }}
+              className="p-3 border-bottom border-right border-left"
+            >
+              <p>Maybeboard</p>
+            </Tab>
+          </Tabs>
+        </Col>
       </Row>
     </Container>
   );
