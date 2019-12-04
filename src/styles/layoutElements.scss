@@ -1,0 +1,19 @@
+body {
+  header {
+    height: 7vh;
+    nav {
+      height: 100%;
+    }
+  }
+
+  aside {
+    height: 93vh;
+    width: 25%;
+    float: left;
+    background-color: #f7f7f7;
+  }
+
+  article {
+    height: 93vh;
+  }
+}

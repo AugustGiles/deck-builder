@@ -1,26 +1,20 @@
 import React from "react";
-// import "./styles/App.scss";
-// import "./styles/form.scss";
-import MyBuilds from "./components/pages/MyBuilds";
-import Navigation from "./components/sections/Navigation";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./styles/layoutElements.scss";
+import MyDecks from "./components/pages/MyDecks";
+import MainNav from "./components/layout-elements/MainNav";
+import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <header>
-        <Navigation />
-      </header>
+    <React.Fragment>
+      <MainNav />
 
       <Switch>
-        <Route path="/login">
-          <h1>Login</h1>
-        </Route>
-        <Route exact path="/">
-          <MyBuilds />
-        </Route>
+        <Route path="/login" render={() => <h1>Login</h1>} />
+        <Route path="/my-decks" component={MyDecks} />
+        <Route exact path="/" component={() => <Redirect to="/my-decks" />} />
       </Switch>
-    </Router>
+    </React.Fragment>
   );
 }
 
