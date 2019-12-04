@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import mtg from "mtgsdk";
 import { Form, Col, Button } from "react-bootstrap";
 
+// import myDecksHelper from "../../../../modules/componentHelpers/myDecksHelper";
+
 function CNDForm_AddCard(props) {
   const [fetchedCards, setFetchedCards] = useState([]);
   const [currentCard, setCurrentCard] = useState(null);
   const [currentQty, setCurrentQty] = useState(1);
+  const [condition, setCondition] = useState("Mint/Near Mint");
+  const [board, setBoard] = useState("Mainboard");
   let typingTimer;
 
   let searchName = text => {
@@ -43,10 +47,23 @@ function CNDForm_AddCard(props) {
   };
 
   let addToDeck = e => {
-    props.setMainboardCards([
-      ...props.mainboardCards,
-      { card: currentCard, qty: currentQty }
-    ]);
+    if (board === "Mainboard") {
+      props.setMainboardCards([
+        ...props.mainboardCards,
+        { card: currentCard, qty: currentQty, condition }
+      ]);
+    } else if (board === "Sideboard") {
+      props.setSideboardCards([
+        ...props.sideboardCards,
+        { card: currentCard, qty: currentQty, condition }
+      ]);
+    } else if (board === "Maybeboard") {
+      props.setMaybeboardCards([
+        ...props.maybeboardCards,
+        { card: currentCard, qty: currentQty, condition }
+      ]);
+    }
+
     setCurrentCard(null);
     setCurrentQty(1);
     document.querySelector("#card-title").value = "";
@@ -56,7 +73,7 @@ function CNDForm_AddCard(props) {
 
   return (
     <div className="p-3 border">
-      <h4>Card Entry</h4>
+      <h5>Card Entry</h5>
       <hr />
       <Form.Row>
         <Col sm={10}>
@@ -111,21 +128,24 @@ function CNDForm_AddCard(props) {
         <Col sm={4}>
           <Form.Group>
             <Form.Label>Condition</Form.Label>
-            <Form.Control as="select">
-              <option value="mint">Mint/Near Mint</option>
-              <option value="lightlyPlayed">Lightly Played</option>
-              <option value="moderatelyPlayed">Moderately Played</option>
-              <option value="heavilyPlayed">Heavily Played</option>
+            <Form.Control
+              as="select"
+              onChange={e => setCondition(e.target.value)}
+            >
+              <option value="Mint/Near Mint">Mint/Near Mint</option>
+              <option value="Lightly Played">Lightly Played</option>
+              <option value="Moderately Played">Moderately Played</option>
+              <option value="Heavily Played">Heavily Played</option>
             </Form.Control>
           </Form.Group>
         </Col>
         <Col sm={4}>
           <Form.Group>
             <Form.Label>Board</Form.Label>
-            <Form.Control as="select">
-              <option value="mainboard">Mainboard</option>
-              <option value="sideboard">Sideboard</option>
-              <option value="maybeboard">Maybeboard</option>
+            <Form.Control as="select" onChange={e => setBoard(e.target.value)}>
+              <option value="Mainboard">Mainboard</option>
+              <option value="Sideboard">Sideboard</option>
+              <option value="Maybeboard">Maybeboard</option>
             </Form.Control>
           </Form.Group>
         </Col>

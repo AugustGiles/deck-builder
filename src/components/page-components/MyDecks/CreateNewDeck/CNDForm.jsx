@@ -29,20 +29,24 @@ function CNDForm(props) {
           </Form.Group>
         </Col>
       </Form.Row>
+
       <Form.Group>
         <Form.Label>Description</Form.Label>
         <Form.Control
           as="textarea"
-          rows="5"
+          rows="3"
           placeholder="More information about the build..."
           onChange={e => props.setDeckDescription(e.target.value)}
         />
       </Form.Group>
-      <hr />
 
       <CNDFormAddCard
         mainboardCards={props.mainboardCards}
         setMainboardCards={props.setMainboardCards}
+        sideboardCards={props.sideboardCards}
+        setSideboardCards={props.setSideboardCards}
+        maybeboardCards={props.maybeboardCards}
+        setMaybeboardCards={props.setMaybeboardCards}
       />
 
       <hr />

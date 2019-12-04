@@ -1,4 +1,4 @@
-let deckServiceModule = () => {
+const deckServiceModule = () => {
   let addNewDeck = async deck => {
     let res = await fetch("http://localhost:3001/decks", {
       method: "POST",

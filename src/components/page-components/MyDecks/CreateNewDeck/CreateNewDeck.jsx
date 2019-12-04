@@ -10,6 +10,8 @@ function CreateNewDeck() {
   const [deckFormat, setDeckFormat] = useState("commander");
   const [deckDesription, setDeckDescription] = useState("");
   const [mainboardCards, setMainboardCards] = useState([]);
+  const [sideboardCards, setSideboardCards] = useState([]);
+  const [maybeboardCards, setMaybeboardCards] = useState([]);
 
   let saveSelectedCards = () => {
     let deck = {
@@ -33,11 +35,19 @@ function CreateNewDeck() {
             setDeckFormat={setDeckFormat}
             setMainboardCards={setMainboardCards}
             mainboardCards={mainboardCards}
+            setSideboardCards={setSideboardCards}
+            sideboardCards={sideboardCards}
+            setMaybeboardCards={setMaybeboardCards}
+            maybeboardCards={maybeboardCards}
             saveSelectedCards={saveSelectedCards}
           />
         </Col>
         <Col xl={6} className="px-3">
-          <DeckPreview mainboardCards={mainboardCards} />
+          <DeckPreview
+            mainboardCards={mainboardCards}
+            sideboardCards={sideboardCards}
+            maybeboardCards={maybeboardCards}
+          />
         </Col>
       </Row>
     </Container>

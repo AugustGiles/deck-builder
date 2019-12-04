@@ -32,13 +32,17 @@ function DeckPreview(props) {
         title="Sideboard"
         style={{ height: "70vh", overflow: "scroll" }}
         className="p-3 border-bottom border-right border-left"
-      ></Tab>
+      >
+        <div>{renderSelectedCards(props.sideboardCards)}</div>
+      </Tab>
       <Tab
         eventKey="maybeboard"
         title="Maybeboard"
         style={{ height: "70vh", overflow: "scroll" }}
         className="p-3 border-bottom border-right border-left"
-      ></Tab>
+      >
+        <div>{renderSelectedCards(props.maybeboardCards)}</div>
+      </Tab>
     </Tabs>
   );
 }
