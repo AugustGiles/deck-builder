@@ -5,7 +5,7 @@ import CNDForm from "./CNDForm";
 import DeckPreview from "./DeckPreview";
 
 function CreateNewDeck() {
-  // slim this down by condensing state to one object?
+  // slim this down by condensing state to one object? Redux?
   const [deckTitle, setDeckTitle] = useState("");
   const [deckFormat, setDeckFormat] = useState("commander");
   const [deckDesription, setDeckDescription] = useState("");
@@ -18,7 +18,11 @@ function CreateNewDeck() {
       title: deckTitle,
       format: deckFormat,
       description: deckDesription,
-      mainboardCards
+      cards: {
+        mainboard: mainboardCards,
+        sideboard: sideboardCards,
+        maybeboard: maybeboardCards
+      }
     };
     deckClient.addNewDeck(deck);
   };
