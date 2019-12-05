@@ -5,8 +5,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 
-import Aside from "../layout-elements/Aside";
-import Article from "../layout-elements/Article";
+import { Aside, Article } from "../layout-elements";
 import MyBuildsSidebar from "../page-components/MyDecks/MyBuildsSidebar";
 import AllDeckStats from "../page-components/MyDecks/AllDeckStats";
 import CreateNewDeck from "../page-components/MyDecks/CreateNewDeck/CreateNewDeck";

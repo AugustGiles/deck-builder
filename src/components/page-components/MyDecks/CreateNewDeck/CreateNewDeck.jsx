@@ -31,7 +31,7 @@ function CreateNewDeck() {
     <Container>
       <h3>Create a New Deck</h3>
       <hr />
-      <Row className="pt-3">
+      <Row>
         <Col xl={6}>
           <CNDForm
             setDeckTitle={setDeckTitle}
