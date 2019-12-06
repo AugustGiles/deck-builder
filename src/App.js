@@ -11,9 +11,11 @@ function App() {
       <MainNav />
 
       <Switch>
-        <Route path="/login" render={() => <h1>Login</h1>} />
-        <Route path="/my-decks" component={MyDecks} />
-        <Route exact path="/" component={() => <Redirect to="/my-decks" />} />
+        <div id="site-content">
+          <Route path="/login" render={() => <h1>Login</h1>} />
+          <Route path="/my-decks" component={MyDecks} />
+          <Route exact path="/" component={() => <Redirect to="/my-decks" />} />
+        </div>
       </Switch>
     </React.Fragment>
   );

@@ -20,7 +20,9 @@ function CNDForm_AddCard(props) {
   const [prerelease, setPrerelease] = useState(false);
 
   let addToDeck = e => {
-    let currentCard = cardVersions.find(version => version.set === printing);
+    let currentCard = cardVersions.find(
+      version => version.set_name === printing
+    );
 
     if (board === "Mainboard") {
       props.setMainboardCards([

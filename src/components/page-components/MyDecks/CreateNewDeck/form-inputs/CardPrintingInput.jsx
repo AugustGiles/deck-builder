@@ -8,8 +8,8 @@ function CardPrintingInput(props) {
     } else {
       return props.cardVersions.map(ver => {
         return (
-          <option key={ver.id} value={ver.set}>
-            {ver.set}
+          <option key={ver.id} value={ver.set_name}>
+            {ver.set_name}
           </option>
         );
       });

@@ -6,13 +6,13 @@ import myDecksHelper from "../../../../../modules/component-helpers/myDecksHelpe
 
 function CardNameInput(props) {
   const [dropdownHidden, setDropdownHidden] = useState(true);
-  const [fetchedCardNames, setFetchedCardNames] = useState([]);
+  const [fetchedCards, setFetchedCards] = useState([]);
   let typingTimer;
   let helper = myDecksHelper(
     props.setCardVersions,
     setDropdownHidden,
     props.setCardName,
-    setFetchedCardNames,
+    setFetchedCards,
     props.setPrinting,
     props.cardName
   );
@@ -46,15 +46,15 @@ function CardNameInput(props) {
           boxShadow: "0 2px 5px 0 rgba(0,0,0,0.2), 0 2px 7px 0 rgba(0,0,0,0.19)"
         }}
       >
-        {fetchedCardNames.map(name => {
+        {fetchedCards.map(card => {
           return (
             <ListGroup.Item
               action
-              key={name}
+              key={card}
               className="py-1"
-              onClick={e => helper.handleFetchedCardSelection(e, name)}
+              onClick={e => helper.handleFetchedCardSelection(e, card)}
             >
-              {name}
+              {card.name}
             </ListGroup.Item>
           );
         })}

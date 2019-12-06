@@ -18,9 +18,9 @@ function DeckView() {
     return deck.cards["mainboard"].map(selection => {
       let card = selection.card;
       return (
-        <div className="d-inline-block p-1">
+        <div className="d-inline-block p-1" key={card.id}>
           <img
-            src={card.imageUrl}
+            src={card.image_uris.normal}
             alt={`${card.name} card`}
             style={{ height: "35vh" }}
           />

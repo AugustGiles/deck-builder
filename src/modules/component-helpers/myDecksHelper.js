@@ -1,33 +1,56 @@
-import mtg from "mtgsdk";
+// import mtg from "mtgsdk";
 
 const myDecksHelper = (
   setCardVersions,
   setDropdownHidden,
   setCardName,
-  setFetchedCardNames,
+  setFetchedCards,
   setPrinting,
   cardName
 ) => {
   let searchName = () => {
-    mtg.card.where({ name: cardName, pageSize: 100 }).then(cards => {
-      const distinctCards = [...new Set(cards.map(card => card.name))];
-      const renderedNames = [...distinctCards.slice(0, 5)];
-      setFetchedCardNames(renderedNames);
+    newSearchName();
+    // mtg.card.where({ name: cardName, pageSize: 50 }).then(cards => {
+    //   const distinctCards = [...new Set(cards.map(card => card.name))];
+    //   const renderedNames = [...distinctCards.slice(0, 5)];
+    //   setFetchedCardNames(renderedNames);
+    //   setDropdownHidden(false);
+    // });
+  };
+
+  let newSearchName = async () => {
+    let url = new URL("https://api.scryfall.com/cards/search?");
+    url.search = new URLSearchParams({ q: cardName }).toString();
+    const resp = await fetch(url);
+
+    if (resp.status === 200) {
+      const body = await resp.json();
+      setFetchedCards(body.data);
       setDropdownHidden(false);
-    });
+    }
   };
 
-  let handleFetchedCardSelection = (e, name) => {
+  let handleFetchedCardSelection = async (e, card) => {
     e.preventDefault();
-    setCardName(name);
+    setCardName(card.name);
     setDropdownHidden(true);
-    mtg.card.where({ name }).then(cards => {
-      setCardVersions(cards);
-      setPrinting(cards[0].set);
-    });
+
+    const resp = await fetch(card.prints_search_uri);
+
+    if (resp.status === 200) {
+      const body = await resp.json();
+      const cardVersions = body.data;
+      setCardVersions(cardVersions);
+      setPrinting(cardVersions[0].set_name);
+    }
+
+    // mtg.card.where({ name }).then(cards => {
+    //   setCardVersions(cards);
+    //   setPrinting(cards[0].set);
+    // });
   };
 
-  return { searchName, handleFetchedCardSelection };
+  return { searchName, handleFetchedCardSelection, newSearchName };
 };
 
 export default myDecksHelper;
