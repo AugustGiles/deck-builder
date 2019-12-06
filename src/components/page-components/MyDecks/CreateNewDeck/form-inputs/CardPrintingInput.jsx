@@ -6,10 +6,10 @@ function CardPrintingInput(props) {
     if (cardVersions.length === 0) {
       return <option>Type card name...</option>;
     } else {
-      return props.cardVersions.map(cardVersion => {
+      return props.cardVersions.map(ver => {
         return (
-          <option key={cardVersion.id} value={cardVersion.set}>
-            {cardVersion.set}
+          <option key={ver.id} value={ver.set}>
+            {ver.set}
           </option>
         );
       });

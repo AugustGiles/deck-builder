@@ -8,6 +8,7 @@ function DeckDescriptionInput(props) {
       <Form.Control
         as="textarea"
         rows="3"
+        style={{ resize: "none" }}
         placeholder="More information about the build..."
         onChange={e => props.handleOnChange(e.target.value)}
       />

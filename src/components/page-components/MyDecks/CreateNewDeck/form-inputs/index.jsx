@@ -6,6 +6,7 @@ import CardQty from "./CardQtyInput";
 import DeckDescription from "./DeckDescriptionInput";
 import DeckFormat from "./DeckFormatInput";
 import DeckTitle from "./DeckTitleInput";
+import CardCheckboxes from "./CardCheckboxes";
 
 export const CardBoardInput = CardBoard;
 export const CardConditionInput = CardCondition;
@@ -15,3 +16,4 @@ export const CardQtyInput = CardQty;
 export const DeckDescriptionInput = DeckDescription;
 export const DeckFormatInput = DeckFormat;
 export const DeckTitleInput = DeckTitle;
+export const CardCheckboxesInput = CardCheckboxes;

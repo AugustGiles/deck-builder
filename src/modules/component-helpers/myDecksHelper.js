@@ -1,24 +1,15 @@
 import mtg from "mtgsdk";
 
 const myDecksHelper = (
-  typingTimer,
   setCardVersions,
   setDropdownHidden,
   setCardName,
   setFetchedCardNames,
-  setPrinting
+  setPrinting,
+  cardName
 ) => {
-  let handleCardNameInput = e => {
-    clearTimeout(typingTimer);
-    let inputName = e.target.value;
-
-    if (inputName) {
-      typingTimer = setTimeout(() => searchName(inputName), 1000);
-    }
-  };
-
-  let searchName = text => {
-    mtg.card.where({ name: text, pageSize: 200 }).then(cards => {
+  let searchName = () => {
+    mtg.card.where({ name: cardName, pageSize: 100 }).then(cards => {
       const distinctCards = [...new Set(cards.map(card => card.name))];
       const renderedNames = [...distinctCards.slice(0, 5)];
       setFetchedCardNames(renderedNames);
@@ -36,7 +27,7 @@ const myDecksHelper = (
     });
   };
 
-  return { handleCardNameInput, handleFetchedCardSelection };
+  return { searchName, handleFetchedCardSelection };
 };
 
 export default myDecksHelper;

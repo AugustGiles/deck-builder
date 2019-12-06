@@ -5,7 +5,8 @@ import {
   CardQtyInput,
   CardConditionInput,
   CardBoardInput,
-  CardPrintingInput
+  CardPrintingInput,
+  CardCheckboxesInput
 } from "./form-inputs";
 
 function CNDForm_AddCard(props) {
@@ -15,25 +16,26 @@ function CNDForm_AddCard(props) {
   const [printing, setPrinting] = useState("");
   const [condition, setCondition] = useState("Mint/Near Mint");
   const [board, setBoard] = useState("Mainboard");
+  const [foil, setFoil] = useState(false);
+  const [prerelease, setPrerelease] = useState(false);
 
   let addToDeck = e => {
     let currentCard = cardVersions.find(version => version.set === printing);
-    debugger;
 
     if (board === "Mainboard") {
       props.setMainboardCards([
         ...props.mainboardCards,
-        { card: currentCard, qty: currentQty, condition }
+        { card: currentCard, qty: currentQty, condition, foil, prerelease }
       ]);
     } else if (board === "Sideboard") {
       props.setSideboardCards([
         ...props.sideboardCards,
-        { card: currentCard, qty: currentQty, condition }
+        { card: currentCard, qty: currentQty, condition, foil, prerelease }
       ]);
     } else if (board === "Maybeboard") {
       props.setMaybeboardCards([
         ...props.maybeboardCards,
-        { card: currentCard, qty: currentQty, condition }
+        { card: currentCard, qty: currentQty, condition, foil, prerelease }
       ]);
     }
 
@@ -43,6 +45,10 @@ function CNDForm_AddCard(props) {
     setPrinting("");
     setBoard("Mainboard");
     setCardVersions([]);
+    setFoil(false);
+    setPrerelease(false);
+
+    document.querySelector("#card-title").focus();
     e.preventDefault();
   };
 
@@ -82,10 +88,24 @@ function CNDForm_AddCard(props) {
           <CardBoardInput setBoard={setBoard} board={board} />
         </Col>
       </Form.Row>
-
-      <Button onClick={addToDeck} variant="primary">
-        Add To Deck ->
-      </Button>
+      <Form.Row>
+        <CardCheckboxesInput
+          setFoil={setFoil}
+          foil={foil}
+          setPrerelease={setPrerelease}
+          prerelease={prerelease}
+        />
+        <Col>
+          <Button
+            onClick={addToDeck}
+            variant="primary"
+            className="w-100"
+            disabled={cardVersions.length === 0 ? true : false}
+          >
+            Add To Deck
+          </Button>
+        </Col>
+      </Form.Row>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import deckClient from "../../../../modules/deck-builder-api/deck";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import CNDForm from "./CNDForm";
 import DeckPreview from "./DeckPreview";
 
@@ -28,7 +28,7 @@ function CreateNewDeck() {
   };
 
   return (
-    <Container>
+    <div className="p-3">
       <h3>Create a New Deck</h3>
       <hr />
       <Row>
@@ -48,13 +48,16 @@ function CreateNewDeck() {
         </Col>
         <Col xl={6} className="px-3">
           <DeckPreview
+            setMainboardCards={setMainboardCards}
             mainboardCards={mainboardCards}
+            setSideboardCards={setSideboardCards}
             sideboardCards={sideboardCards}
+            setMaybeboardCards={setMaybeboardCards}
             maybeboardCards={maybeboardCards}
           />
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 

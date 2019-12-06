@@ -9,23 +9,30 @@ function CardNameInput(props) {
   const [fetchedCardNames, setFetchedCardNames] = useState([]);
   let typingTimer;
   let helper = myDecksHelper(
-    typingTimer,
     props.setCardVersions,
     setDropdownHidden,
     props.setCardName,
     setFetchedCardNames,
-    props.setPrinting
+    props.setPrinting,
+    props.cardName
   );
+
+  let handleCardNameInput = e => {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(helper.searchName, 500);
+  };
 
   return (
     <Form.Group className="position-relative mb-3">
       <Form.Label>Card Title</Form.Label>
       <Form.Control
         type="text"
+        id="card-title"
         value={props.cardName}
         className="mb-0"
         onChange={e => props.setCardName(e.target.value)}
-        onKeyUp={e => helper.handleCardNameInput(e)}
+        onKeyUp={e => handleCardNameInput(e)}
+        onKeyDown={e => clearTimeout(typingTimer)}
         placeholder="'Alesha, Who Smiles at Death'"
       />
       <ListGroup
