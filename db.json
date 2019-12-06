@@ -2144,6 +2144,177 @@
         ]
       },
       "id": 9
+    },
+    {
+      "title": "",
+      "format": "commander",
+      "description": "",
+      "cards": {
+        "mainboard": [
+          {
+            "card": {
+              "name": "Alesha, Who Smiles at Death",
+              "manaCost": "{2}{R}",
+              "cmc": 3,
+              "colors": [
+                "Red"
+              ],
+              "colorIdentity": [
+                "B",
+                "R",
+                "W"
+              ],
+              "type": "Legendary Creature — Human Warrior",
+              "supertypes": [
+                "Legendary"
+              ],
+              "types": [
+                "Creature"
+              ],
+              "subtypes": [
+                "Human",
+                "Warrior"
+              ],
+              "rarity": "Rare",
+              "set": "PFRF",
+              "setName": "Fate Reforged Promos",
+              "text": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {W/B}{W/B}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
+              "flavor": "\"Greet death with sword in hand.\"",
+              "artist": "Anastasia Ovchinnikova",
+              "number": "90s",
+              "power": "3",
+              "toughness": "2",
+              "layout": "normal",
+              "watermark": "mardu",
+              "rulings": [
+                {
+                  "date": "2014-11-24",
+                  "text": "You choose which opponent or opposing planeswalker the creature is attacking as you put it onto the battlefield. It doesn’t have to be the same player or planeswalker Alesha is attacking."
+                },
+                {
+                  "date": "2014-11-24",
+                  "text": "Although the creature you return is attacking, it was never declared as an attacking creature (for purposes of abilities that trigger whenever a creature attacks, for example)."
+                }
+              ],
+              "foreignNames": [],
+              "printings": [
+                "C16",
+                "FRF",
+                "PFRF"
+              ],
+              "legalities": [
+                {
+                  "format": "Commander",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Duel",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Legacy",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Modern",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Vintage",
+                  "legality": "Legal"
+                }
+              ],
+              "id": "f28c83b9-71db-5069-95eb-31a193dc3f0f"
+            },
+            "qty": "2",
+            "condition": "Lightly Played"
+          }
+        ],
+        "sideboard": [
+          {
+            "card": {
+              "name": "Torgaar, Famine Incarnate",
+              "manaCost": "{6}{B}{B}",
+              "cmc": 8,
+              "colors": [
+                "Black"
+              ],
+              "colorIdentity": [
+                "B"
+              ],
+              "type": "Legendary Creature — Avatar",
+              "supertypes": [
+                "Legendary"
+              ],
+              "types": [
+                "Creature"
+              ],
+              "subtypes": [
+                "Avatar"
+              ],
+              "rarity": "Rare",
+              "set": "PDOM",
+              "setName": "Dominaria Promos",
+              "text": "As an additional cost to cast this spell, you may sacrifice any number of creatures. This spell costs {2} less to cast for each creature sacrificed this way.\nWhen Torgaar, Famine Incarnate enters the battlefield, up to one target player's life total becomes half their starting life total, rounded down.",
+              "artist": "Lius Lasahido",
+              "number": "108s",
+              "power": "7",
+              "toughness": "6",
+              "layout": "normal",
+              "rulings": [
+                {
+                  "date": "2018-04-27",
+                  "text": "Torgaar’s first ability can’t reduce its cost below {B}{B}. You can sacrifice any number of creatures, even if they won’t reduce Torgaar’s cost any further."
+                },
+                {
+                  "date": "2018-04-27",
+                  "text": "For your life total to become half your starting life total (normally 10, half of 20), you gain or lose the appropriate amount of life. For example, if your life total is 4 when Torgaar’s ability resolves targeting you, it will cause you to gain 6 life; alternatively, if your life total is 25 when it resolves, it will cause you to lose 15 life. Other cards that interact with life gain or life loss will interact with this effect accordingly."
+                },
+                {
+                  "date": "2018-04-27",
+                  "text": "In a Two-Headed Giant game, Torgaar’s ability causes the team’s life total to become half the team’s starting life total (normally 15, half of 30), but only the target player actually gains or loses life."
+                }
+              ],
+              "foreignNames": [],
+              "printings": [
+                "DOM",
+                "PDOM"
+              ],
+              "legalities": [
+                {
+                  "format": "Commander",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Duel",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Historic",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Legacy",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Modern",
+                  "legality": "Legal"
+                },
+                {
+                  "format": "Vintage",
+                  "legality": "Legal"
+                }
+              ],
+              "id": "93fda792-1ce1-5250-8ba9-a0362aebaa57"
+            },
+            "qty": 1,
+            "condition": "Mint/Near Mint"
+          }
+        ],
+        "maybeboard": []
+      },
+      "id": 10
     }
   ]
 }

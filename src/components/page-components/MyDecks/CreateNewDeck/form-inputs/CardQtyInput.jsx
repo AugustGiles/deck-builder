@@ -6,11 +6,10 @@ function CardQtyInput(props) {
     <Form.Group>
       <Form.Label>Qty</Form.Label>
       <Form.Control
-        id="card-qty"
-        type="number"
-        defaultValue={1}
         min={1}
-        onChange={e => props.handleOnChange(e.target.value)}
+        type="number"
+        value={props.currentQty}
+        onChange={e => props.setCurrentQty(e.target.value)}
       />
     </Form.Group>
   );

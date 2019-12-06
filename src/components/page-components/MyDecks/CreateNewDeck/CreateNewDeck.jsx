@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import deckClient from "../../../../modules/deckBuilderApi/deck";
+import deckClient from "../../../../modules/deck-builder-api/deck";
 import { Container, Row, Col } from "react-bootstrap";
 import CNDForm from "./CNDForm";
 import DeckPreview from "./DeckPreview";

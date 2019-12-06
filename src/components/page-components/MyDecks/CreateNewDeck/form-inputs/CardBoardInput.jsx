@@ -7,7 +7,8 @@ function CardBoardInput(props) {
       <Form.Label>Board</Form.Label>
       <Form.Control
         as="select"
-        onChange={e => props.handleOnChange(e.target.value)}
+        value={props.board}
+        onChange={e => props.setBoard(e.target.value)}
       >
         <option value="Mainboard">Mainboard</option>
         <option value="Sideboard">Sideboard</option>

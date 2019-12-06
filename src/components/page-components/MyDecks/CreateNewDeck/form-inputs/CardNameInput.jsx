@@ -1,58 +1,37 @@
 import React, { useState } from "react";
-import mtg from "mtgsdk";
 import Form from "react-bootstrap/Form";
+import ListGroup from "react-bootstrap/ListGroup";
+
+import myDecksHelper from "../../../../../modules/component-helpers/myDecksHelper";
 
 function CardNameInput(props) {
-  const [fetchedCards, setFetchedCards] = useState([]);
+  const [dropdownHidden, setDropdownHidden] = useState(true);
+  const [fetchedCardNames, setFetchedCardNames] = useState([]);
   let typingTimer;
+  let helper = myDecksHelper(
+    typingTimer,
+    props.setCardVersions,
+    setDropdownHidden,
+    props.setCardName,
+    setFetchedCardNames,
+    props.setPrinting
+  );
 
-  let searchName = text => {
-    mtg.card.where({ name: text, pageSize: 5 }).then(cards => {
-      setFetchedCards(cards);
-      document.querySelector("#fetched-cards").hidden = false;
-    });
-  };
-
-  let handleCardNameInput = e => {
-    clearTimeout(typingTimer);
-    let value = e.target.value;
-
-    if (value) {
-      typingTimer = setTimeout(() => searchName(value), 1000);
-    }
-  };
-
-  let renderFetchedCards = cards => {
-    return cards.map(card => {
-      return (
-        <p
-          key={card.id}
-          onClick={() => {
-            document.querySelector("#card-title").value = card.name;
-            setFetchedCards([]);
-            props.setCurrentCard(card);
-            document.querySelector("#fetched-cards").hidden = true;
-          }}
-        >
-          {card.name}
-        </p>
-      );
-    });
-  };
   return (
     <Form.Group className="position-relative mb-3">
       <Form.Label>Card Title</Form.Label>
       <Form.Control
-        className="mb-0"
-        id="card-title"
         type="text"
+        value={props.cardName}
+        className="mb-0"
+        onChange={e => props.setCardName(e.target.value)}
+        onKeyUp={e => helper.handleCardNameInput(e)}
         placeholder="'Alesha, Who Smiles at Death'"
-        onKeyUp={e => handleCardNameInput(e)}
       />
-      <div
-        id="fetched-cards"
-        hidden
-        className="position-absolute p-2"
+      <ListGroup
+        hidden={dropdownHidden === true ? true : false}
+        className="position-absolute"
+        variant="flush"
         style={{
           zIndex: "10",
           backgroundColor: "white",
@@ -60,8 +39,19 @@ function CardNameInput(props) {
           boxShadow: "0 2px 5px 0 rgba(0,0,0,0.2), 0 2px 7px 0 rgba(0,0,0,0.19)"
         }}
       >
-        {renderFetchedCards(fetchedCards)}
-      </div>
+        {fetchedCardNames.map(name => {
+          return (
+            <ListGroup.Item
+              action
+              key={name}
+              className="py-1"
+              onClick={e => helper.handleFetchedCardSelection(e, name)}
+            >
+              {name}
+            </ListGroup.Item>
+          );
+        })}
+      </ListGroup>
     </Form.Group>
   );
 }

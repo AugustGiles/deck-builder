@@ -9,12 +9,17 @@ import {
 } from "./form-inputs";
 
 function CNDForm_AddCard(props) {
-  const [currentCard, setCurrentCard] = useState(null);
+  const [cardName, setCardName] = useState("");
+  const [cardVersions, setCardVersions] = useState([]);
   const [currentQty, setCurrentQty] = useState(1);
+  const [printing, setPrinting] = useState("");
   const [condition, setCondition] = useState("Mint/Near Mint");
   const [board, setBoard] = useState("Mainboard");
 
   let addToDeck = e => {
+    let currentCard = cardVersions.find(version => version.set === printing);
+    debugger;
+
     if (board === "Mainboard") {
       props.setMainboardCards([
         ...props.mainboardCards,
@@ -32,10 +37,12 @@ function CNDForm_AddCard(props) {
       ]);
     }
 
-    setCurrentCard(null);
+    setCardName("");
     setCurrentQty(1);
-    document.querySelector("#card-title").value = "";
-    document.querySelector("#card-qty").value = 1;
+    setCondition("Mint/Near Mint");
+    setPrinting("");
+    setBoard("Mainboard");
+    setCardVersions([]);
     e.preventDefault();
   };
 
@@ -45,22 +52,34 @@ function CNDForm_AddCard(props) {
       <hr />
       <Form.Row>
         <Col sm={10}>
-          <CardNameInput setCurrentCard={setCurrentCard} />
+          <CardNameInput
+            setCardName={setCardName}
+            cardName={cardName}
+            setCardVersions={setCardVersions}
+            setPrinting={setPrinting}
+          />
         </Col>
         <Col sm={2}>
-          <CardQtyInput handleOnChange={val => setCurrentQty(val)} />
+          <CardQtyInput setCurrentQty={setCurrentQty} currentQty={currentQty} />
         </Col>
       </Form.Row>
 
       <Form.Row>
         <Col sm={4}>
-          <CardPrintingInput />
+          <CardPrintingInput
+            cardVersions={cardVersions}
+            setPrinting={setPrinting}
+            printing={printing}
+          />
         </Col>
         <Col sm={4}>
-          <CardConditionInput handleOnChange={val => setCondition(val)} />
+          <CardConditionInput
+            setCondition={setCondition}
+            condition={condition}
+          />
         </Col>
         <Col sm={4}>
-          <CardBoardInput handleOnChange={val => setBoard(val)} />
+          <CardBoardInput setBoard={setBoard} board={board} />
         </Col>
       </Form.Row>
 

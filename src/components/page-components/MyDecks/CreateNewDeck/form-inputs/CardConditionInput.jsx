@@ -7,7 +7,8 @@ function CardConditionInput(props) {
       <Form.Label>Condition</Form.Label>
       <Form.Control
         as="select"
-        onChange={e => props.handleOnChange(e.target.value)}
+        onChange={e => props.setCondition(e.target.value)}
+        value={props.condition}
       >
         <option value="Mint/Near Mint">Mint/Near Mint</option>
         <option value="Lightly Played">Lightly Played</option>
