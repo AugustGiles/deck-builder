@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
+import Table from "react-bootstrap/Table";
 
 // TODO: Clean up styling?
 
@@ -10,9 +11,13 @@ function DeckPreview(props) {
   let renderSelectedCards = cards => {
     return cards.map(selection => {
       return (
-        <p key={selection.card.id}>
-          {selection.qty}x -- {selection.card.name}
-        </p>
+        <tr key={selection.card.id}>
+          <td>{selection.qty}</td>
+          <td>{selection.card.name}</td>
+          <td>{selection.card.set}</td>
+          <td>{selection.condition}</td>
+          <td>X</td>
+        </tr>
       );
     });
   };
@@ -25,7 +30,18 @@ function DeckPreview(props) {
         style={{ height: "70vh", overflow: "scroll" }}
         className="p-3 border-bottom border-right border-left"
       >
-        <div>{renderSelectedCards(props.mainboardCards)}</div>
+        <Table striped size="sm">
+          <thead>
+            <tr>
+              <th>Qty</th>
+              <th>Card Title</th>
+              <th>Set</th>
+              <th>Condition</th>
+              <th>X</th>
+            </tr>
+          </thead>
+          <tbody>{renderSelectedCards(props.mainboardCards)}</tbody>
+        </Table>
       </Tab>
       <Tab
         eventKey="sideboard"
@@ -33,7 +49,18 @@ function DeckPreview(props) {
         style={{ height: "70vh", overflow: "scroll" }}
         className="p-3 border-bottom border-right border-left"
       >
-        <div>{renderSelectedCards(props.sideboardCards)}</div>
+        <Table striped size="sm">
+          <thead>
+            <tr>
+              <th>Qty</th>
+              <th>Card Title</th>
+              <th>Set</th>
+              <th>Condition</th>
+              <th>X</th>
+            </tr>
+          </thead>
+          <tbody>{renderSelectedCards(props.sideboardCards)}</tbody>
+        </Table>
       </Tab>
       <Tab
         eventKey="maybeboard"
@@ -41,7 +68,18 @@ function DeckPreview(props) {
         style={{ height: "70vh", overflow: "scroll" }}
         className="p-3 border-bottom border-right border-left"
       >
-        <div>{renderSelectedCards(props.maybeboardCards)}</div>
+        <Table striped size="sm">
+          <thead>
+            <tr>
+              <th>Qty</th>
+              <th>Card Title</th>
+              <th>Set</th>
+              <th>Condition</th>
+              <th>X</th>
+            </tr>
+          </thead>
+          <tbody>{renderSelectedCards(props.maybeboardCards)}</tbody>
+        </Table>
       </Tab>
     </Tabs>
   );
