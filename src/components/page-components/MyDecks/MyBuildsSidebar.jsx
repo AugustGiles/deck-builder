@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Nav from "react-bootstrap/Nav";
 
+import deckClient from "../../../modules/deck-builder-api/deck";
+
 function MyBuildsSidebar(props) {
+  let [decks, setDecks] = useState([]);
   let active = window.location.pathname;
 
-  // TODO: add all saved decks to menu
+  useEffect(() => {
+    const getDecks = async () => {
+      let fetchedDecks = await deckClient.getAllDecks();
+      setDecks(fetchedDecks);
+    };
+    getDecks();
+  }, []);
+
+  let renderDecks = fetchedDecks => {
+    return fetchedDecks.map(fetchedDeck => {
+      return (
+        <ListGroup.Item
+          action
+          key={fetchedDeck.id}
+          active={active === `/my-decks/deck/${fetchedDeck.id}` ? true : false}
+          href={`${props.url}/deck/${fetchedDeck.id}`}
+        >
+          {fetchedDeck.title}
+        </ListGroup.Item>
+      );
+    });
+  };
 
   return (
     <Nav>
@@ -24,6 +48,7 @@ function MyBuildsSidebar(props) {
         >
           Create New Deck
         </ListGroup.Item>
+        {renderDecks(decks)}
       </ListGroup>
     </Nav>
   );

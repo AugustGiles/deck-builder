@@ -1,16 +1,15 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 
 function AllDeckStats() {
   return (
-    <Container>
+    <div className="p-3">
       <h3>Overall Stats</h3>
       <hr />
       <p>
         This will ultimately be a nice place to see an upper level view of your
         deck stats
       </p>
-    </Container>
+    </div>
   );
 }
 

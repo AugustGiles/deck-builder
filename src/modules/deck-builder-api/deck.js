@@ -18,7 +18,13 @@ const deckServiceModule = () => {
     return data;
   };
 
-  return { addNewDeck, getAllDecks };
+  let getDeck = async id => {
+    let res = await fetch(`http://localhost:3001/decks/${id}`);
+    let data = await res.json();
+    return data;
+  };
+
+  return { addNewDeck, getAllDecks, getDeck };
 };
 
 export default deckServiceModule();
