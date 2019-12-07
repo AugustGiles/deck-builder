@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import deckClient from "../../../modules/deck-builder-api/deck";
+import Form from "react-bootstrap/Form";
 
 function DeckView() {
   let [deck, setDeck] = useState({});
@@ -8,8 +9,8 @@ function DeckView() {
     const getDeck = async () => {
       const urlArr = window.location.href.split("/");
       const id = urlArr[urlArr.length - 1];
-      const fetchedDecks = await deckClient.getDeck(id);
-      setDeck(fetchedDecks);
+      const fetchedDeck = await deckClient.getDeck(id);
+      setDeck(fetchedDeck);
     };
     getDeck();
   }, []);
@@ -36,7 +37,34 @@ function DeckView() {
     <div className="p-3">
       <h3>{deck.title}</h3>
       <hr />
-      <div>{Object.keys(deck).length !== 0 && renderDeckCards(deck)}</div>
+      <div className="d-inline-block w-75">
+        <div>{Object.keys(deck).length !== 0 && renderDeckCards(deck)}</div>
+      </div>
+      <div
+        className="d-inline-block float-right p-2 position-fixed border-left"
+        style={{ width: "19%" }}
+      >
+        <Form>
+          <Form.Group>
+            <Form.Label>View</Form.Label>
+            <Form.Control as="select" size="sm">
+              <option value="mainboard">Mainboard</option>
+              <option value="sideboard">Sideboard</option>
+              <option value="maybeboard">Maybeboard</option>
+            </Form.Control>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Sort By</Form.Label>
+            <Form.Control as="select" size="sm">
+              <option value="type_line">Card Type</option>
+              <option value="cmc">CMC</option>
+              <option value="rarity">Rarity</option>
+              <option value="power">Power</option>
+              <option value="toughness">Toughness</option>
+            </Form.Control>
+          </Form.Group>
+        </Form>
+      </div>
     </div>
   );
 }

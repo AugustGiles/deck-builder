@@ -1,5 +1,3 @@
-// import mtg from "mtgsdk";
-
 const myDecksHelper = (
   setCardVersions,
   setDropdownHidden,
@@ -8,17 +6,7 @@ const myDecksHelper = (
   setPrinting,
   cardName
 ) => {
-  let searchName = () => {
-    newSearchName();
-    // mtg.card.where({ name: cardName, pageSize: 50 }).then(cards => {
-    //   const distinctCards = [...new Set(cards.map(card => card.name))];
-    //   const renderedNames = [...distinctCards.slice(0, 5)];
-    //   setFetchedCardNames(renderedNames);
-    //   setDropdownHidden(false);
-    // });
-  };
-
-  let newSearchName = async () => {
+  let searchName = async () => {
     let url = new URL("https://api.scryfall.com/cards/search?");
     url.search = new URLSearchParams({ q: cardName }).toString();
     const resp = await fetch(url);
@@ -43,14 +31,9 @@ const myDecksHelper = (
       setCardVersions(cardVersions);
       setPrinting(cardVersions[0].set_name);
     }
-
-    // mtg.card.where({ name }).then(cards => {
-    //   setCardVersions(cards);
-    //   setPrinting(cards[0].set);
-    // });
   };
 
-  return { searchName, handleFetchedCardSelection, newSearchName };
+  return { searchName, handleFetchedCardSelection };
 };
 
 export default myDecksHelper;
