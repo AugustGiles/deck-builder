@@ -6,10 +6,12 @@ import {
 } from "react-router-dom";
 
 import { Aside, Article } from "../layout-elements";
-import MyBuildsSidebar from "../page-components/MyDecks/MyBuildsSidebar";
-import AllDeckStats from "../page-components/MyDecks/AllDeckStats";
-import CreateNewDeck from "../page-components/MyDecks/CreateNewDeck/CreateNewDeck";
-import DeckView from "../page-components/MyDecks/DeckView";
+import {
+  CreateNewDeck,
+  DeckView,
+  AllDeckStats,
+  MyDecksSidebar
+} from "../page-components/MyDecks";
 
 function MyDecks() {
   let { url } = useRouteMatch();
@@ -17,7 +19,7 @@ function MyDecks() {
   return (
     <React.Fragment>
       <Aside>
-        <MyBuildsSidebar url={url} />
+        <MyDecksSidebar url={url} />
       </Aside>
       <Article classes="float-right d-inline-block">
         <Switch>

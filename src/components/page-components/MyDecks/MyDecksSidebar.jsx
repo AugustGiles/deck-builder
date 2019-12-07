@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 
 import deckClient from "../../../modules/deck-builder-api/deck";
 
-function MyBuildsSidebar(props) {
+function MyDecksSidebar(props) {
   let [decks, setDecks] = useState([]);
   let active = window.location.pathname;
 
@@ -54,4 +54,4 @@ function MyBuildsSidebar(props) {
   );
 }
 
-export default MyBuildsSidebar;
+export default MyDecksSidebar;

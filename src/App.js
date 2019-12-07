@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
 
 import MyDecks from "./components/pages/MyDecks";
-import MainNav from "./components/layout-elements/MainNav";
+import { MainNav } from "./components/layout-elements";
 import "./styles/layoutElements.scss";
 
 function App() {

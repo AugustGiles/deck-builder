@@ -13,7 +13,7 @@ const myDecksHelper = (
 
     if (resp.status === 200) {
       const body = await resp.json();
-      setFetchedCards(body.data);
+      setFetchedCards(body.data.splice(0, 5));
       setDropdownHidden(false);
     }
   };
