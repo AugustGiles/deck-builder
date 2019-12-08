@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import deckClient from "../../../../modules/deck-builder-api/deck";
 import CardList from "./CardList";
 import FilterSort from "./FilterSort";
+import cardSortHelper from "./cardSortHelper";
 import { FixedRight } from "../../../layout-elements/";
 
 function DeckView() {
@@ -23,7 +24,13 @@ function DeckView() {
     <div className="p-3">
       <h3>{deck.title}</h3>
       <hr />
-      <CardList deck={deck} classList="d-inline-block w-75" />
+      {Object.keys(deck).length !== 0 && (
+        <CardList
+          cards={cardSortHelper.sortByAttribute(sort, deck.cards[view])}
+          classList="d-inline-block w-75"
+        />
+      )}
+
       <FixedRight>
         <FilterSort
           view={view}
