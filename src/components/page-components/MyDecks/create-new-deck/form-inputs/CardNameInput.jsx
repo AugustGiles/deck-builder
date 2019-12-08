@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import ListGroup from "react-bootstrap/ListGroup";
-
-import myDecksHelper from "../../../../../modules/component-helpers/myDecksHelper";
+import CardNameDropdown from "./CardNameDropdown";
+import scryfallApi from "../../../../../modules/scryfall-api";
 
 function CardNameInput(props) {
   const [dropdownHidden, setDropdownHidden] = useState(true);
   const [fetchedCards, setFetchedCards] = useState([]);
   let typingTimer;
-  let helper = myDecksHelper(
-    props.setCardVersions,
-    setDropdownHidden,
-    props.setCardName,
-    setFetchedCards,
-    props.setPrinting,
-    props.cardName
-  );
 
   let handleCardNameInput = e => {
     clearTimeout(typingTimer);
-    typingTimer = setTimeout(helper.searchName, 500);
+    typingTimer = setTimeout(() => {
+      searchName(props.cardName);
+    }, 500);
+  };
+
+  let searchName = async cardName => {
+    let cards = await scryfallApi.getCardsByName(cardName);
+    if (cards) {
+      setFetchedCards(cards.splice(0, 5));
+      setDropdownHidden(false);
+    }
   };
 
   return (
@@ -35,30 +36,13 @@ function CardNameInput(props) {
         onKeyDown={e => clearTimeout(typingTimer)}
         placeholder="'Alesha, Who Smiles at Death'"
       />
-      <ListGroup
-        hidden={dropdownHidden === true ? true : false}
-        className="position-absolute"
-        variant="flush"
-        style={{
-          zIndex: "10",
-          backgroundColor: "white",
-          width: "100%",
-          boxShadow: "0 2px 5px 0 rgba(0,0,0,0.2), 0 2px 7px 0 rgba(0,0,0,0.19)"
-        }}
-      >
-        {fetchedCards.map(card => {
-          return (
-            <ListGroup.Item
-              action
-              key={card}
-              className="py-1"
-              onClick={e => helper.handleFetchedCardSelection(e, card)}
-            >
-              {card.name}
-            </ListGroup.Item>
-          );
-        })}
-      </ListGroup>
+      {!dropdownHidden && (
+        <CardNameDropdown
+          fetchedCards={fetchedCards}
+          setDropdownHidden={setDropdownHidden}
+          {...props}
+        />
+      )}
     </Form.Group>
   );
 }

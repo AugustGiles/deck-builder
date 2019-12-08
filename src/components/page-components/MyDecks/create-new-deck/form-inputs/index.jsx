@@ -8,12 +8,14 @@ import DeckFormat from "./DeckFormatInput";
 import DeckTitle from "./DeckTitleInput";
 import CardCheckboxes from "./CardCheckboxes";
 
-export const CardBoardInput = CardBoard;
-export const CardConditionInput = CardCondition;
-export const CardNameInput = CardName;
-export const CardPrintingInput = CardPrinting;
-export const CardQtyInput = CardQty;
-export const DeckDescriptionInput = DeckDescription;
-export const DeckFormatInput = DeckFormat;
-export const DeckTitleInput = DeckTitle;
-export const CardCheckboxesInput = CardCheckboxes;
+export default {
+  CardBoardInput: CardBoard,
+  CardConditionInput: CardCondition,
+  CardNameInput: CardName,
+  CardPrintingInput: CardPrinting,
+  CardQtyInput: CardQty,
+  DeckDescriptionInput: DeckDescription,
+  DeckFormatInput: DeckFormat,
+  DeckTitleInput: DeckTitle,
+  CardCheckboxesInput: CardCheckboxes
+};

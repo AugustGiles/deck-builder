@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Form, Col, Button } from "react-bootstrap";
-import {
-  CardNameInput,
-  CardQtyInput,
-  CardConditionInput,
-  CardBoardInput,
-  CardPrintingInput,
-  CardCheckboxesInput
-} from "./form-inputs";
+import input from "./form-inputs";
 
 function CNDForm_AddCard(props) {
   const [cardName, setCardName] = useState("");
@@ -15,43 +8,39 @@ function CNDForm_AddCard(props) {
   const [currentQty, setCurrentQty] = useState(1);
   const [printing, setPrinting] = useState("");
   const [condition, setCondition] = useState("Mint/Near Mint");
-  const [board, setBoard] = useState("Mainboard");
+  const [board, setBoard] = useState("mainboard");
   const [foil, setFoil] = useState(false);
   const [prerelease, setPrerelease] = useState(false);
 
   let addToDeck = e => {
+    e.preventDefault();
+    props.setCards(compileCards());
+    resetState();
+  };
+
+  let compileCards = () => {
     let currentCard = cardVersions.find(
       version => version.set_name === printing
     );
 
-    if (board === "Mainboard") {
-      props.setMainboardCards([
-        ...props.mainboardCards,
-        { card: currentCard, qty: currentQty, condition, foil, prerelease }
-      ]);
-    } else if (board === "Sideboard") {
-      props.setSideboardCards([
-        ...props.sideboardCards,
-        { card: currentCard, qty: currentQty, condition, foil, prerelease }
-      ]);
-    } else if (board === "Maybeboard") {
-      props.setMaybeboardCards([
-        ...props.maybeboardCards,
-        { card: currentCard, qty: currentQty, condition, foil, prerelease }
-      ]);
-    }
+    let cardsCopy = { ...props.cards };
+    cardsCopy[board] = [
+      ...props.cards[board],
+      { card: currentCard, qty: currentQty, condition, foil, prerelease }
+    ];
+    return cardsCopy;
+  };
 
+  let resetState = () => {
     setCardName("");
     setCurrentQty(1);
     setCondition("Mint/Near Mint");
     setPrinting("");
-    setBoard("Mainboard");
+    setBoard("mainboard");
     setCardVersions([]);
     setFoil(false);
     setPrerelease(false);
-
     document.querySelector("#card-title").focus();
-    e.preventDefault();
   };
 
   return (
@@ -60,7 +49,7 @@ function CNDForm_AddCard(props) {
       <hr />
       <Form.Row>
         <Col sm={10}>
-          <CardNameInput
+          <input.CardNameInput
             setCardName={setCardName}
             cardName={cardName}
             setCardVersions={setCardVersions}
@@ -68,30 +57,33 @@ function CNDForm_AddCard(props) {
           />
         </Col>
         <Col sm={2}>
-          <CardQtyInput setCurrentQty={setCurrentQty} currentQty={currentQty} />
+          <input.CardQtyInput
+            setCurrentQty={setCurrentQty}
+            currentQty={currentQty}
+          />
         </Col>
       </Form.Row>
 
       <Form.Row>
         <Col sm={4}>
-          <CardPrintingInput
+          <input.CardPrintingInput
             cardVersions={cardVersions}
             setPrinting={setPrinting}
             printing={printing}
           />
         </Col>
         <Col sm={4}>
-          <CardConditionInput
+          <input.CardConditionInput
             setCondition={setCondition}
             condition={condition}
           />
         </Col>
         <Col sm={4}>
-          <CardBoardInput setBoard={setBoard} board={board} />
+          <input.CardBoardInput setBoard={setBoard} board={board} />
         </Col>
       </Form.Row>
       <Form.Row>
-        <CardCheckboxesInput
+        <input.CardCheckboxesInput
           setFoil={setFoil}
           foil={foil}
           setPrerelease={setPrerelease}

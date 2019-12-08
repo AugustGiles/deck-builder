@@ -1,88 +1,45 @@
 import React, { useState } from "react";
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
-
-// TODO: Clean up styling?
+import { Tabs, Tab, Table } from "react-bootstrap";
+import DeckPreviewCardRow from "./DeckPreviewCardRow";
 
 function DeckPreview(props) {
   const [tabKey, setTabKey] = useState("mainboard");
+  const boards = ["Mainboard", "Sideboard", "Maybeboard"];
 
-  let handleDelete = (id, board, setBoard) => {
-    let cards = [...board];
-    let indexToRemove = cards.findIndex(selection => selection.card.id === id);
-    cards.splice(indexToRemove, 1);
-    setBoard(cards);
-  };
-
-  let renderSelectedCards = (boardCards, setBoard) => {
-    return boardCards.map(selection => {
+  let renderSelectedCards = () => {
+    return props.cards[tabKey].map(selection => {
       return (
-        <tr key={selection.card.id}>
-          <td>{selection.qty}</td>
-          <td>{selection.card.name}</td>
-          <td>{selection.card.set}</td>
-          <td>{selection.condition}</td>
-          <td>{selection.foil ? "F" : "-"}</td>
-          <td>{selection.prerelease ? "P" : "-"}</td>
-          <td className="p-0">
-            <Button
-              className="rounded-0 w-100 border-0"
-              variant="outline-danger"
-              onClick={() =>
-                handleDelete(selection.card.id, boardCards, setBoard)
-              }
-            >
-              X
-            </Button>
-          </td>
-        </tr>
+        <DeckPreviewCardRow selection={selection} handleDelete={handleDelete} />
       );
     });
   };
 
+  let handleDelete = id => {
+    let cardsCopy = { ...props.cards };
+    let indexToRemove = props.cards[tabKey].findIndex(
+      selection => selection.card.id === id
+    );
+    cardsCopy[tabKey].splice(indexToRemove, 1);
+    props.setCards(cardsCopy);
+  };
+
   return (
     <Tabs activeKey={tabKey} onSelect={k => setTabKey(k)}>
-      <Tab
-        eventKey="mainboard"
-        title="Mainboard"
-        style={{ height: "72vh", overflow: "scroll" }}
-        className="border-bottom border-right border-left"
-      >
-        <Table striped size="sm">
-          <tbody>
-            {renderSelectedCards(props.mainboardCards, props.setMainboardCards)}
-          </tbody>
-        </Table>
-      </Tab>
-      <Tab
-        eventKey="sideboard"
-        title="Sideboard"
-        style={{ height: "72vh", overflow: "scroll" }}
-        className="border-bottom border-right border-left"
-      >
-        <Table striped size="sm">
-          <tbody>
-            {renderSelectedCards(props.sideboardCards, props.setSideboardCards)}
-          </tbody>
-        </Table>
-      </Tab>
-      <Tab
-        eventKey="maybeboard"
-        title="Maybeboard"
-        style={{ height: "72vh", overflow: "scroll" }}
-        className="border-bottom border-right border-left"
-      >
-        <Table striped size="sm">
-          <tbody>
-            {renderSelectedCards(
-              props.maybeboardCards,
-              props.setMaybeboardCards
-            )}
-          </tbody>
-        </Table>
-      </Tab>
+      {boards.map(board => {
+        return (
+          <Tab
+            key={board}
+            title={board}
+            eventKey={board.toLowerCase()}
+            style={{ height: "72vh", overflow: "scroll" }}
+            className="border-bottom border-right border-left"
+          >
+            <Table striped size="sm">
+              <tbody>{renderSelectedCards(props.cards, props.setCards)}</tbody>
+            </Table>
+          </Tab>
+        );
+      })}
     </Tabs>
   );
 }

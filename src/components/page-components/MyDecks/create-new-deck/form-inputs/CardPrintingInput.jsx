@@ -3,17 +3,13 @@ import Form from "react-bootstrap/Form";
 
 function CardPrintingInput(props) {
   let renderPrintingOptions = cardVersions => {
-    if (cardVersions.length === 0) {
-      return <option>Type card name...</option>;
-    } else {
-      return props.cardVersions.map(ver => {
-        return (
-          <option key={ver.id} value={ver.set_name}>
-            {ver.set_name}
-          </option>
-        );
-      });
-    }
+    return props.cardVersions.map(ver => {
+      return (
+        <option key={ver.id} value={ver.set_name}>
+          {ver.set_name}
+        </option>
+      );
+    });
   };
 
   return (
@@ -24,7 +20,11 @@ function CardPrintingInput(props) {
         onChange={e => props.setPrinting(e.target.value)}
         value={props.printing}
       >
-        {renderPrintingOptions(props.cardVersions)}
+        {props.cardVersions.length === 0 ? (
+          <option>Type card name...</option>
+        ) : (
+          renderPrintingOptions(props.cardVersions)
+        )}
       </Form.Control>
     </Form.Group>
   );

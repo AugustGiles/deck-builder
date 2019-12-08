@@ -10,9 +10,9 @@ function CardBoardInput(props) {
         value={props.board}
         onChange={e => props.setBoard(e.target.value)}
       >
-        <option value="Mainboard">Mainboard</option>
-        <option value="Sideboard">Sideboard</option>
-        <option value="Maybeboard">Maybeboard</option>
+        <option value="mainboard">Mainboard</option>
+        <option value="sideboard">Sideboard</option>
+        <option value="maybeboard">Maybeboard</option>
       </Form.Control>
     </Form.Group>
   );
