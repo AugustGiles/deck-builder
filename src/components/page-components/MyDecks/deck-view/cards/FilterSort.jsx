@@ -28,7 +28,7 @@ function FilterSort(props) {
           <option value="type_line">Card Type</option>
           <option value="cmc">CMC</option>
           <option value="rarity">Rarity</option>
-          <option value="price">Price</option>
+          {/* <option value="price">Price</option> */}
         </Form.Control>
       </Form.Group>
     </Form>

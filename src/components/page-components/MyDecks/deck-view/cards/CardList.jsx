@@ -1,5 +1,4 @@
 import React from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
 
 function CardList(props) {
   let renderCardObj = () => {
@@ -7,10 +6,9 @@ function CardList(props) {
     return objKeys.map(objKey => {
       return (
         <div key={objKey}>
-          <Jumbotron fluid className="p-3">
-            <h4>{objKey}</h4>
-          </Jumbotron>
+          <h4>{objKey}</h4>
           {renderCards(objKey)}
+          <hr />
         </div>
       );
     });
@@ -26,14 +24,8 @@ function CardList(props) {
             alt={`${card.name} card`}
             style={{ height: "35vh" }}
           />
-          <p
-            className="text-muted text-center m-0"
-            style={{ fontSize: "small" }}
-          >
-            {card.name}
-          </p>
           <p className="text-muted text-center" style={{ fontSize: "small" }}>
-            {card.prices.usd ? `$${card.prices.usd}` : "Price Not Listed"}
+            {card.name}
           </p>
         </div>
       );

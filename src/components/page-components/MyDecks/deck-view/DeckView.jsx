@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import deckClient from "../../../../modules/deck-builder-api/deck";
-import CardList from "./CardList";
-import FilterSort from "./FilterSort";
-import cardSortHelper from "./cardSortHelper";
-import { FixedRight } from "../../../layout-elements/";
+import DeckTitleBar from "./DeckTitleBar";
+import Cards from "./cards/Cards";
+import Dashboard from "./dashboard/Dashboard";
 
 function DeckView() {
   let [deck, setDeck] = useState({});
-  let [view, setView] = useState("mainboard");
-  let [sort, setSort] = useState("type_line");
+  let [deckViewPage, setDeckViewPage] = useState("dashboard");
 
   useEffect(() => {
     const getDeck = async () => {
@@ -21,25 +19,20 @@ function DeckView() {
   }, []);
 
   return (
-    <div className="p-3">
-      <h3>{deck.title}</h3>
-      <hr />
-      {Object.keys(deck).length !== 0 && (
-        <CardList
-          cards={cardSortHelper.sortByAttribute(sort, deck.cards[view])}
-          classList="d-inline-block w-75"
-        />
-      )}
-
-      <FixedRight>
-        <FilterSort
-          view={view}
-          setView={setView}
-          sort={sort}
-          setSort={setSort}
-        />
-      </FixedRight>
-    </div>
+    <React.Fragment>
+      <DeckTitleBar
+        title={deck.title}
+        deckViewPage={deckViewPage}
+        setDeckViewPage={setDeckViewPage}
+      />
+      <div style={{ marginTop: "6%" }} className="p-3">
+        {deckViewPage === "cards" ? (
+          <Cards deck={deck} />
+        ) : (
+          <Dashboard deck={deck} />
+        )}
+      </div>
+    </React.Fragment>
   );
 }
 
