@@ -10,7 +10,7 @@ function FilterSort(props) {
           as="select"
           size="sm"
           value={props.view}
-          onChange={e => props.setView(e.target.value)}
+          onChange={e => props.setBoardView(e.target.value)}
         >
           <option value="mainboard">Mainboard</option>
           <option value="sideboard">Sideboard</option>
