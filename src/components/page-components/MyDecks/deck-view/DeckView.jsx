@@ -25,7 +25,7 @@ function DeckView() {
         setDeckViewPage={setDeckViewPage}
       />
       <div
-        style={{ top: "90px", overflow: "scroll" }}
+        style={{ top: "95px", overflow: "scroll", width: "80%" }}
         className="p-3 position-fixed h-100"
       >
         {deckViewPage === "cards" ? (

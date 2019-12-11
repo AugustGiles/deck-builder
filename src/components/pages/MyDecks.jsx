@@ -21,7 +21,7 @@ function MyDecks() {
       <Aside>
         <MyDecksSidebar url={url} />
       </Aside>
-      <Article classes="float-right d-inline-block">
+      <Article classes="float-right d-inline-block" style={{ width: "80%" }}>
         <Switch>
           <Route path="/my-decks/create-new-deck" component={CreateNewDeck} />
           <Route path="/my-decks/deck/:id" component={DeckView} />

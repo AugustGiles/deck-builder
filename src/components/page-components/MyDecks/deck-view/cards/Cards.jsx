@@ -16,7 +16,7 @@ function Cards(props) {
             sort,
             props.deck.cards[boardView]
           )}
-          classList="d-inline-block w-75"
+          classList="d-inline-block w-75 mb-5"
         />
       )}
       <FixedRight>

@@ -14,7 +14,7 @@ function DeckTitleBar(props) {
         activeKey={props.deckViewPage}
         onSelect={selectedKey => props.setDeckViewPage(selectedKey)}
         variant="tabs"
-        className="h-100"
+        className="h-100 bg-white"
       >
         <Nav.Item>
           <Nav.Link eventKey="dashboard">Dashboard</Nav.Link>
