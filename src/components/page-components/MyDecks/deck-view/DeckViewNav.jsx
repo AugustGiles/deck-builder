@@ -22,6 +22,9 @@ function DeckTitleBar(props) {
         <Nav.Item>
           <Nav.Link eventKey="cards">Cards</Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="table">Table</Nav.Link>
+        </Nav.Item>
       </Nav>
     </div>
   );

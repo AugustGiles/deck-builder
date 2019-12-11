@@ -6,7 +6,7 @@ function CardList(props) {
     return objKeys.map(objKey => {
       return (
         <div key={objKey}>
-          <h4>{objKey}</h4>
+          <p>{objKey}</p>
           {renderCards(objKey)}
           <hr />
         </div>
