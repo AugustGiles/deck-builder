@@ -40,7 +40,7 @@ function CompiledPieChart(props) {
           cx="50%"
           cy="50%"
           innerRadius={10}
-          outerRadius={80}
+          outerRadius={100}
           // label
           label={renderCustomizedLabel}
           labelLine={false}
