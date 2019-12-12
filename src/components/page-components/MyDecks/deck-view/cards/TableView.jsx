@@ -7,7 +7,6 @@ function TableView(props) {
 
   let renderManaImages = cost => {
     if (cost !== "" && cost !== undefined) {
-      debugger;
       let costArr = cost.slice(1, cost.length - 1).split("}{");
 
       return costArr.map((costSymbol, i) => {
@@ -27,6 +26,11 @@ function TableView(props) {
   let renderRows = deck => {
     return tableSortHelper
       .sortByAttribute(sort, deck, props.deckViewPage)
+      .filter(selection =>
+        selection.card.name
+          .toLowerCase()
+          .includes(props.searchText.toLowerCase())
+      )
       .map(selection => {
         return (
           <tr key={selection.card.id}>

@@ -30,9 +30,9 @@ const cardSortHelper = () => {
 
       types.forEach(type => {
         if (typeLine.includes(type)) {
-          returnObj[`${type}s`]
-            ? returnObj[`${type}s`].push(selection)
-            : (returnObj[`${type}s`] = [selection]);
+          returnObj[type]
+            ? returnObj[type].push(selection)
+            : (returnObj[type] = [selection]);
         }
       });
     });

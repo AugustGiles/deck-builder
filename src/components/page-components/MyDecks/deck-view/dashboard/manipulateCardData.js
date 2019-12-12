@@ -15,7 +15,11 @@ const manipulateCardData = () => {
     let compiledObj = cardSortHelper.sortByAttribute("type_line", cards);
 
     let returnArr = Object.keys(compiledObj).map(type => {
-      return { type, qty: compiledObj[type].length };
+      let qty = compiledObj[type].reduce(
+        (acc, curr) => acc + parseInt(curr.qty),
+        0
+      );
+      return { type, qty };
     });
 
     return returnArr;

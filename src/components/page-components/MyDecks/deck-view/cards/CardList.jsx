@@ -7,6 +7,7 @@ function CardList(props) {
       "type_line",
       deck.cards[deckViewPage]
     );
+
     let objKeys = Object.keys(cards);
     return objKeys.map(objKey => {
       return (
@@ -20,7 +21,8 @@ function CardList(props) {
           >
             {objKey}
           </h4>
-          {renderCards(cards[objKey])}
+          <div className="d-flex flex-wrap">{renderCards(cards[objKey])}</div>
+
           <hr />
         </div>
       );
@@ -30,13 +32,22 @@ function CardList(props) {
   let renderCards = cards => {
     return cards.map(selection => {
       let card = selection.card;
+      if (!card.name.toLowerCase().includes(props.searchText.toLowerCase())) {
+        return null;
+      }
+      let url;
+      if (!card.image_uris && card.card_faces) {
+        url = card.card_faces[0].image_uris.normal;
+      } else {
+        url = card.image_uris.normal;
+      }
       return (
-        <div className="d-inline-block p-1" key={card.id}>
-          <img
-            src={card.image_uris && card.image_uris.normal}
-            alt={`${card.name} card`}
-            style={{ height: "35vh" }}
-          />
+        <div
+          className="d-inline-block p-1"
+          key={card.id}
+          style={{ maxWidth: "200px", height: "100%" }}
+        >
+          <img src={url} alt={`${card.name} card`} style={{ height: "35vh" }} />
           <p className="text-muted text-center" style={{ fontSize: "small" }}>
             {card.name}
           </p>
