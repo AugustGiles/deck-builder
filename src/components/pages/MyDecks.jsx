@@ -23,7 +23,9 @@ function MyDecks() {
       </Aside>
       <Article classes="float-right d-inline-block" style={{ width: "80%" }}>
         <Switch>
-          <Route path="/my-decks/create-new-deck" component={CreateNewDeck} />
+          <Route path="/my-decks/create-new-deck">
+            <CreateNewDeck context="create" deck={{}} />
+          </Route>
           <Route path="/my-decks/deck/:id" component={DeckView} />
           <Route exact path="/my-decks" component={AllDeckStats} />
         </Switch>

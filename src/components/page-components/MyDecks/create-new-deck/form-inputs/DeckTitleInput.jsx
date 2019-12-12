@@ -7,6 +7,7 @@ function DeckTitleInput(props) {
       <Form.Label>Deck Title</Form.Label>
       <Form.Control
         type="text"
+        value={props.title}
         placeholder="Enter title"
         onChange={e => props.handleOnChange(e.target.value)}
       />

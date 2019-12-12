@@ -7,6 +7,7 @@ function DeckFormatInput(props) {
       <Form.Label>Format</Form.Label>
       <Form.Control
         as="select"
+        value={props.format}
         onChange={e => props.handleOnChange(e.target.value)}
       >
         <option value="commander">Commander</option>

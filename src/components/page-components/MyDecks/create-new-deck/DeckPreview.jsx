@@ -9,7 +9,11 @@ function DeckPreview(props) {
   let renderSelectedCards = () => {
     return props.cards[tabKey].map(selection => {
       return (
-        <DeckPreviewCardRow selection={selection} handleDelete={handleDelete} />
+        <DeckPreviewCardRow
+          selection={selection}
+          handleDelete={handleDelete}
+          key={selection.card.id}
+        />
       );
     });
   };

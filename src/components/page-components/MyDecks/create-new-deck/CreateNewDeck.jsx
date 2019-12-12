@@ -4,17 +4,20 @@ import { Row, Col } from "react-bootstrap";
 import CNDForm from "./CNDForm";
 import DeckPreview from "./DeckPreview";
 
-function CreateNewDeck() {
+function CreateNewDeck(props) {
   const [deckInfo, setDeckInfo] = useState({
-    title: "",
-    format: "commander",
-    description: ""
+    title: props.deck.title || "",
+    format: props.deck.format || "commander",
+    description: props.deck.description || ""
   });
-  const [cards, setCards] = useState({
-    mainboard: [],
-    sideboard: [],
-    maybeboard: []
-  });
+
+  const [cards, setCards] = useState(
+    props.deck.cards || {
+      mainboard: [],
+      sideboard: [],
+      maybeboard: []
+    }
+  );
 
   const updateDeckInfo = (val, key) => {
     let deckInfoCopy = { ...deckInfo };
@@ -25,20 +28,24 @@ function CreateNewDeck() {
   const saveSelectedCards = () => {
     let deck = { ...deckInfo };
     deck["cards"] = cards;
-    deckClient.addNewDeck(deck);
+    if (props.context === "create") {
+      deckClient.addNewDeck(deck);
+    } else if (props.context === "edit") {
+      deckClient.editDeck(deck, props.deck.id);
+    }
   };
 
   return (
     <div className="p-3">
-      <h3>Create a New Deck</h3>
-      <hr />
       <Row>
         <Col xl={6}>
           <CNDForm
+            deckInfo={deckInfo}
             updateDeckInfo={updateDeckInfo}
             setCards={setCards}
             cards={cards}
             saveSelectedCards={saveSelectedCards}
+            context={props.context}
           />
         </Col>
         <Col xl={6} className="px-3">

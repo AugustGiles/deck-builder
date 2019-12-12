@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import deckClient from "../../../../modules/deck-builder-api/deck";
 import DeckViewNav from "./DeckViewNav";
 import Cards from "./cards/Cards";
+import EditDeck from "./EditDeck";
 import Dashboard from "./dashboard/Dashboard";
 
 function DeckView() {
@@ -37,6 +38,8 @@ function DeckView() {
           deckViewPage === "maybeboard") && (
           <Cards deckViewPage={deckViewPage} deck={deck} />
         )}
+
+        {deckViewPage === "edit" && <EditDeck deck={deck} />}
       </div>
     </React.Fragment>
   );
