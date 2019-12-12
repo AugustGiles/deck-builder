@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import deckClient from "../../../../modules/deck-builder-api/deck";
 import DeckViewNav from "./DeckViewNav";
 import Cards from "./cards/Cards";
-import CardsTable from "./table/Table";
 import Dashboard from "./dashboard/Dashboard";
 
 function DeckView() {
@@ -26,14 +25,18 @@ function DeckView() {
         setDeckViewPage={setDeckViewPage}
       />
       <div
-        style={{ top: "95px", overflow: "scroll", width: "80%" }}
+        style={{ top: "12.5vh", overflow: "scroll", width: "80%" }}
         className="p-3 position-fixed h-100"
       >
         {deckViewPage === "dashboard" && Object.keys(deck).length > 0 && (
           <Dashboard deck={deck} />
         )}
-        {deckViewPage === "cards" && <Cards deck={deck} />}
-        {deckViewPage === "table" && <CardsTable deck={deck} />}
+
+        {(deckViewPage === "mainboard" ||
+          deckViewPage === "sideboard" ||
+          deckViewPage === "maybeboard") && (
+          <Cards deckViewPage={deckViewPage} deck={deck} />
+        )}
       </div>
     </React.Fragment>
   );

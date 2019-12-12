@@ -1,32 +1,41 @@
 import React, { useState } from "react";
 import CardList from "./CardList";
-import FilterSort from "./FilterSort";
-import cardSortHelper from "./cardSortHelper";
-import { FixedRight } from "../../../../layout-elements/";
+import TableView from "./TableView";
+import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
 
 function Cards(props) {
-  let [boardView, setBoardView] = useState("mainboard");
-  let [sort, setSort] = useState("type_line");
+  let [cardView, setCardView] = useState("table");
 
   return (
     <React.Fragment>
-      {Object.keys(props.deck).length !== 0 && (
-        <CardList
-          cards={cardSortHelper.sortByAttribute(
-            sort,
-            props.deck.cards[boardView]
-          )}
-          classList="d-inline-block w-75 mb-5"
-        />
+      <ToggleButtonGroup
+        type="radio"
+        value={cardView}
+        name="cardView"
+        size="sm"
+        className="float-right mb-2"
+        onChange={val => setCardView(val)}
+      >
+        <ToggleButton value={"table"}>Table View</ToggleButton>
+        <ToggleButton value={"cards"}>Card View</ToggleButton>
+      </ToggleButtonGroup>
+
+      {cardView === "table" &&
+        props.deck.cards[props.deckViewPage].length > 0 && (
+          <TableView deckViewPage={props.deckViewPage} deck={props.deck} />
+        )}
+      {cardView === "cards" &&
+        props.deck.cards[props.deckViewPage].length > 0 && (
+          <CardList
+            deckViewPage={props.deckViewPage}
+            deck={props.deck}
+            classList="d-inline-block mb-5"
+          />
+        )}
+      {props.deck.cards[props.deckViewPage].length === 0 && (
+        <p>No cards in {props.deckViewPage}</p>
       )}
-      <FixedRight>
-        <FilterSort
-          boardView={boardView}
-          setBoardView={setBoardView}
-          sort={sort}
-          setSort={setSort}
-        />
-      </FixedRight>
     </React.Fragment>
   );
 }

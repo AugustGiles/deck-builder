@@ -1,26 +1,39 @@
 import React from "react";
+import cardSortHelper from "./cardSortHelper";
 
 function CardList(props) {
-  let renderCardObj = () => {
-    let objKeys = Object.keys(props.cards);
+  let renderCardObj = (deck, deckViewPage) => {
+    let cards = cardSortHelper.sortByAttribute(
+      "type_line",
+      deck.cards[deckViewPage]
+    );
+    let objKeys = Object.keys(cards);
     return objKeys.map(objKey => {
       return (
         <div key={objKey}>
-          <p>{objKey}</p>
-          {renderCards(objKey)}
+          <h4
+            style={{
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              fontWeight: "300"
+            }}
+          >
+            {objKey}
+          </h4>
+          {renderCards(cards[objKey])}
           <hr />
         </div>
       );
     });
   };
 
-  let renderCards = key => {
-    return props.cards[key].map(selection => {
+  let renderCards = cards => {
+    return cards.map(selection => {
       let card = selection.card;
       return (
         <div className="d-inline-block p-1" key={card.id}>
           <img
-            src={card.image_uris.normal}
+            src={card.image_uris && card.image_uris.normal}
             alt={`${card.name} card`}
             style={{ height: "35vh" }}
           />
@@ -34,7 +47,7 @@ function CardList(props) {
 
   return (
     <div className={props.classList}>
-      <div>{renderCardObj()}</div>
+      <div>{renderCardObj(props.deck, props.deckViewPage)}</div>
     </div>
   );
 }
