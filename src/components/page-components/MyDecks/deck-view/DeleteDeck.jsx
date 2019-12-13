@@ -19,7 +19,7 @@ function DeleteDeck(props) {
 
   return (
     <Row>
-      <Col sm={12} md={6}>
+      <Col sm={12} lg={6}>
         <Card>
           <Card.Header>
             <b className="d-inline-block">

@@ -39,7 +39,9 @@ function DeckPreview(props) {
             className="border-bottom border-right border-left"
           >
             <Table striped size="sm">
-              <tbody>{renderSelectedCards(props.cards, props.setCards)}</tbody>
+              <tbody style={{ fontSize: "small" }}>
+                {renderSelectedCards(props.cards, props.setCards)}
+              </tbody>
             </Table>
           </Tab>
         );

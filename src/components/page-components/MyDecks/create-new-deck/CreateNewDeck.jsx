@@ -49,7 +49,7 @@ function CreateNewDeck(props) {
             context={props.context}
           />
         </Col>
-        <Col xl={6} className="px-3">
+        <Col xl={6} className="px-3 py-3 py-xl-0">
           <DeckPreview setCards={setCards} cards={cards} />
         </Col>
       </Row>

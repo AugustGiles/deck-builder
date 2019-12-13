@@ -14,6 +14,7 @@ function DeckPreviewCardRow(props) {
         <Button
           className="rounded-0 w-100 border-0"
           variant="outline-danger"
+          size="sm"
           onClick={() => props.handleDelete(props.selection.card.id)}
         >
           X
