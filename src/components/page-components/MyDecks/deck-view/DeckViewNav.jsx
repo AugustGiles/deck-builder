@@ -32,6 +32,11 @@ function DeckTitleBar(props) {
         <Nav.Item>
           <Nav.Link eventKey="edit">Edit Deck</Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link className="float-right text-danger" eventKey="delete">
+            Delete Deck
+          </Nav.Link>
+        </Nav.Item>
       </Nav>
     </div>
   );

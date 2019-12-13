@@ -8283,51 +8283,162 @@
             "prerelease": false
           }
         ],
-        "sideboard": [],
-        "maybeboard": []
-      },
-      "id": 1
-    },
-    {
-      "title": "Test Sideboard",
-      "format": "commander",
-      "description": "Made to test the filter functionality of deck view page",
-      "cards": {
-        "mainboard": [
+        "sideboard": [
           {
             "card": {
               "object": "card",
-              "id": "fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b",
-              "oracle_id": "0310dfdb-0498-488d-9f1a-279f8239e024",
-              "multiverse_ids": [],
-              "tcgplayer_id": 203360,
-              "name": "Meren of Clan Nel Toth",
+              "id": "8690cbcc-f8fd-41f7-9e28-e61c12b04014",
+              "oracle_id": "a1e232c0-dc38-47be-a5a0-f68bc1d86a29",
+              "multiverse_ids": [
+                464065
+              ],
+              "mtgo_id": 72604,
+              "tcgplayer_id": 191131,
+              "name": "Yawgmoth, Thran Physician",
               "lang": "en",
-              "released_at": "2019-11-07",
-              "uri": "https://api.scryfall.com/cards/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b",
-              "scryfall_uri": "https://scryfall.com/card/mb1/1455/meren-of-clan-nel-toth?utm_source=api",
+              "released_at": "2019-06-14",
+              "uri": "https://api.scryfall.com/cards/8690cbcc-f8fd-41f7-9e28-e61c12b04014",
+              "scryfall_uri": "https://scryfall.com/card/mh1/116/yawgmoth-thran-physician?utm_source=api",
               "layout": "normal",
               "highres_image": true,
               "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/f/e/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b.jpg?1573515455",
-                "normal": "https://img.scryfall.com/cards/normal/front/f/e/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b.jpg?1573515455",
-                "large": "https://img.scryfall.com/cards/large/front/f/e/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b.jpg?1573515455",
-                "png": "https://img.scryfall.com/cards/png/front/f/e/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b.png?1573515455",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/f/e/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b.jpg?1573515455",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/f/e/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b.jpg?1573515455"
+                "small": "https://img.scryfall.com/cards/small/front/8/6/8690cbcc-f8fd-41f7-9e28-e61c12b04014.jpg?1562201785",
+                "normal": "https://img.scryfall.com/cards/normal/front/8/6/8690cbcc-f8fd-41f7-9e28-e61c12b04014.jpg?1562201785",
+                "large": "https://img.scryfall.com/cards/large/front/8/6/8690cbcc-f8fd-41f7-9e28-e61c12b04014.jpg?1562201785",
+                "png": "https://img.scryfall.com/cards/png/front/8/6/8690cbcc-f8fd-41f7-9e28-e61c12b04014.png?1562201785",
+                "art_crop": "https://img.scryfall.com/cards/art_crop/front/8/6/8690cbcc-f8fd-41f7-9e28-e61c12b04014.jpg?1562201785",
+                "border_crop": "https://img.scryfall.com/cards/border_crop/front/8/6/8690cbcc-f8fd-41f7-9e28-e61c12b04014.jpg?1562201785"
               },
-              "mana_cost": "{2}{B}{G}",
+              "mana_cost": "{2}{B}{B}",
               "cmc": 4,
-              "type_line": "Legendary Creature — Human Shaman",
-              "oracle_text": "Whenever another creature you control dies, you get an experience counter.\nAt the beginning of your end step, choose target creature card in your graveyard. If that card's converted mana cost is less than or equal to the number of experience counters you have, return it to the battlefield. Otherwise, put it into your hand.",
-              "power": "3",
+              "type_line": "Legendary Creature — Human Cleric",
+              "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+              "power": "2",
               "toughness": "4",
               "colors": [
-                "B",
+                "B"
+              ],
+              "color_identity": [
+                "B"
+              ],
+              "legalities": {
+                "standard": "not_legal",
+                "future": "not_legal",
+                "historic": "not_legal",
+                "pioneer": "not_legal",
+                "modern": "legal",
+                "legacy": "legal",
+                "pauper": "not_legal",
+                "vintage": "legal",
+                "penny": "not_legal",
+                "commander": "legal",
+                "brawl": "not_legal",
+                "duel": "legal",
+                "oldschool": "not_legal"
+              },
+              "games": [
+                "mtgo",
+                "paper"
+              ],
+              "reserved": false,
+              "foil": true,
+              "nonfoil": true,
+              "oversized": false,
+              "promo": false,
+              "reprint": false,
+              "variation": false,
+              "set": "mh1",
+              "set_name": "Modern Horizons",
+              "set_type": "draft_innovation",
+              "set_uri": "https://api.scryfall.com/sets/d7efccd6-55bc-4fb8-9138-e72577510a99",
+              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amh1&unique=prints",
+              "scryfall_set_uri": "https://scryfall.com/sets/mh1?utm_source=api",
+              "rulings_uri": "https://api.scryfall.com/cards/8690cbcc-f8fd-41f7-9e28-e61c12b04014/rulings",
+              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa1e232c0-dc38-47be-a5a0-f68bc1d86a29&unique=prints",
+              "collector_number": "116",
+              "digital": false,
+              "rarity": "mythic",
+              "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+              "artist": "Mark Winters",
+              "artist_ids": [
+                "3d8a379d-f4e8-440d-99d5-5ec107757348"
+              ],
+              "illustration_id": "b7ae43df-a9b6-4e11-9053-a4309c0e9df0",
+              "border_color": "black",
+              "frame": "2015",
+              "frame_effects": [
+                "legendary"
+              ],
+              "full_art": false,
+              "textless": false,
+              "booster": true,
+              "story_spotlight": false,
+              "edhrec_rank": 1341,
+              "preview": {
+                "source": "Wizards of the Coast",
+                "source_uri": "https://magic.wizards.com/en/articles/archive/making-magic/modern-life-2019-05-27",
+                "previewed_at": "2019-05-27"
+              },
+              "prices": {
+                "usd": "7.99",
+                "usd_foil": "55.72",
+                "eur": "6.36",
+                "tix": "3.42"
+              },
+              "related_uris": {
+                "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=464065",
+                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Yawgmoth%2C+Thran+Physician&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "edhrec": "https://edhrec.com/route/?cc=Yawgmoth%2C+Thran+Physician",
+                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Yawgmoth%2C+Thran+Physician"
+              },
+              "purchase_uris": {
+                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=191131&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Modern-Horizons/Yawgmoth-Thran-Physician?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+                "cardhoarder": "https://www.cardhoarder.com/cards/72604?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+              }
+            },
+            "qty": 1,
+            "condition": "Mint/Near Mint",
+            "foil": false,
+            "prerelease": false
+          }
+        ],
+        "maybeboard": [
+          {
+            "card": {
+              "object": "card",
+              "id": "9eb08e11-c247-404c-9f40-a12cb7087d0c",
+              "oracle_id": "b99ada26-9a61-4175-9fb8-15a106960220",
+              "multiverse_ids": [
+                470579
+              ],
+              "mtgo_id": 77120,
+              "tcgplayer_id": 196563,
+              "name": "Ohran Frostfang",
+              "lang": "en",
+              "released_at": "2019-08-23",
+              "uri": "https://api.scryfall.com/cards/9eb08e11-c247-404c-9f40-a12cb7087d0c",
+              "scryfall_uri": "https://scryfall.com/card/c19/33/ohran-frostfang?utm_source=api",
+              "layout": "normal",
+              "highres_image": true,
+              "image_uris": {
+                "small": "https://img.scryfall.com/cards/small/front/9/e/9eb08e11-c247-404c-9f40-a12cb7087d0c.jpg?1568003598",
+                "normal": "https://img.scryfall.com/cards/normal/front/9/e/9eb08e11-c247-404c-9f40-a12cb7087d0c.jpg?1568003598",
+                "large": "https://img.scryfall.com/cards/large/front/9/e/9eb08e11-c247-404c-9f40-a12cb7087d0c.jpg?1568003598",
+                "png": "https://img.scryfall.com/cards/png/front/9/e/9eb08e11-c247-404c-9f40-a12cb7087d0c.png?1568003598",
+                "art_crop": "https://img.scryfall.com/cards/art_crop/front/9/e/9eb08e11-c247-404c-9f40-a12cb7087d0c.jpg?1568003598",
+                "border_crop": "https://img.scryfall.com/cards/border_crop/front/9/e/9eb08e11-c247-404c-9f40-a12cb7087d0c.jpg?1568003598"
+              },
+              "mana_cost": "{3}{G}{G}",
+              "cmc": 5,
+              "type_line": "Snow Creature — Snake",
+              "oracle_text": "Attacking creatures you control have deathtouch.\nWhenever a creature you control deals combat damage to a player, draw a card.",
+              "power": "2",
+              "toughness": "6",
+              "colors": [
                 "G"
               ],
               "color_identity": [
-                "B",
                 "G"
               ],
               "legalities": {
@@ -8346,6 +8457,7 @@
                 "oldschool": "not_legal"
               },
               "games": [
+                "mtgo",
                 "paper"
               ],
               "reserved": false,
@@ -8353,50 +8465,54 @@
               "nonfoil": true,
               "oversized": false,
               "promo": false,
-              "reprint": true,
+              "reprint": false,
               "variation": false,
-              "set": "mb1",
-              "set_name": "Mystery Booster",
-              "set_type": "funny",
-              "set_uri": "https://api.scryfall.com/sets/d13bfc70-6137-4179-aa96-da30fd84de29",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amb1&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/mb1?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/fe5d1b77-e0bb-422c-8d69-6bc4bc61a28b/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A0310dfdb-0498-488d-9f1a-279f8239e024&unique=prints",
-              "collector_number": "1455",
+              "set": "c19",
+              "set_name": "Commander 2019",
+              "set_type": "commander",
+              "set_uri": "https://api.scryfall.com/sets/0fa3ccbb-d86d-4a2e-a55e-c4979c4feeb2",
+              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ac19&unique=prints",
+              "scryfall_set_uri": "https://scryfall.com/sets/c19?utm_source=api",
+              "rulings_uri": "https://api.scryfall.com/cards/9eb08e11-c247-404c-9f40-a12cb7087d0c/rulings",
+              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ab99ada26-9a61-4175-9fb8-15a106960220&unique=prints",
+              "collector_number": "33",
               "digital": false,
-              "rarity": "mythic",
+              "rarity": "rare",
+              "flavor_text": "Silent as a snowdrift. Inexorable as an avalanche.",
               "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Mark Winters",
+              "artist": "Torstein Nordstrand",
               "artist_ids": [
-                "3d8a379d-f4e8-440d-99d5-5ec107757348"
+                "d72fed18-68fb-4a66-b369-978ae372fa07"
               ],
-              "illustration_id": "34f76b57-924d-4d09-b1f3-5185320a2498",
+              "illustration_id": "34bb89af-5234-4110-bd50-baf182d6d504",
               "border_color": "black",
               "frame": "2015",
-              "frame_effects": [
-                "legendary"
-              ],
               "full_art": false,
               "textless": false,
               "booster": false,
               "story_spotlight": false,
-              "edhrec_rank": 988,
+              "edhrec_rank": 2664,
+              "preview": {
+                "source": "Commanders Brew",
+                "source_uri": "https://youtu.be/CGDC7L2W8Yw",
+                "previewed_at": "2019-08-07"
+              },
               "prices": {
-                "usd": "13.63",
+                "usd": "4.49",
                 "usd_foil": null,
-                "eur": null,
-                "tix": null
+                "eur": "2.74",
+                "tix": "0.87"
               },
               "related_uris": {
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Meren+of+Clan+Nel+Toth&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Meren+of+Clan+Nel+Toth",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Meren+of+Clan+Nel+Toth"
+                "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=470579",
+                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Ohran+Frostfang&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "edhrec": "https://edhrec.com/route/?cc=Ohran+Frostfang",
+                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Ohran+Frostfang"
               },
               "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=203360&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Meren+of+Clan+Nel+Toth&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Meren+of+Clan+Nel+Toth&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=196563&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-2019/Ohran-Frostfang?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+                "cardhoarder": "https://www.cardhoarder.com/cards/77120?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
               }
             },
             "qty": 1,
@@ -8407,41 +8523,41 @@
           {
             "card": {
               "object": "card",
-              "id": "3d637cb2-b770-4637-a75c-c2ed9e562538",
-              "oracle_id": "10ab3102-43a3-4c60-8641-2c5a7c1e29c2",
+              "id": "68d3ec62-f33e-473f-bb65-da8166544b81",
+              "oracle_id": "e0cef79c-ad47-4cbc-9d73-a913e487ccb7",
               "multiverse_ids": [],
-              "tcgplayer_id": 93365,
-              "name": "Akoum Firebird",
+              "name": "Garruk, Cursed Huntsman",
               "lang": "en",
-              "released_at": "2015-10-03",
-              "uri": "https://api.scryfall.com/cards/3d637cb2-b770-4637-a75c-c2ed9e562538",
-              "scryfall_uri": "https://scryfall.com/card/pbfz/138s/akoum-firebird?utm_source=api",
+              "released_at": "2019-10-04",
+              "uri": "https://api.scryfall.com/cards/68d3ec62-f33e-473f-bb65-da8166544b81",
+              "scryfall_uri": "https://scryfall.com/card/peld/191s/garruk-cursed-huntsman?utm_source=api",
               "layout": "normal",
               "highres_image": true,
               "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/3/d/3d637cb2-b770-4637-a75c-c2ed9e562538.jpg?1562132939",
-                "normal": "https://img.scryfall.com/cards/normal/front/3/d/3d637cb2-b770-4637-a75c-c2ed9e562538.jpg?1562132939",
-                "large": "https://img.scryfall.com/cards/large/front/3/d/3d637cb2-b770-4637-a75c-c2ed9e562538.jpg?1562132939",
-                "png": "https://img.scryfall.com/cards/png/front/3/d/3d637cb2-b770-4637-a75c-c2ed9e562538.png?1562132939",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/3/d/3d637cb2-b770-4637-a75c-c2ed9e562538.jpg?1562132939",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/3/d/3d637cb2-b770-4637-a75c-c2ed9e562538.jpg?1562132939"
+                "small": "https://img.scryfall.com/cards/small/front/6/8/68d3ec62-f33e-473f-bb65-da8166544b81.jpg?1571850876",
+                "normal": "https://img.scryfall.com/cards/normal/front/6/8/68d3ec62-f33e-473f-bb65-da8166544b81.jpg?1571850876",
+                "large": "https://img.scryfall.com/cards/large/front/6/8/68d3ec62-f33e-473f-bb65-da8166544b81.jpg?1571850876",
+                "png": "https://img.scryfall.com/cards/png/front/6/8/68d3ec62-f33e-473f-bb65-da8166544b81.png?1571850876",
+                "art_crop": "https://img.scryfall.com/cards/art_crop/front/6/8/68d3ec62-f33e-473f-bb65-da8166544b81.jpg?1571850876",
+                "border_crop": "https://img.scryfall.com/cards/border_crop/front/6/8/68d3ec62-f33e-473f-bb65-da8166544b81.jpg?1571850876"
               },
-              "mana_cost": "{2}{R}{R}",
-              "cmc": 4,
-              "type_line": "Creature — Phoenix",
-              "oracle_text": "Flying, haste\nAkoum Firebird attacks each combat if able.\nLandfall — Whenever a land enters the battlefield under your control, you may pay {4}{R}{R}. If you do, return Akoum Firebird from your graveyard to the battlefield.",
-              "power": "3",
-              "toughness": "3",
+              "mana_cost": "{4}{B}{G}",
+              "cmc": 6,
+              "type_line": "Legendary Planeswalker — Garruk",
+              "oracle_text": "0: Create two 2/2 black and green Wolf creature tokens with \"When this creature dies, put a loyalty counter on each Garruk you control.\"\n−3: Destroy target creature. Draw a card.\n−6: You get an emblem with \"Creatures you control get +3/+3 and have trample.\"",
+              "loyalty": "5",
               "colors": [
-                "R"
+                "B",
+                "G"
               ],
               "color_identity": [
-                "R"
+                "B",
+                "G"
               ],
               "legalities": {
-                "standard": "not_legal",
-                "future": "not_legal",
-                "historic": "not_legal",
+                "standard": "legal",
+                "future": "legal",
+                "historic": "legal",
                 "pioneer": "legal",
                 "modern": "legal",
                 "legacy": "legal",
@@ -8449,7 +8565,7 @@
                 "vintage": "legal",
                 "penny": "not_legal",
                 "commander": "legal",
-                "brawl": "not_legal",
+                "brawl": "legal",
                 "duel": "legal",
                 "oldschool": "not_legal"
               },
@@ -8463,23 +8579,23 @@
               "promo": true,
               "reprint": true,
               "variation": false,
-              "set": "pbfz",
-              "set_name": "Battle for Zendikar Promos",
+              "set": "peld",
+              "set_name": "Throne of Eldraine Promos",
               "set_type": "promo",
-              "set_uri": "https://api.scryfall.com/sets/1b5e95bd-4947-4991-8d7d-b770d6b2aaff",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apbfz&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/pbfz?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/3d637cb2-b770-4637-a75c-c2ed9e562538/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A10ab3102-43a3-4c60-8641-2c5a7c1e29c2&unique=prints",
-              "collector_number": "138s",
+              "set_uri": "https://api.scryfall.com/sets/5f593578-5079-4988-8e88-a3df186bdc2b",
+              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apeld&unique=prints",
+              "scryfall_set_uri": "https://scryfall.com/sets/peld?utm_source=api",
+              "rulings_uri": "https://api.scryfall.com/cards/68d3ec62-f33e-473f-bb65-da8166544b81/rulings",
+              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ae0cef79c-ad47-4cbc-9d73-a913e487ccb7&unique=prints",
+              "collector_number": "191s",
               "digital": false,
               "rarity": "mythic",
               "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Chris Rahn",
+              "artist": "Eric Deschamps",
               "artist_ids": [
-                "7742047e-0f80-4c0f-a530-d07460165e86"
+                "37970e22-9cee-44c1-af44-5ee27cf26b76"
               ],
-              "illustration_id": "8916ac70-dfa7-40e1-b802-8854a655279e",
+              "illustration_id": "e8db5195-5a86-4610-9606-bbc0e5209909",
               "border_color": "black",
               "frame": "2015",
               "full_art": false,
@@ -8488,195 +8604,69 @@
               "story_spotlight": false,
               "promo_types": [
                 "prerelease",
-                "datestamped",
-                "setpromo"
+                "datestamped"
               ],
-              "edhrec_rank": 9316,
+              "edhrec_rank": 6076,
               "prices": {
                 "usd": null,
-                "usd_foil": "1.49",
+                "usd_foil": null,
                 "eur": null,
                 "tix": null
               },
               "related_uris": {
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Akoum+Firebird&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Akoum+Firebird",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Akoum+Firebird"
+                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Garruk%2C+Cursed+Huntsman&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "edhrec": "https://edhrec.com/route/?cc=Garruk%2C+Cursed+Huntsman",
+                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Garruk%2C+Cursed+Huntsman"
               },
               "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=93365&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Akoum+Firebird&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Akoum+Firebird&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+                "tcgplayer": "https://shop.tcgplayer.com/productcatalog/product/show?ProductName=Garruk%2C+Cursed+Huntsman&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Garruk%2C+Cursed+Huntsman&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Garruk%2C+Cursed+Huntsman&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
               }
             },
             "qty": 1,
             "condition": "Mint/Near Mint",
             "foil": false,
             "prerelease": false
-          }
-        ],
-        "sideboard": [
+          },
           {
             "card": {
               "object": "card",
-              "id": "c19a4d6b-13b0-43f0-8a9a-35752c6381d6",
-              "oracle_id": "a8ddea1c-8d80-49c1-a5b4-630d5e51d66e",
+              "id": "4f6e4cbf-0bf0-45b1-8707-a82a7d91298a",
+              "oracle_id": "43f2d81e-aa01-4fa9-9046-6a27a05dbd2d",
               "multiverse_ids": [],
-              "tcgplayer_id": 130642,
-              "name": "Hapatra, Vizier of Poisons",
-              "lang": "en",
-              "released_at": "2017-04-28",
-              "uri": "https://api.scryfall.com/cards/c19a4d6b-13b0-43f0-8a9a-35752c6381d6",
-              "scryfall_uri": "https://scryfall.com/card/pakh/199s/hapatra-vizier-of-poisons?utm_source=api",
-              "layout": "normal",
-              "highres_image": true,
-              "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/c/1/c19a4d6b-13b0-43f0-8a9a-35752c6381d6.jpg?1562931178",
-                "normal": "https://img.scryfall.com/cards/normal/front/c/1/c19a4d6b-13b0-43f0-8a9a-35752c6381d6.jpg?1562931178",
-                "large": "https://img.scryfall.com/cards/large/front/c/1/c19a4d6b-13b0-43f0-8a9a-35752c6381d6.jpg?1562931178",
-                "png": "https://img.scryfall.com/cards/png/front/c/1/c19a4d6b-13b0-43f0-8a9a-35752c6381d6.png?1562931178",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/c/1/c19a4d6b-13b0-43f0-8a9a-35752c6381d6.jpg?1562931178",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/c/1/c19a4d6b-13b0-43f0-8a9a-35752c6381d6.jpg?1562931178"
-              },
-              "mana_cost": "{B}{G}",
-              "cmc": 2,
-              "type_line": "Legendary Creature — Human Cleric",
-              "oracle_text": "Whenever Hapatra, Vizier of Poisons deals combat damage to a player, you may put a -1/-1 counter on target creature.\nWhenever you put one or more -1/-1 counters on a creature, create a 1/1 green Snake creature token with deathtouch.",
-              "power": "2",
-              "toughness": "2",
-              "colors": [
-                "B",
-                "G"
-              ],
-              "color_identity": [
-                "B",
-                "G"
-              ],
-              "legalities": {
-                "standard": "not_legal",
-                "future": "not_legal",
-                "historic": "not_legal",
-                "pioneer": "legal",
-                "modern": "legal",
-                "legacy": "legal",
-                "pauper": "not_legal",
-                "vintage": "legal",
-                "penny": "not_legal",
-                "commander": "legal",
-                "brawl": "not_legal",
-                "duel": "legal",
-                "oldschool": "not_legal"
-              },
-              "games": [
-                "paper"
-              ],
-              "reserved": false,
-              "foil": true,
-              "nonfoil": false,
-              "oversized": false,
-              "promo": true,
-              "reprint": true,
-              "variation": false,
-              "set": "pakh",
-              "set_name": "Amonkhet Promos",
-              "set_type": "promo",
-              "set_uri": "https://api.scryfall.com/sets/c1847ece-b71e-4125-973a-465dfb35e496",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apakh&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/pakh?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/c19a4d6b-13b0-43f0-8a9a-35752c6381d6/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa8ddea1c-8d80-49c1-a5b4-630d5e51d66e&unique=prints",
-              "collector_number": "199s",
-              "digital": false,
-              "rarity": "rare",
-              "flavor_text": "Her subtle smile is suffused with venom.",
-              "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Tyler Jacobson",
-              "artist_ids": [
-                "522af130-8db4-4b4b-950c-6e2b246339cf"
-              ],
-              "illustration_id": "2172019b-43b2-4589-96cb-cdd9bc3b0095",
-              "border_color": "black",
-              "frame": "2015",
-              "full_art": false,
-              "textless": false,
-              "booster": false,
-              "story_spotlight": false,
-              "promo_types": [
-                "prerelease",
-                "datestamped",
-                "setpromo"
-              ],
-              "edhrec_rank": 2643,
-              "prices": {
-                "usd": null,
-                "usd_foil": "4.56",
-                "eur": null,
-                "tix": null
-              },
-              "related_uris": {
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Hapatra%2C+Vizier+of+Poisons&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Hapatra%2C+Vizier+of+Poisons",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Hapatra%2C+Vizier+of+Poisons"
-              },
-              "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=130642&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Hapatra%2C+Vizier+of+Poisons&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Hapatra%2C+Vizier+of+Poisons&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-              }
-            },
-            "qty": 1,
-            "condition": "Mint/Near Mint",
-            "foil": false,
-            "prerelease": false
-          }
-        ],
-        "maybeboard": [
-          {
-            "card": {
-              "object": "card",
-              "id": "fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0",
-              "oracle_id": "6969a7e2-6866-4001-a139-24b3be13deae",
-              "multiverse_ids": [],
-              "tcgplayer_id": 204321,
-              "name": "Alesha, Who Smiles at Death",
+              "tcgplayer_id": 202909,
+              "name": "Contagion Clasp",
               "lang": "en",
               "released_at": "2019-11-07",
-              "uri": "https://api.scryfall.com/cards/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0",
-              "scryfall_uri": "https://scryfall.com/card/mb1/837/alesha-who-smiles-at-death?utm_source=api",
+              "uri": "https://api.scryfall.com/cards/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a",
+              "scryfall_uri": "https://scryfall.com/card/mb1/1564/contagion-clasp?utm_source=api",
               "layout": "normal",
               "highres_image": true,
               "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "normal": "https://img.scryfall.com/cards/normal/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "large": "https://img.scryfall.com/cards/large/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "png": "https://img.scryfall.com/cards/png/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.png?1573510983",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983"
+                "small": "https://img.scryfall.com/cards/small/front/4/f/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a.jpg?1573516239",
+                "normal": "https://img.scryfall.com/cards/normal/front/4/f/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a.jpg?1573516239",
+                "large": "https://img.scryfall.com/cards/large/front/4/f/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a.jpg?1573516239",
+                "png": "https://img.scryfall.com/cards/png/front/4/f/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a.png?1573516239",
+                "art_crop": "https://img.scryfall.com/cards/art_crop/front/4/f/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a.jpg?1573516239",
+                "border_crop": "https://img.scryfall.com/cards/border_crop/front/4/f/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a.jpg?1573516239"
               },
-              "mana_cost": "{2}{R}",
-              "cmc": 3,
-              "type_line": "Legendary Creature — Human Warrior",
-              "oracle_text": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {W/B}{W/B}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
-              "power": "3",
-              "toughness": "2",
-              "colors": [
-                "R"
-              ],
-              "color_identity": [
-                "B",
-                "R",
-                "W"
-              ],
+              "mana_cost": "{2}",
+              "cmc": 2,
+              "type_line": "Artifact",
+              "oracle_text": "When Contagion Clasp enters the battlefield, put a -1/-1 counter on target creature.\n{4}, {T}: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+              "colors": [],
+              "color_identity": [],
               "legalities": {
                 "standard": "not_legal",
                 "future": "not_legal",
                 "historic": "not_legal",
-                "pioneer": "legal",
+                "pioneer": "not_legal",
                 "modern": "legal",
                 "legacy": "legal",
                 "pauper": "not_legal",
                 "vintage": "legal",
-                "penny": "not_legal",
+                "penny": "legal",
                 "commander": "legal",
                 "brawl": "not_legal",
                 "duel": "legal",
@@ -8698,44 +8688,40 @@
               "set_uri": "https://api.scryfall.com/sets/d13bfc70-6137-4179-aa96-da30fd84de29",
               "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amb1&unique=prints",
               "scryfall_set_uri": "https://scryfall.com/sets/mb1?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A6969a7e2-6866-4001-a139-24b3be13deae&unique=prints",
-              "collector_number": "837",
+              "rulings_uri": "https://api.scryfall.com/cards/4f6e4cbf-0bf0-45b1-8707-a82a7d91298a/rulings",
+              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A43f2d81e-aa01-4fa9-9046-6a27a05dbd2d&unique=prints",
+              "collector_number": "1564",
               "digital": false,
-              "rarity": "rare",
-              "watermark": "mardu",
-              "flavor_text": "\"Greet death with sword in hand.\"",
+              "rarity": "uncommon",
+              "watermark": "phyrexian",
               "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Anastasia Ovchinnikova",
+              "artist": "Anthony Palumbo",
               "artist_ids": [
-                "3605d81f-5c97-4958-9dcc-d44a85e10305"
+                "afd2d541-4140-41ae-a28f-862436458fcb"
               ],
-              "illustration_id": "37dae181-fbe0-4b6a-8ff2-facaeaba47ef",
+              "illustration_id": "55c4a339-a06c-452f-a7c3-51d5686a8519",
               "border_color": "black",
-              "frame": "2015",
-              "frame_effects": [
-                "legendary"
-              ],
+              "frame": "2003",
               "full_art": false,
               "textless": false,
               "booster": false,
               "story_spotlight": false,
-              "edhrec_rank": 1830,
+              "edhrec_rank": 893,
               "prices": {
-                "usd": "2.50",
+                "usd": null,
                 "usd_foil": null,
                 "eur": null,
                 "tix": null
               },
               "related_uris": {
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Alesha%2C+Who+Smiles+at+Death&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Alesha%2C+Who+Smiles+at+Death",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Alesha%2C+Who+Smiles+at+Death"
+                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Contagion+Clasp&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "edhrec": "https://edhrec.com/route/?cc=Contagion+Clasp",
+                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Contagion+Clasp"
               },
               "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=204321&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Alesha%2C+Who+Smiles+at+Death&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Alesha%2C+Who+Smiles+at+Death&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=202909&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Contagion+Clasp&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Contagion+Clasp&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
               }
             },
             "qty": 1,
@@ -8745,7 +8731,7 @@
           }
         ]
       },
-      "id": 2
+      "id": 1
     },
     {
       "title": "Meren of Clan Nel Toth",
@@ -17600,468 +17586,6 @@
         "maybeboard": []
       },
       "id": 3
-    },
-    {
-      "title": "More serious title",
-      "format": "commander",
-      "description": "more serious text",
-      "cards": {
-        "mainboard": [
-          {
-            "card": {
-              "object": "card",
-              "id": "fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0",
-              "oracle_id": "6969a7e2-6866-4001-a139-24b3be13deae",
-              "multiverse_ids": [],
-              "tcgplayer_id": 204321,
-              "name": "Alesha, Who Smiles at Death",
-              "lang": "en",
-              "released_at": "2019-11-07",
-              "uri": "https://api.scryfall.com/cards/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0",
-              "scryfall_uri": "https://scryfall.com/card/mb1/837/alesha-who-smiles-at-death?utm_source=api",
-              "layout": "normal",
-              "highres_image": true,
-              "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "normal": "https://img.scryfall.com/cards/normal/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "large": "https://img.scryfall.com/cards/large/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "png": "https://img.scryfall.com/cards/png/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.png?1573510983",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/f/c/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0.jpg?1573510983"
-              },
-              "mana_cost": "{2}{R}",
-              "cmc": 3,
-              "type_line": "Legendary Creature — Human Warrior",
-              "oracle_text": "First strike\nWhenever Alesha, Who Smiles at Death attacks, you may pay {W/B}{W/B}. If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.",
-              "power": "3",
-              "toughness": "2",
-              "colors": [
-                "R"
-              ],
-              "color_identity": [
-                "B",
-                "R",
-                "W"
-              ],
-              "legalities": {
-                "standard": "not_legal",
-                "future": "not_legal",
-                "historic": "not_legal",
-                "pioneer": "legal",
-                "modern": "legal",
-                "legacy": "legal",
-                "pauper": "not_legal",
-                "vintage": "legal",
-                "penny": "not_legal",
-                "commander": "legal",
-                "brawl": "not_legal",
-                "duel": "legal",
-                "oldschool": "not_legal"
-              },
-              "games": [
-                "paper"
-              ],
-              "reserved": false,
-              "foil": false,
-              "nonfoil": true,
-              "oversized": false,
-              "promo": false,
-              "reprint": true,
-              "variation": false,
-              "set": "mb1",
-              "set_name": "Mystery Booster",
-              "set_type": "funny",
-              "set_uri": "https://api.scryfall.com/sets/d13bfc70-6137-4179-aa96-da30fd84de29",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amb1&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/mb1?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/fcd63377-4a2a-4f9d-ba32-ba3f1faf2ce0/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A6969a7e2-6866-4001-a139-24b3be13deae&unique=prints",
-              "collector_number": "837",
-              "digital": false,
-              "rarity": "rare",
-              "watermark": "mardu",
-              "flavor_text": "\"Greet death with sword in hand.\"",
-              "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Anastasia Ovchinnikova",
-              "artist_ids": [
-                "3605d81f-5c97-4958-9dcc-d44a85e10305"
-              ],
-              "illustration_id": "37dae181-fbe0-4b6a-8ff2-facaeaba47ef",
-              "border_color": "black",
-              "frame": "2015",
-              "frame_effects": [
-                "legendary"
-              ],
-              "full_art": false,
-              "textless": false,
-              "booster": false,
-              "story_spotlight": false,
-              "edhrec_rank": 1830,
-              "prices": {
-                "usd": "2.50",
-                "usd_foil": null,
-                "eur": null,
-                "tix": null
-              },
-              "related_uris": {
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Alesha%2C+Who+Smiles+at+Death&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Alesha%2C+Who+Smiles+at+Death",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Alesha%2C+Who+Smiles+at+Death"
-              },
-              "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=204321&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Alesha%2C+Who+Smiles+at+Death&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Alesha%2C+Who+Smiles+at+Death&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-              }
-            },
-            "qty": 1,
-            "condition": "Mint/Near Mint",
-            "foil": false,
-            "prerelease": false
-          },
-          {
-            "card": {
-              "object": "card",
-              "id": "a891b322-74e6-4a88-aa84-2d1cbe972e07",
-              "oracle_id": "ebfafabc-5255-4024-be59-7403bdb16ee4",
-              "multiverse_ids": [],
-              "tcgplayer_id": 93349,
-              "name": "Anafenza, the Foremost",
-              "lang": "en",
-              "released_at": "2014-09-27",
-              "uri": "https://api.scryfall.com/cards/a891b322-74e6-4a88-aa84-2d1cbe972e07",
-              "scryfall_uri": "https://scryfall.com/card/pktk/163s/anafenza-the-foremost?utm_source=api",
-              "layout": "normal",
-              "highres_image": true,
-              "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/a/8/a891b322-74e6-4a88-aa84-2d1cbe972e07.jpg?1562701642",
-                "normal": "https://img.scryfall.com/cards/normal/front/a/8/a891b322-74e6-4a88-aa84-2d1cbe972e07.jpg?1562701642",
-                "large": "https://img.scryfall.com/cards/large/front/a/8/a891b322-74e6-4a88-aa84-2d1cbe972e07.jpg?1562701642",
-                "png": "https://img.scryfall.com/cards/png/front/a/8/a891b322-74e6-4a88-aa84-2d1cbe972e07.png?1562701642",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/a/8/a891b322-74e6-4a88-aa84-2d1cbe972e07.jpg?1562701642",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/a/8/a891b322-74e6-4a88-aa84-2d1cbe972e07.jpg?1562701642"
-              },
-              "mana_cost": "{W}{B}{G}",
-              "cmc": 3,
-              "type_line": "Legendary Creature — Human Soldier",
-              "oracle_text": "Whenever Anafenza, the Foremost attacks, put a +1/+1 counter on another target tapped creature you control.\nIf a nontoken creature an opponent owns would die or a creature card not on the battlefield would be put into an opponent's graveyard, exile that card instead.",
-              "power": "4",
-              "toughness": "4",
-              "colors": [
-                "B",
-                "G",
-                "W"
-              ],
-              "color_identity": [
-                "B",
-                "G",
-                "W"
-              ],
-              "legalities": {
-                "standard": "not_legal",
-                "future": "not_legal",
-                "historic": "not_legal",
-                "pioneer": "legal",
-                "modern": "legal",
-                "legacy": "legal",
-                "pauper": "not_legal",
-                "vintage": "legal",
-                "penny": "not_legal",
-                "commander": "legal",
-                "brawl": "not_legal",
-                "duel": "legal",
-                "oldschool": "not_legal"
-              },
-              "games": [
-                "paper"
-              ],
-              "reserved": false,
-              "foil": true,
-              "nonfoil": false,
-              "oversized": false,
-              "promo": true,
-              "reprint": true,
-              "variation": false,
-              "set": "pktk",
-              "set_name": "Khans of Tarkir Promos",
-              "set_type": "promo",
-              "set_uri": "https://api.scryfall.com/sets/95318a25-1983-40ae-b315-140160078e3c",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Apktk&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/pktk?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/a891b322-74e6-4a88-aa84-2d1cbe972e07/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aebfafabc-5255-4024-be59-7403bdb16ee4&unique=prints",
-              "collector_number": "163s",
-              "digital": false,
-              "rarity": "mythic",
-              "watermark": "abzan",
-              "flavor_text": "Rarely at rest on the Amber Throne, Anafenza always leads the Abzan Houses to battle.",
-              "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "James Ryman",
-              "artist_ids": [
-                "3852bbc9-11c0-4fe3-8722-a06ad7e2bcc5"
-              ],
-              "illustration_id": "06d52e84-1bbb-4594-9277-2126442d1810",
-              "border_color": "black",
-              "frame": "2015",
-              "full_art": false,
-              "textless": false,
-              "booster": false,
-              "story_spotlight": false,
-              "promo_types": [
-                "prerelease",
-                "datestamped",
-                "setpromo"
-              ],
-              "edhrec_rank": 2244,
-              "prices": {
-                "usd": null,
-                "usd_foil": "8.83",
-                "eur": null,
-                "tix": null
-              },
-              "related_uris": {
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Anafenza%2C+the+Foremost&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Anafenza%2C+the+Foremost",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Anafenza%2C+the+Foremost"
-              },
-              "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=93349&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Anafenza%2C+the+Foremost&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Anafenza%2C+the+Foremost&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-              }
-            },
-            "qty": 1,
-            "condition": "Mint/Near Mint",
-            "foil": false,
-            "prerelease": false
-          },
-          {
-            "card": {
-              "object": "card",
-              "id": "b261067f-b5de-41cc-ba9e-6ef4c061e170",
-              "oracle_id": "2df8f253-1d3c-4b1f-8549-93fb90623474",
-              "multiverse_ids": [
-                129913
-              ],
-              "mtgo_id": 27156,
-              "mtgo_foil_id": 27157,
-              "tcgplayer_id": 15030,
-              "name": "Ambassador Laquatus",
-              "lang": "en",
-              "released_at": "2007-07-13",
-              "uri": "https://api.scryfall.com/cards/b261067f-b5de-41cc-ba9e-6ef4c061e170",
-              "scryfall_uri": "https://scryfall.com/card/10e/65/ambassador-laquatus?utm_source=api",
-              "layout": "normal",
-              "highres_image": true,
-              "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/b/2/b261067f-b5de-41cc-ba9e-6ef4c061e170.jpg?1562553771",
-                "normal": "https://img.scryfall.com/cards/normal/front/b/2/b261067f-b5de-41cc-ba9e-6ef4c061e170.jpg?1562553771",
-                "large": "https://img.scryfall.com/cards/large/front/b/2/b261067f-b5de-41cc-ba9e-6ef4c061e170.jpg?1562553771",
-                "png": "https://img.scryfall.com/cards/png/front/b/2/b261067f-b5de-41cc-ba9e-6ef4c061e170.png?1562553771",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/b/2/b261067f-b5de-41cc-ba9e-6ef4c061e170.jpg?1562553771",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/b/2/b261067f-b5de-41cc-ba9e-6ef4c061e170.jpg?1562553771"
-              },
-              "mana_cost": "{1}{U}{U}",
-              "cmc": 3,
-              "type_line": "Legendary Creature — Merfolk Wizard",
-              "oracle_text": "{3}: Target player puts the top three cards of their library into their graveyard.",
-              "power": "1",
-              "toughness": "3",
-              "colors": [
-                "U"
-              ],
-              "color_identity": [
-                "U"
-              ],
-              "legalities": {
-                "standard": "not_legal",
-                "future": "not_legal",
-                "historic": "not_legal",
-                "pioneer": "not_legal",
-                "modern": "legal",
-                "legacy": "legal",
-                "pauper": "not_legal",
-                "vintage": "legal",
-                "penny": "legal",
-                "commander": "legal",
-                "brawl": "not_legal",
-                "duel": "legal",
-                "oldschool": "not_legal"
-              },
-              "games": [
-                "mtgo",
-                "paper"
-              ],
-              "reserved": false,
-              "foil": true,
-              "nonfoil": true,
-              "oversized": false,
-              "promo": false,
-              "reprint": true,
-              "variation": false,
-              "set": "10e",
-              "set_name": "Tenth Edition",
-              "set_type": "core",
-              "set_uri": "https://api.scryfall.com/sets/a66a6124-0d81-488d-b080-91f5ba7fbad0",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3A10e&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/10e?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/b261067f-b5de-41cc-ba9e-6ef4c061e170/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A2df8f253-1d3c-4b1f-8549-93fb90623474&unique=prints",
-              "collector_number": "65",
-              "digital": false,
-              "rarity": "rare",
-              "flavor_text": "\"Life is a game. The only thing that matters is whether you're a pawn or a player.\"",
-              "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Jim Murray",
-              "artist_ids": [
-                "1c906f9b-5bbe-4643-8f5c-90eb1c7f0c43"
-              ],
-              "illustration_id": "11ce5af9-1f4a-405f-9f80-27c5271f0c1c",
-              "border_color": "black",
-              "frame": "2003",
-              "full_art": false,
-              "textless": false,
-              "booster": true,
-              "story_spotlight": false,
-              "edhrec_rank": 7943,
-              "prices": {
-                "usd": "1.79",
-                "usd_foil": "8.55",
-                "eur": "0.57",
-                "tix": "0.02"
-              },
-              "related_uris": {
-                "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=129913",
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Ambassador+Laquatus&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Ambassador+Laquatus",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Ambassador+Laquatus"
-              },
-              "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=15030&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Tenth-Edition/Ambassador-Laquatus?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards/27156?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-              }
-            },
-            "qty": 1,
-            "condition": "Mint/Near Mint",
-            "foil": false,
-            "prerelease": false
-          },
-          {
-            "card": {
-              "object": "card",
-              "id": "e49ceeeb-ebb4-4364-9cfa-367b1d153b9e",
-              "oracle_id": "eb62aa4b-c11b-4195-ae85-cff8f78ce17b",
-              "multiverse_ids": [
-                456365
-              ],
-              "tcgplayer_id": 177424,
-              "name": "Advent of the Wurm",
-              "lang": "en",
-              "released_at": "2018-11-02",
-              "uri": "https://api.scryfall.com/cards/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e",
-              "scryfall_uri": "https://scryfall.com/card/gk1/107/advent-of-the-wurm?utm_source=api",
-              "layout": "normal",
-              "highres_image": true,
-              "image_uris": {
-                "small": "https://img.scryfall.com/cards/small/front/e/4/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e.jpg?1541002882",
-                "normal": "https://img.scryfall.com/cards/normal/front/e/4/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e.jpg?1541002882",
-                "large": "https://img.scryfall.com/cards/large/front/e/4/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e.jpg?1541002882",
-                "png": "https://img.scryfall.com/cards/png/front/e/4/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e.png?1541002882",
-                "art_crop": "https://img.scryfall.com/cards/art_crop/front/e/4/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e.jpg?1541002882",
-                "border_crop": "https://img.scryfall.com/cards/border_crop/front/e/4/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e.jpg?1541002882"
-              },
-              "mana_cost": "{1}{G}{G}{W}",
-              "cmc": 4,
-              "type_line": "Instant",
-              "oracle_text": "Create a 5/5 green Wurm creature token with trample.",
-              "colors": [
-                "G",
-                "W"
-              ],
-              "color_identity": [
-                "G",
-                "W"
-              ],
-              "legalities": {
-                "standard": "not_legal",
-                "future": "not_legal",
-                "historic": "not_legal",
-                "pioneer": "legal",
-                "modern": "legal",
-                "legacy": "legal",
-                "pauper": "not_legal",
-                "vintage": "legal",
-                "penny": "legal",
-                "commander": "legal",
-                "brawl": "not_legal",
-                "duel": "legal",
-                "oldschool": "not_legal"
-              },
-              "games": [
-                "paper"
-              ],
-              "reserved": false,
-              "foil": false,
-              "nonfoil": true,
-              "oversized": false,
-              "promo": false,
-              "reprint": true,
-              "variation": false,
-              "set": "gk1",
-              "set_name": "GRN Guild Kit",
-              "set_type": "box",
-              "set_uri": "https://api.scryfall.com/sets/600bdba8-0b12-454f-811c-438e0d9eb9b6",
-              "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Agk1&unique=prints",
-              "scryfall_set_uri": "https://scryfall.com/sets/gk1?utm_source=api",
-              "rulings_uri": "https://api.scryfall.com/cards/e49ceeeb-ebb4-4364-9cfa-367b1d153b9e/rulings",
-              "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aeb62aa4b-c11b-4195-ae85-cff8f78ce17b&unique=prints",
-              "collector_number": "107",
-              "digital": false,
-              "rarity": "rare",
-              "watermark": "selesnya",
-              "flavor_text": "The consciousness of Mat'Selesnya does not always spread in peaceful ways.",
-              "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-              "artist": "Lucas Graciano",
-              "artist_ids": [
-                "ce98f39c-7cdd-47e6-a520-6c50443bb4c2"
-              ],
-              "illustration_id": "fc06d465-4708-4c83-8473-9048a04d7d82",
-              "border_color": "black",
-              "frame": "2015",
-              "full_art": false,
-              "textless": false,
-              "booster": false,
-              "story_spotlight": false,
-              "edhrec_rank": 3475,
-              "prices": {
-                "usd": "0.32",
-                "usd_foil": null,
-                "eur": "0.27",
-                "tix": null
-              },
-              "related_uris": {
-                "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=456365",
-                "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Advent+of+the+Wurm&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "edhrec": "https://edhrec.com/route/?cc=Advent+of+the+Wurm",
-                "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Advent+of+the+Wurm"
-              },
-              "purchase_uris": {
-                "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=177424&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
-                "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Guilds-of-Ravnica-Guild-Kits/Advent-of-the-Wurm?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
-                "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Advent+of+the+Wurm&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
-              }
-            },
-            "qty": 1,
-            "condition": "Mint/Near Mint",
-            "foil": false,
-            "prerelease": false
-          }
-        ],
-        "sideboard": [],
-        "maybeboard": []
-      },
-      "id": 4
     }
   ]
 }

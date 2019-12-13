@@ -27,6 +27,11 @@ html {
           border-left: 3px solid darkslategray;
         }
       }
+
+      table.table thead tr th.active {
+        background-color: gainsboro;
+        color: blue;
+      }
     }
   }
 }

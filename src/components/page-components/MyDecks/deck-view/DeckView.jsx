@@ -3,6 +3,7 @@ import deckClient from "../../../../modules/deck-builder-api/deck";
 import DeckViewNav from "./DeckViewNav";
 import Cards from "./cards/Cards";
 import EditDeck from "./EditDeck";
+import DeleteDeck from "./DeleteDeck";
 import Dashboard from "./dashboard/Dashboard";
 
 function DeckView() {
@@ -40,6 +41,7 @@ function DeckView() {
         )}
 
         {deckViewPage === "edit" && <EditDeck deck={deck} />}
+        {deckViewPage === "delete" && <DeleteDeck deck={deck} />}
       </div>
     </React.Fragment>
   );

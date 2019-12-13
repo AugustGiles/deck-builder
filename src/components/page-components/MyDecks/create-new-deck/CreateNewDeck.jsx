@@ -25,13 +25,14 @@ function CreateNewDeck(props) {
     setDeckInfo(deckInfoCopy);
   };
 
-  const saveSelectedCards = () => {
+  const saveSelectedCards = async () => {
     let deck = { ...deckInfo };
     deck["cards"] = cards;
     if (props.context === "create") {
-      deckClient.addNewDeck(deck);
+      let data = await deckClient.addNewDeck(deck);
+      window.location.href = `/my-decks/deck/${data.id}`;
     } else if (props.context === "edit") {
-      deckClient.editDeck(deck, props.deck.id);
+      await deckClient.editDeck(deck, props.deck.id);
     }
   };
 

@@ -15,7 +15,6 @@ const deckServiceModule = () => {
   };
 
   let editDeck = async (deck, id) => {
-    debugger;
     let res = await fetch(`${baseUrl}/decks/${id}`, {
       method: "PUT",
       headers: {
@@ -25,7 +24,6 @@ const deckServiceModule = () => {
     });
 
     let data = await res.json();
-    debugger;
     return data;
   };
 
@@ -41,7 +39,19 @@ const deckServiceModule = () => {
     return data;
   };
 
-  return { addNewDeck, editDeck, getAllDecks, getDeckById };
+  let deleteDeckById = async id => {
+    let res = await fetch(`${baseUrl}/decks/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    let data = await res.json();
+    return data;
+  };
+
+  return { addNewDeck, editDeck, getAllDecks, getDeckById, deleteDeckById };
 };
 
 export default deckServiceModule();
