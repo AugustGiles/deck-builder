@@ -17,4 +17,27 @@ body {
     height: 93vh;
     width: 80%;
   }
+
+  .nav.custom-side-nav {
+    a {
+      font-weight: lighter;
+      padding: 0px 8px;
+      margin: 4px 0px;
+    }
+    a.active {
+      font-weight: normal;
+      color: darkslategray;
+      border-left: 3px solid darkslategray;
+    }
+
+    a[disabled] {
+      color: grey;
+      text-decoration: none;
+      cursor: auto;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
 }

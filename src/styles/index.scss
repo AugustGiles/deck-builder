@@ -15,19 +15,6 @@ html {
         margin-top: 7vh;
       }
 
-      .nav.custom-side-nav {
-        a {
-          font-weight: lighter;
-          padding: 0px 8px;
-          margin: 4px 0px;
-        }
-        a.active {
-          font-weight: normal;
-          color: darkslategray;
-          border-left: 3px solid darkslategray;
-        }
-      }
-
       table.table thead tr th.active {
         background-color: gainsboro;
       }

@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Switch, Route, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import MyDecks from "./components/pages/MyDecks";
 import { MainNav } from "./components/layout-elements";
@@ -10,15 +11,15 @@ function App() {
     <React.Fragment>
       <MainNav />
 
-      <Switch>
-        <div id="site-content">
+      <div id="site-content">
+        <Switch>
           <Route path="/login" render={() => <h1>Login</h1>} />
           <Route path="/my-decks" component={MyDecks} />
           <Route exact path="/" component={() => <Redirect to="/my-decks" />} />
-        </div>
-      </Switch>
+        </Switch>
+      </div>
     </React.Fragment>
   );
 }
 
-export default App;
+export default connect()(App);
