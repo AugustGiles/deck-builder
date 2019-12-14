@@ -1,7 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 import cardSortHelper from "./cardSortHelper";
 
-function CardList(props) {
+function CardList({ deck, deckViewPage, classList, searchText }) {
   let renderCardObj = (deck, deckViewPage) => {
     let cards = cardSortHelper.sortByAttribute(
       "type_line",
@@ -32,7 +33,7 @@ function CardList(props) {
   let renderCards = cards => {
     return cards.map(selection => {
       let card = selection.card;
-      if (!card.name.toLowerCase().includes(props.searchText.toLowerCase())) {
+      if (!card.name.toLowerCase().includes(searchText.toLowerCase())) {
         return null;
       }
       let url;
@@ -57,10 +58,14 @@ function CardList(props) {
   };
 
   return (
-    <div className={props.classList}>
-      <div>{renderCardObj(props.deck, props.deckViewPage)}</div>
+    <div className={classList}>
+      <div>{renderCardObj(deck, deckViewPage)}</div>
     </div>
   );
 }
 
-export default CardList;
+const mapStateToProps = store => {
+  return { deck: store.tracker.activeDeck };
+};
+
+export default connect(mapStateToProps)(CardList);

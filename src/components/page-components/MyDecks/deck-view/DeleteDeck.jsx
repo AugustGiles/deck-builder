@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -7,12 +8,12 @@ import Form from "react-bootstrap/Form";
 
 import deckServiceModule from "../../../../modules/deck-builder-api/deck";
 
-function DeleteDeck(props) {
+function DeleteDeck({ deck }) {
   const [enteredTitle, setEnteredTitle] = useState("");
 
   const handleDelete = async () => {
-    if (enteredTitle === props.deck.title) {
-      await deckServiceModule.deleteDeckById(props.deck.id);
+    if (enteredTitle === deck.title) {
+      await deckServiceModule.deleteDeckById(deck.id);
       window.location.href = `/my-decks`;
     }
   };
@@ -31,19 +32,15 @@ function DeleteDeck(props) {
             <Form>
               <Form.Group controlId="confirm-deck-title">
                 <Form.Label>Enter Deck Title To Confirm</Form.Label>
-
                 <Form.Control
                   type="email"
+                  autoComplete="off"
                   value={enteredTitle}
-                  placeholder={`'${props.deck.title}'`}
+                  placeholder={`'${deck.title}'`}
                   onChange={e => setEnteredTitle(e.target.value)}
                 />
-
                 <hr />
-                <p>
-                  <i className="text-danger">This action cannot be reversed.</i>
-                </p>
-
+                <i className="text-danger">This action cannot be reversed.</i>
                 <Button variant="outline-danger w-100" onClick={handleDelete}>
                   Delete
                 </Button>
@@ -56,4 +53,8 @@ function DeleteDeck(props) {
   );
 }
 
-export default DeleteDeck;
+const mapStateToProps = store => {
+  return { deck: store.tracker.activeDeck };
+};
+
+export default connect(mapStateToProps)(DeleteDeck);

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import CardList from "./CardList";
 import TableView from "./TableView";
 import Form from "react-bootstrap/Form";
 import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
 
-function Cards(props) {
+function Cards({ deck, activeView }) {
   let [cardView, setCardView] = useState("table");
   let [searchText, setSearchText] = useState("");
 
@@ -36,30 +37,33 @@ function Cards(props) {
         </ToggleButtonGroup>
       </div>
 
-      {cardView === "table" &&
-        props.deck.cards[props.deckViewPage].length > 0 && (
-          <TableView
-            deckViewPage={props.deckViewPage}
-            deck={props.deck}
-            searchText={searchText}
-          />
-        )}
-
-      {cardView === "cards" &&
-        props.deck.cards[props.deckViewPage].length > 0 && (
-          <CardList
-            deckViewPage={props.deckViewPage}
-            deck={props.deck}
-            classList="d-inline-block mb-5"
-            searchText={searchText}
-          />
-        )}
-
-      {props.deck.cards[props.deckViewPage].length === 0 && (
-        <p>No cards in {props.deckViewPage}</p>
+      {cardView === "table" && deck.cards[activeView].length > 0 && (
+        <TableView
+          deckViewPage={activeView}
+          deck={deck}
+          searchText={searchText}
+        />
       )}
+
+      {cardView === "cards" && deck.cards[activeView].length > 0 && (
+        <CardList
+          deckViewPage={activeView}
+          deck={deck}
+          classList="d-inline-block mb-5"
+          searchText={searchText}
+        />
+      )}
+
+      {deck.cards[activeView].length === 0 && <p>No cards in {activeView}</p>}
     </React.Fragment>
   );
 }
 
-export default Cards;
+const mapStateToProps = store => {
+  return {
+    deck: store.tracker.activeDeck,
+    activeView: store.tracker.activeView
+  };
+};
+
+export default connect(mapStateToProps)(Cards);

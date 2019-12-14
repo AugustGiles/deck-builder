@@ -14,8 +14,7 @@ import {
   MyDecksSidebar
 } from "../page-components/MyDecks";
 
-function MyDecks(props) {
-  let { setUser, setActiveUrl } = props;
+function MyDecks({ setUser, setActiveUrl }) {
   let { path, url } = useRouteMatch();
 
   useEffect(() => {

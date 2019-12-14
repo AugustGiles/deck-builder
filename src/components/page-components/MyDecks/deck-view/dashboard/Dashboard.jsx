@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getUserDeckById } from "../../../../../redux/selectors/userSelectors";
 import CompiledBarChart from "../../../../charts/CompiledBarChart";
 import CompiledPieChart from "../../../../charts/CompiledPieChart";
 import manipulateCardData from "./manipulateCardData";
@@ -13,55 +12,56 @@ function Dashboard({ deck }) {
       className="d-flex mb-5"
       style={{ flexWrap: "wrap", overflow: "scroll" }}
     >
-      <Col lg="4" className="p-2">
-        <Card className="h-100">
-          <Card.Body>
-            <Card.Title>{deck.title}</Card.Title>
-            <Card.Subtitle>{deck.format}</Card.Subtitle>
-            <hr />
-            <Card.Text>{deck.description}</Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col lg="4" className="p-2">
-        <Card className="h-100">
-          <Card.Body>
-            <Card.Title>Cards By CMC</Card.Title>
-            <br />
-            <CompiledBarChart
-              data={manipulateCardData.qtyByCMC(deck.cards["mainboard"])}
-              legend={false}
-              height={175}
-              width={300}
-              xData={"cmc"}
-              yData={"qty"}
-              color="purple"
-            />
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col lg="4" className="p-2">
-        <Card className="h-100">
-          <Card.Body>
-            <Card.Title>Cards By Type</Card.Title>
-            <br />
-            <CompiledPieChart
-              data={manipulateCardData.qtyByType(deck.cards["mainboard"])}
-              dataKey="qty"
-              nameKey="type"
-            />
-          </Card.Body>
-        </Card>
-      </Col>
+      {Object.keys(deck).length > 0 && (
+        <React.Fragment>
+          <Col lg="4" className="p-2">
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>{deck.title}</Card.Title>
+                <Card.Subtitle>{deck.format}</Card.Subtitle>
+                <hr />
+                <Card.Text>{deck.description}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col lg="4" className="p-2">
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>Cards By CMC</Card.Title>
+                <br />
+                <CompiledBarChart
+                  data={manipulateCardData.qtyByCMC(deck.cards["mainboard"])}
+                  legend={false}
+                  height={175}
+                  width={300}
+                  xData={"cmc"}
+                  yData={"qty"}
+                  color="purple"
+                />
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col lg="4" className="p-2">
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>Cards By Type</Card.Title>
+                <br />
+                <CompiledPieChart
+                  data={manipulateCardData.qtyByType(deck.cards["mainboard"])}
+                  dataKey="qty"
+                  nameKey="type"
+                />
+              </Card.Body>
+            </Card>
+          </Col>
+        </React.Fragment>
+      )}
     </div>
   );
 }
 
 const mapStateToProps = store => {
-  let id = window.location.href.split("/")[
-    window.location.href.split("/").length - 1
-  ];
-  return { deck: getUserDeckById(store, id) };
+  return { deck: store.tracker.activeDeck };
 };
 
 export default connect(mapStateToProps)(Dashboard);
