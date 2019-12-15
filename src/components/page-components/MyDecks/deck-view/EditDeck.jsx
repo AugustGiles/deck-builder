@@ -1,7 +1,7 @@
 import React from "react";
 import CreateNewDeck from "../create-new-deck/CreateNewDeck";
 
-function EditDeck(props) {
+function EditDeck() {
   return <CreateNewDeck context="edit" />;
 }
 

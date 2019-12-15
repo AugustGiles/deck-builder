@@ -14,7 +14,7 @@ import {
   MyDecksSidebar
 } from "../page-components/MyDecks";
 
-function MyDecks({ setUser, setActiveUrl }) {
+function MyDecks({ setUser, setActiveUrl, decks }) {
   let { path, url } = useRouteMatch();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function MyDecks({ setUser, setActiveUrl }) {
             <CreateNewDeck context="create" deck={{}} />
           </Route>
           <Route path={`${path}/deck/:id`}>
-            <DeckView />
+            {decks.length > 0 && <DeckView />}
           </Route>
           <Route exact path={path} component={AllDeckStats} />
         </Switch>
@@ -46,4 +46,8 @@ function MyDecks({ setUser, setActiveUrl }) {
   );
 }
 
-export default connect(null, { setUser, setActiveUrl })(MyDecks);
+const mapStateToProps = store => {
+  return { decks: store.user.decks };
+};
+
+export default connect(mapStateToProps, { setUser, setActiveUrl })(MyDecks);

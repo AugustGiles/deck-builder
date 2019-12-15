@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import cardSortHelper from "./cardSortHelper";
+import cardSortHelper from "./helpers/cardSortHelper";
 
-function CardList({ deck, deckViewPage, classList, searchText }) {
-  let renderCardObj = (deck, deckViewPage) => {
+function CardView({ deck, activeView, searchText }) {
+  let renderCardObj = (deck, activeView) => {
     let cards = cardSortHelper.sortByAttribute(
       "type_line",
-      deck.cards[deckViewPage]
+      deck.cards[activeView]
     );
 
     let objKeys = Object.keys(cards);
@@ -58,14 +58,17 @@ function CardList({ deck, deckViewPage, classList, searchText }) {
   };
 
   return (
-    <div className={classList}>
-      <div>{renderCardObj(deck, deckViewPage)}</div>
+    <div className="d-inline-block mb-5">
+      <div>{renderCardObj(deck, activeView)}</div>
     </div>
   );
 }
 
 const mapStateToProps = store => {
-  return { deck: store.tracker.activeDeck };
+  return {
+    deck: store.tracker.activeDeck,
+    activeView: store.tracker.activeView
+  };
 };
 
-export default connect(mapStateToProps)(CardList);
+export default connect(mapStateToProps)(CardView);

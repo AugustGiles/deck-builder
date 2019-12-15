@@ -1,31 +1,31 @@
 const tableSortHelper = () => {
-  const sortByAttribute = (attribute, deck, deckViewPage) => {
+  const sortByAttribute = (attribute, deck, activeView) => {
     switch (attribute) {
       case "qty":
-        return sortByQty(deck, deckViewPage);
+        return sortByQty(deck, activeView);
       case "name":
-        return sortByName(deck, deckViewPage);
+        return sortByName(deck, activeView);
       case "type_line":
-        return sortByTypeLine(deck, deckViewPage);
+        return sortByTypeLine(deck, activeView);
       case "set_name":
-        return sortBySetName(deck, deckViewPage);
+        return sortBySetName(deck, activeView);
       case "condition":
-        return sortByCondition(deck, deckViewPage);
+        return sortByCondition(deck, activeView);
       case "cmc":
-        return sortByCmc(deck, deckViewPage);
+        return sortByCmc(deck, activeView);
       default:
         return deck;
     }
   };
 
-  const sortByQty = (deck, deckViewPage) => {
-    return [...deck.cards[deckViewPage]].sort((a, b) => {
+  const sortByQty = (deck, activeView) => {
+    return [...deck.cards[activeView]].sort((a, b) => {
       return a.qty - b.qty;
     });
   };
 
-  const sortByName = (deck, deckViewPage) => {
-    return [...deck.cards[deckViewPage]].sort((a, b) => {
+  const sortByName = (deck, activeView) => {
+    return [...deck.cards[activeView]].sort((a, b) => {
       if (a.card.name < b.card.name) {
         return -1;
       } else if (a.card.name > b.card.name) {
@@ -36,8 +36,8 @@ const tableSortHelper = () => {
     });
   };
 
-  const sortBySetName = (deck, deckViewPage) => {
-    return [...deck.cards[deckViewPage]].sort((a, b) => {
+  const sortBySetName = (deck, activeView) => {
+    return [...deck.cards[activeView]].sort((a, b) => {
       if (a.card.set_name < b.card.set_name) {
         return -1;
       } else if (a.card.set_name > b.card.set_name) {
@@ -48,8 +48,8 @@ const tableSortHelper = () => {
     });
   };
 
-  const sortByTypeLine = (deck, deckViewPage) => {
-    return [...deck.cards[deckViewPage]].sort((a, b) => {
+  const sortByTypeLine = (deck, activeView) => {
+    return [...deck.cards[activeView]].sort((a, b) => {
       if (a.card.type_line < b.card.type_line) {
         return -1;
       } else if (a.card.type_line > b.card.type_line) {
@@ -60,8 +60,8 @@ const tableSortHelper = () => {
     });
   };
 
-  const sortByCondition = (deck, deckViewPage) => {
-    return [...deck.cards[deckViewPage]].sort((a, b) => {
+  const sortByCondition = (deck, activeView) => {
+    return [...deck.cards[activeView]].sort((a, b) => {
       if (a.condition < b.condition) {
         return -1;
       } else if (a.condition > b.condition) {
@@ -72,8 +72,8 @@ const tableSortHelper = () => {
     });
   };
 
-  const sortByCmc = (deck, deckViewPage) => {
-    return [...deck.cards[deckViewPage]].sort((a, b) => {
+  const sortByCmc = (deck, activeView) => {
+    return [...deck.cards[activeView]].sort((a, b) => {
       return a.card.cmc - b.card.cmc;
     });
   };

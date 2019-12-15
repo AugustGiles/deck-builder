@@ -1,4 +1,4 @@
-import cardSortHelper from "../cards/cardSortHelper";
+import cardSortHelper from "../cards/helpers/cardSortHelper";
 
 const manipulateCardData = () => {
   const qtyByCMC = cards => {
