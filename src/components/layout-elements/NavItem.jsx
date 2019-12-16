@@ -4,27 +4,19 @@ import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import { setActiveUrl } from "../../redux/actions/trackerActions";
 
-function NavItem({
-  key,
-  url,
-  text,
-  className,
-  activeUrl,
-  disabled,
-  setActiveUrl
-}) {
+function NavItem(props) {
   return (
     <Nav.Item
-      key={key}
-      className={className}
-      onClick={() => setActiveUrl(window.location.pathname)}
+      key={props.key}
+      className={props.className}
+      onClick={() => props.setActiveUrl(window.location.pathname)}
     >
       <Link
-        to={url}
-        disabled={disabled}
-        className={activeUrl === url ? "active" : ""}
+        to={props.url}
+        disabled={props.disabled}
+        className={props.activeUrl === props.url ? "active" : ""}
       >
-        {text}
+        {props.text}
       </Link>
     </Nav.Item>
   );

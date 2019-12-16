@@ -13,15 +13,15 @@ import {
   ResponsiveContainer
 } from "recharts";
 
-function CompiledBarChart(props) {
+function CompiledBarChart({ data, xData, yData, legend }) {
   return (
     <ResponsiveContainer width="100%" height={200}>
-      <BarChart data={props.data}>
+      <BarChart data={data}>
         >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={props.xData}>
+        <XAxis dataKey={xData}>
           <Label
-            value={props.xData}
+            value={xData}
             offset={0}
             position="insideBottom"
             style={{ fontSize: "small" }}
@@ -29,16 +29,16 @@ function CompiledBarChart(props) {
         </XAxis>
         <YAxis>
           <Label
-            value={props.yData}
+            value={yData}
             position="insideLeft"
             angle="-90%"
             style={{ fontSize: "small" }}
           />
         </YAxis>
         <Tooltip />
-        {props.legend && <Legend />}
-        <Bar dataKey={props.yData}>
-          {props.data.map((entry, index) => (
+        {legend && <Legend />}
+        <Bar dataKey={yData}>
+          {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </Bar>

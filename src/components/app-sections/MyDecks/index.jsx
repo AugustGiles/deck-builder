@@ -1,35 +1,34 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { setUser } from "../../redux/actions/userActions";
-import { setActiveUrl } from "../../redux/actions/trackerActions";
+import { setUser } from "../../../redux/actions/userActions";
+import { setActiveUrl } from "../../../redux/actions/trackerActions";
 
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 
-import deckClient from "../../modules/deck-builder-api/deck";
-import { Aside, Article } from "../layout-elements";
-import {
-  CreateNewDeck,
-  DeckView,
-  AllDeckStats,
-  MyDecksSidebar
-} from "../page-components/MyDecks";
+import deckClient from "../../../modules/deck-builder-api/deck";
+import { Aside, Article } from "../../layout-elements";
+import CreateNewDeck from "./create-new-deck/CreateNewDeck";
+import DeckView from "./deck-view/DeckView";
+import AllDeckStats from "./all-deck-stats/AllDeckStats";
+import MyDecksSidebar from "./MyDecksSidebar";
 
 function MyDecks({ setUser, setActiveUrl, decks }) {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
 
   useEffect(() => {
-    setActiveUrl(window.location.pathname);
     const getDecks = async () => {
       let decks = await deckClient.getAllDecks();
       setUser({ decks });
     };
+
+    setActiveUrl(window.location.pathname);
     getDecks();
   }, [setUser, setActiveUrl]);
 
   return (
     <React.Fragment>
       <Aside>
-        <MyDecksSidebar url={url} />
+        <MyDecksSidebar />
       </Aside>
       <Article classes="float-right d-inline-block" style={{ width: "80%" }}>
         <Switch>

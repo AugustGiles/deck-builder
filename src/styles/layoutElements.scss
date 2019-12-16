@@ -19,10 +19,13 @@ body {
   }
 
   .nav.custom-side-nav {
+    .nav-item {
+      margin: 2px 0px;
+    }
+
     a {
       font-weight: lighter;
       padding: 0px 8px;
-      margin: 4px 0px;
     }
     a.active {
       font-weight: normal;

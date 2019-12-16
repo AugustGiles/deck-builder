@@ -1,8 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import { Switch, Route, Redirect } from "react-router-dom";
-
-import MyDecks from "./components/pages/MyDecks";
+import MyDecks from "./components/app-sections/MyDecks/index";
 import { MainNav } from "./components/layout-elements";
 import "./styles/layoutElements.scss";
 
@@ -22,4 +20,4 @@ function App() {
   );
 }
 
-export default connect()(App);
+export default App;

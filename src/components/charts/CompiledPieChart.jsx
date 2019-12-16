@@ -2,7 +2,7 @@ import React from "react";
 import colors from "./colors";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
-function CompiledPieChart(props) {
+function CompiledPieChart({ data, dataKey, nameKey }) {
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
     cx,
@@ -34,18 +34,17 @@ function CompiledPieChart(props) {
     <ResponsiveContainer width="100%" height={200}>
       <PieChart width={730} height={250}>
         <Pie
-          data={props.data}
-          dataKey={props.dataKey}
-          nameKey={props.nameKey}
+          data={data}
+          dataKey={dataKey}
+          nameKey={nameKey}
           cx="50%"
           cy="50%"
           innerRadius={10}
           outerRadius={100}
-          // label
           label={renderCustomizedLabel}
           labelLine={false}
         >
-          {props.data.map((entry, index) => (
+          {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </Pie>
