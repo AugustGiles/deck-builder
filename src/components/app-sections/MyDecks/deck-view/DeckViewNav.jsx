@@ -9,6 +9,7 @@ function DeckViewNav({ activeView, setActiveView }) {
     "Mainboard",
     "Sideboard",
     "Maybeboard",
+    "Notes",
     "Edit",
     "Delete"
   ];

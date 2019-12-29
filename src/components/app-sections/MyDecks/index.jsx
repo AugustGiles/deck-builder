@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { setUser } from "../../../redux/actions/userActions";
-import { setActiveUrl } from "../../../redux/actions/trackerActions";
-
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 
+import actions from "../../../redux/actions";
 import deckClient from "../../../modules/deck-builder-api/deck";
+
 import { Aside, Article } from "../../layout-elements";
 import CreateNewDeck from "./create-new-deck/CreateNewDeck";
 import DeckView from "./deck-view/DeckView";
@@ -33,7 +32,9 @@ function MyDecks({ setUser, setActiveUrl, decks }) {
       <Article classes="float-right d-inline-block" style={{ width: "80%" }}>
         <Switch>
           <Route path={`${path}/create-new-deck`}>
-            <CreateNewDeck context="create" deck={{}} />
+            <div className="p-3">
+              <CreateNewDeck context="create" deck={{}} />
+            </div>
           </Route>
           <Route path={`${path}/deck/:id`}>
             {decks.length > 0 && <DeckView />}
@@ -49,4 +50,7 @@ const mapStateToProps = store => {
   return { decks: store.user.decks };
 };
 
-export default connect(mapStateToProps, { setUser, setActiveUrl })(MyDecks);
+export default connect(mapStateToProps, {
+  setUser: actions.userActions.setUser,
+  setActiveUrl: actions.trackerActions.setActiveUrl
+})(MyDecks);

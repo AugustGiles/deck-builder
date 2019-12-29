@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import deckClient from "../../../../modules/deck-builder-api/deck";
+import noteClient from "../../../../modules/deck-builder-api/note";
 import { Row, Col } from "react-bootstrap";
 import CNDForm from "./CNDForm";
 import DeckPreview from "./DeckPreview";
@@ -9,8 +10,11 @@ function CreateNewDeck({ deck, context }) {
   const [deckInfo, setDeckInfo] = useState({
     title: deck.title,
     format: deck.format,
-    description: deck.description
+    description: deck.description,
+    id: deck.id
   });
+
+  const [note, setNote] = useState("");
 
   const [cards, setCards] = useState(deck.cards);
 
@@ -24,20 +28,32 @@ function CreateNewDeck({ deck, context }) {
     let deck = { ...deckInfo };
     deck["cards"] = cards;
     if (context === "create") {
-      let data = await deckClient.addNewDeck(deck);
-      window.location.href = `/my-decks/deck/${data.id}`;
+      let deckData = await deckClient.addNewDeck(deck);
+      await noteClient.addNewNote(
+        `Created deck: ${deckInfo.title}`,
+        deckData.id
+      );
+      window.location.href = `/my-decks/deck/${deckData.id}`;
     } else if (context === "edit") {
       await deckClient.editDeck(deck, deck.id);
+      if (note.length === 0) {
+        await noteClient.addNewNote("Edited Deck", deck.id);
+      } else {
+        await noteClient.addNewNote(note, deck.id);
+      }
+      window.location.href = `/my-decks/deck/${deck.id}`;
     }
   };
 
   return (
-    <div className="p-3">
+    <div>
       <Row>
         <Col xl={6}>
           <CNDForm
             deckInfo={deckInfo}
             updateDeckInfo={updateDeckInfo}
+            note={note}
+            setNote={setNote}
             setCards={setCards}
             cards={cards}
             saveSelectedCards={saveSelectedCards}
@@ -63,7 +79,8 @@ const mapStateToProps = store => {
           mainboard: [],
           sideboard: [],
           maybeboard: []
-        }
+        },
+        id: null
       }
     };
   } else {

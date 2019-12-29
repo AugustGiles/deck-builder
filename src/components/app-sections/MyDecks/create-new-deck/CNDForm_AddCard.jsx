@@ -11,9 +11,13 @@ function CNDForm_AddCard(props) {
   const [board, setBoard] = useState("mainboard");
   const [foil, setFoil] = useState(false);
   const [prerelease, setPrerelease] = useState(false);
+  const [isCommander, setIsCommander] = useState(false);
 
   let addToDeck = e => {
     e.preventDefault();
+    if (isCommander === true && props.deckInfo.format === "commander") {
+      props.updateDeckInfo(cardName, "commander");
+    }
     props.setCards(compileCards());
     resetState();
   };
@@ -40,6 +44,7 @@ function CNDForm_AddCard(props) {
     setCardVersions([]);
     setFoil(false);
     setPrerelease(false);
+    setIsCommander(false);
     document.querySelector("#card-title").focus();
   };
 
@@ -88,6 +93,9 @@ function CNDForm_AddCard(props) {
           foil={foil}
           setPrerelease={setPrerelease}
           prerelease={prerelease}
+          deckInfo={props.deckInfo}
+          setIsCommander={setIsCommander}
+          isCommander={isCommander}
         />
         <Col>
           <Button

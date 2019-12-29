@@ -40,7 +40,8 @@ function DeckPreview(props) {
           >
             <Table striped size="sm">
               <tbody style={{ fontSize: "small" }}>
-                {renderSelectedCards(props.cards, props.setCards)}
+                {props.cards &&
+                  renderSelectedCards(props.cards, props.setCards)}
               </tbody>
             </Table>
           </Tab>

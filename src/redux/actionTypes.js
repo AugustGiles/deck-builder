@@ -6,3 +6,4 @@ export const ADD_DECK = "ADD_DECK";
 export const SET_ACTIVE_URL = "SET_URL";
 export const SET_ACTIVE_DECK = "SET_ACTIVE_DECK";
 export const SET_ACTIVE_VIEW = "SET_ACTIVE_VIEW";
+export const SET_ACTIVE_NOTES = "SET_ACTIVE_NOTES";

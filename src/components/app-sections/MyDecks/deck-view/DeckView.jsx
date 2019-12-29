@@ -1,21 +1,36 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import noteClient from "../../../../modules/deck-builder-api/note";
 import { getUserDeckById } from "../../../../redux/selectors/userSelectors";
 import {
   setActiveDeck,
-  setActiveView
+  setActiveView,
+  setActiveNotes
 } from "../../../../redux/actions/trackerActions";
 import DeckViewNav from "./DeckViewNav";
 import Cards from "./cards/Cards";
+import Notes from "./Notes";
 import EditDeck from "./EditDeck";
 import DeleteDeck from "./DeleteDeck";
 import Dashboard from "./dashboard/Dashboard";
 
-function DeckView({ deck, setActiveDeck, activeView, setActiveView }) {
+function DeckView({
+  deck,
+  setActiveDeck,
+  activeView,
+  setActiveView,
+  setActiveNotes
+}) {
   useEffect(() => {
+    const getNotes = async () => {
+      let notes = await noteClient.getNotesByDeckId(deck.id);
+      setActiveNotes(notes);
+    };
+
     setActiveDeck(deck);
     setActiveView("dashboard");
-  }, [deck, setActiveDeck, setActiveView]);
+    getNotes();
+  }, [deck, setActiveDeck, setActiveView, setActiveNotes]);
 
   return (
     <React.Fragment>
@@ -28,6 +43,7 @@ function DeckView({ deck, setActiveDeck, activeView, setActiveView }) {
         {activeView === "mainboard" && <Cards />}
         {activeView === "sideboard" && <Cards />}
         {activeView === "maybeboard" && <Cards />}
+        {activeView === "notes" && <Notes />}
         {activeView === "edit" && <EditDeck />}
         {activeView === "delete" && <DeleteDeck />}
       </div>
@@ -44,6 +60,8 @@ const mapStateToProps = store => {
   };
 };
 
-export default connect(mapStateToProps, { setActiveDeck, setActiveView })(
-  DeckView
-);
+export default connect(mapStateToProps, {
+  setActiveDeck,
+  setActiveView,
+  setActiveNotes
+})(DeckView);

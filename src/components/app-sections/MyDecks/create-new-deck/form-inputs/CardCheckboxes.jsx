@@ -25,6 +25,18 @@ function CardCheckboxes(props) {
           />
         </Form.Group>
       </Col>
+      {props.deckInfo.format === "commander" && (
+        <Col>
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              label="Commander"
+              checked={props.isCommander}
+              onChange={() => props.setIsCommander(!props.isCommander)}
+            />
+          </Form.Group>
+        </Col>
+      )}
     </React.Fragment>
   );
 }

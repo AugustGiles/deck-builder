@@ -1,13 +1,15 @@
 import {
   SET_ACTIVE_URL,
   SET_ACTIVE_DECK,
+  SET_ACTIVE_NOTES,
   SET_ACTIVE_VIEW
 } from "../actionTypes";
 
 const initialState = {
   activeUrl: "",
   activeDeck: {},
-  activeView: ""
+  activeView: "",
+  activeNotes: []
 };
 
 export default function(state = initialState, action) {
@@ -22,6 +24,10 @@ export default function(state = initialState, action) {
 
     case SET_ACTIVE_VIEW: {
       return { ...state, activeView: action.payload };
+    }
+
+    case SET_ACTIVE_NOTES: {
+      return { ...state, activeNotes: action.payload };
     }
 
     default:

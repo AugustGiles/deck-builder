@@ -32,7 +32,7 @@ function CardNameDropdown(props) {
         return (
           <ListGroup.Item
             action
-            key={card}
+            key={card.name}
             className="py-1"
             onClick={e => handleFetchedCardSelection(e, card)}
           >

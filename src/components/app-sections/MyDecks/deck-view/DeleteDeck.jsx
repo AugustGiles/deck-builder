@@ -19,7 +19,7 @@ function DeleteDeck({ deck }) {
   };
 
   return (
-    <Row>
+    <Row className="p-3">
       <Col sm={12} lg={6}>
         <Card>
           <Card.Header>
