@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import CardNameDropdown from "./CardNameDropdown";
-import scryfallApi from "../../../../../modules/scryfall-api";
+import scryfallCards from "../../../../apis/scryfall/cards";
 
 function CardNameInput(props) {
   const [dropdownHidden, setDropdownHidden] = useState(true);
@@ -16,7 +16,7 @@ function CardNameInput(props) {
   };
 
   let searchName = async cardName => {
-    let cards = await scryfallApi.getCardsByName(cardName);
+    let cards = await scryfallCards.getCardsByName(cardName);
     if (cards) {
       setFetchedCards(cards.splice(0, 5));
       setDropdownHidden(false);

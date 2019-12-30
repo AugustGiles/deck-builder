@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import noteClient from "../../../../modules/deck-builder-api/note";
-import { getUserDeckById } from "../../../../redux/selectors/userSelectors";
+import { note as noteClient } from "../../../apis/deck-builder";
+import { getUserDeckById } from "../../../redux/selectors/userSelectors";
 import {
   setActiveDeck,
   setActiveView,
   setActiveNotes
-} from "../../../../redux/actions/trackerActions";
+} from "../../../redux/actions/trackerActions";
 import DeckViewNav from "./DeckViewNav";
 import Cards from "./cards/Cards";
 import Notes from "./Notes";

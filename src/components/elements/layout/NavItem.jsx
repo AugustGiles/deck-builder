@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
-import { setActiveUrl } from "../../redux/actions/trackerActions";
+import { setActiveUrl } from "../../../redux/actions/trackerActions";
 
 function NavItem(props) {
   return (

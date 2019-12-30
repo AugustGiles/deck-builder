@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setActiveView } from "../../../../redux/actions/trackerActions";
+import { setActiveView } from "../../../redux/actions/trackerActions";
 import Nav from "react-bootstrap/Nav";
 
 function DeckViewNav({ activeView, setActiveView }) {

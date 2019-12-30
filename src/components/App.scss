@@ -8,16 +8,5 @@ html {
       "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    #root {
-      min-height: 100%;
-      #site-content {
-        margin-top: 7vh;
-      }
-
-      table.table thead tr th.active {
-        background-color: gainsboro;
-      }
-    }
   }
 }

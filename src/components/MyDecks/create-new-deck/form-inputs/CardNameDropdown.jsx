@@ -1,6 +1,6 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import skryfallApi from "../../../../../modules/scryfall-api";
+import scryfallCards from "../../../../apis/scryfall/cards";
 
 function CardNameDropdown(props) {
   let handleFetchedCardSelection = async (e, card) => {
@@ -8,7 +8,7 @@ function CardNameDropdown(props) {
     props.setCardName(card.name);
     props.setDropdownHidden(true);
 
-    const cardVersions = await skryfallApi.getCardVersions(
+    const cardVersions = await scryfallCards.getCardVersions(
       card.prints_search_uri
     );
     if (cardVersions) {

@@ -1,16 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { NavItem } from "../../layout-elements";
+import { NavItem } from "../elements/layout";
 import Nav from "react-bootstrap/Nav";
 
 function MyDecksSidebar({ decks }) {
   return (
     <Nav className="flex-column py-3 px-2 custom-side-nav">
       <NavItem text="All Deck Stats" url="/my-decks" />
-      <NavItem text="Create New Deck" url={"/my-decks/create-new-deck"} />
+      <NavItem text="Create New Deck" url="/my-decks/create-new-deck" />
 
       <br />
-      <NavItem text="Decks" url={""} disabled />
+      <NavItem text="Decks" url="" disabled />
 
       {decks &&
         decks.map(fetchedDeck => {

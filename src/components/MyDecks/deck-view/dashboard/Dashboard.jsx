@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import CompiledBarChart from "../../../../charts/CompiledBarChart";
-import CompiledPieChart from "../../../../charts/CompiledPieChart";
+import { BarChart, PieChart } from "../../../elements/charts";
 import manipulateCardData from "./manipulateCardData";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
@@ -29,7 +28,7 @@ function Dashboard({ deck }) {
               <Card.Body>
                 <Card.Title>Cards By CMC</Card.Title>
                 <br />
-                <CompiledBarChart
+                <BarChart
                   data={manipulateCardData.qtyByCMC(deck.cards["mainboard"])}
                   legend={false}
                   height={175}
@@ -46,7 +45,7 @@ function Dashboard({ deck }) {
               <Card.Body>
                 <Card.Title>Cards By Type</Card.Title>
                 <br />
-                <CompiledPieChart
+                <PieChart
                   data={manipulateCardData.qtyByType(deck.cards["mainboard"])}
                   dataKey="qty"
                   nameKey="type"

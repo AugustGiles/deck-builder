@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-
-import deckServiceModule from "../../../../modules/deck-builder-api/deck";
+import { Card, Button, Row, Col, Form } from "react-bootstrap";
+import { deck as deckClient } from "../../../apis/deck-builder";
 
 function DeleteDeck({ deck }) {
   const [enteredTitle, setEnteredTitle] = useState("");
 
   const handleDelete = async () => {
     if (enteredTitle === deck.title) {
-      await deckServiceModule.deleteDeckById(deck.id);
+      await deckClient.deleteDeckById(deck.id);
       window.location.href = `/my-decks`;
     }
   };

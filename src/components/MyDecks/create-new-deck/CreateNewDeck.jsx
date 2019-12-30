@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import deckClient from "../../../../modules/deck-builder-api/deck";
-import noteClient from "../../../../modules/deck-builder-api/note";
+import {
+  deck as deckClient,
+  note as noteClient
+} from "../../../apis/deck-builder";
 import { Row, Col } from "react-bootstrap";
 import CNDForm from "./CNDForm";
 import DeckPreview from "./DeckPreview";
@@ -46,7 +48,7 @@ function CreateNewDeck({ deck, context }) {
   };
 
   return (
-    <div>
+    <div className={context === "create" ? "p-3" : ""}>
       <Row>
         <Col xl={6}>
           <CNDForm
